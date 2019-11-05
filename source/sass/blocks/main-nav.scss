@@ -1,0 +1,47 @@
+.main-nav {
+  width: 767px;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  padding-right: 24px;
+
+  &--accessories {
+    padding-right: 26px;
+  }
+
+  &--spares {
+    padding-right: 26px;
+  }
+
+  &--workshop {
+    padding-right: 25px;
+  }
+
+  &--delivery {
+    padding-right: 22px;
+  }
+}
+
+.main-nav__link {
+  font-family: "Hagin Caps Medium", "Times New Roman", serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  color: #9b8869;
+  text-decoration: none;
+
+  &--page-main {
+    text-transform: uppercase;
+    color: #817155;
+  }
+}

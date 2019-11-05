@@ -1,0 +1,47 @@
+.user-item {
+  position: relative;
+  min-width: 36px;
+  height: 36px;
+  padding: 0;
+  // background-color: red;
+  list-style: none;
+
+  &--profile {
+    margin-right: 10px;
+  }
+
+  &--search {
+    margin-right: 8px;
+  }
+
+  &--logout {
+    display: none;
+  }
+}
+
+.user-item__link {
+  display: block;
+  min-width: 36px;
+  height: 36px;
+  color: #9b8869;
+  text-decoration: none;
+}
+
+.user-item__icon {
+  position: absolute;
+
+  &--profile {
+    top: 7px;
+    left: 9px;
+  }
+
+  &--search {
+    top: 8px;
+    left: 9px;
+  }
+
+  &--basket {
+    top: 7px;
+    left: 7px;
+  }
+}

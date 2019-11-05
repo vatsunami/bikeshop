@@ -1,0 +1,35 @@
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 105px;
+  list-style: none;
+}
+
+.social__link {
+  position: relative;
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+
+.social__icon {
+  position: absolute;
+
+  &--vk {
+    top: 6px;
+    left: 2px;
+  }
+
+  &--fb {
+    top: 4px;
+    left: 9px;
+  }
+
+  &--inst {
+    top: 4px;
+    left: 4px;
+  }
+}

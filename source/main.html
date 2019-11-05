@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Список страниц</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    <header class="page-header page-header--main">
+      <div class="page-header__container">
+        <div class="page-header__top">
+          <div class="page-header__logo-wrapper">
+            <a class="page-header__logo" href="#">
+              <img src="img/logo.svg" alt="Chopper Bikeshop" width="184" height="30">
+            </a>
+          </div>
+
+          <nav class="page-header__nav main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--bikes">
+                <a class="main-nav__link main-nav__link--page-main" href="catalog.html">Велосипеды</a>
+              </li>
+              <li class="main-nav__item main-nav__item--accessories">
+                <a class="main-nav__link main-nav__link--page-main" href="#">Аксессуары</a>
+              </li>
+              <li class="main-nav__item main-nav__item--spares">
+                <a class="main-nav__link main-nav__link--page-main" href="#">Запчасти</a>
+              </li>
+              <li class="main-nav__item main-nav__item--workshop">
+                <a class="main-nav__link main-nav__link--page-main" href="#">Мастерская</a>
+              </li>
+              <li class="main-nav__item main-nav__item--delivery">
+                <a class="main-nav__link main-nav__link--page-main" href="#">Доставка и оплата</a>
+              </li>
+              <li class="main-nav__item main-nav__item--contacts">
+                <a class="main-nav__link main-nav__link--page-main" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="user-item user-item--profile">
+            <a class="user-item__link" href="#">
+              <svg class="user-item__icon user-item__icon--profile" width="24" height="24">
+                <use xlink:href="#icon-user"></use>
+              </svg>
+              <span class="visually-hidden">Михаил Иванов</span>
+            </a>
+          </div>
+
+          <div class="user-item user-item--search">
+            <a class="user-item__link" href="#">
+              <svg class="user-item__icon user-item__icon--search" width="24" height="24">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+              <span class="visually-hidden">Поиск</span>
+            </a>
+          </div>
+
+          <div class="user-item user-item--basket">
+            <a class="user-item__link" href="#">
+              <svg class="user-item__icon user-item__icon--basket" width="24" height="24">
+                <use xlink:href="#icon-basket"></use>
+              </svg>
+              <span class="visually-hidden">Корзина</span>
+              <span class="visually-hidden">(1)</span>
+            </a>
+          </div>
+
+          <div class="user-item user-item--logout">
+            <a class="user-item__link" href="#">
+              <svg class="user-item__icon user-item__icon--logout" width="24" height="24">
+                <use xlink:href="#icon-logout"></use>
+              </svg>
+              <span class="visually-hidden">Выйти</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="page-header__promo promo">
+          <h1 class="page-title visually-hidden">Интернет-магазин Bike Shop</h1>
+          <div class="promo__container">
+            <div class="promo__slogan-wrapper">
+              <svg class="promo__slogan" width="246" height="71">
+                <use xlink:href="#slogan"></use>
+              </svg>
+            </div>
+            <div class="promo__button-wrapper">
+              <a class="button" href="catalog.html">В магазин</a>
+            </div>
+            <div class="promo__social social">
+              <b class="social__title">Мы в социальных сетях</b>
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <span class="visually-hidden">Vk</span>
+                    <svg class="social__icon social__icon--vk" width="21.39" height="12.03">
+                      <use xlink:href="#icon-vk"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <span class="visually-hidden">Facebook</span>
+                    <svg class="social__icon social__icon--fb" width="9.18" height="18.04">
+                      <use xlink:href="#icon-fb"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <span class="visually-hidden">Instagram</span>
+                    <svg class="social__icon social__icon--inst" width="17.14" height="17.14">
+                      <use xlink:href="#icon-inst"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="bikes">
+        <div class="bikes__container">
+          <h2 class="bikes__title">Каталог</h2>
+          <p class="bikes__text">У нас более 200 моделей прогулочных велосипедов для настоящих мужчин</p>
+          <p class="bikes__text">Бесплатный выездной тестдрайв на все модели.
+            Система рассрочки 0-0-5. Для членов клуба бесплатно предоставляется выездной сервис, зимнее хранение и куча привелегий от партнеров</p>
+          <div class="bikes__slider slider-products">
+            <div class="slider-products__slides">
+              <div class="slider-products__slide">
+                <ul class="slider-products__list">
+                  <li class="slider-products__item product-card">
+                    <div class="product-card__container">
+                      <div class="product-card__picture">
+                        <img src="http://placehold.it/283x131" alt="Neuzer Chopper Apocalypse" width="283" height="131">
+                      </div>
+                      <a class="product-card__buy" href="#">
+                        <span class="visually-hidden">Добавить в корзину</span>
+                      </a>
+                      <div class="product-card__description">
+                        <h3 class="product-card__name">Neuzer Chopper Apocalypse</h3>
+                        <p class="product-card__info">24", сталь Hi-Ten</p>
+                        <p class="product-card__info">Венгрия</p>
+                        <b class="product-card__price">75 000 ₽</b>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="slider-products__item product-card">
+                    <div class="product-card__container">
+                      <div class="product-card__picture">
+                        <img src="http://placehold.it/262x128" alt="Schwinn Stingray Occ" width="262" height="128">
+                      </div>
+                      <a class="product-card__buy" href="#">
+                        <span class="visually-hidden">Добавить в корзину</span>
+                      </a>
+                      <div class="product-card__description">
+                        <h3 class="product-card__name">Schwinn Stingray Occ</h3>
+                        <p class="product-card__info">20+24", сталь</p>
+                        <p class="product-card__info">США</p>
+                        <b class="product-card__price">34 000 ₽</b>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="slider-products__item product-card">
+                    <div class="product-card__container">
+                      <div class="product-card__picture">
+                        <img src="http://placehold.it/266x189" alt="Harley Davidson" width="266" height="189">
+                      </div>
+                      <a class="product-card__buy" href="#">
+                        <span class="visually-hidden">Добавить в корзину</span>
+                      </a>
+                      <div class="product-card__description">
+                        <h3 class="product-card__name">Harley Davidson</h3>
+                        <p class="product-card__info">20", сталь</p>
+                        <p class="product-card__info">Китай</p>
+                        <b class="product-card__price">23 000 ₽</b>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="slider-products__toggle slider-products__toggle--prev">
+              <button class="toggle toogle--prev" type="button">
+                <span class="visually-hidden">Предыдущий слайд</span>
+                <span class="toggle__arrow toggle__arrow--prev"></span>
+              </button>
+            </div>
+            <div class="slider-products__toggle slider-products__toggle--next">
+              <button class="toggle toogle--next" type="button">
+                <span class="visually-hidden">Следующий слайд</span>
+                <span class="toggle__arrow toggle__arrow--next"></span>
+              </button>
+            </div>
+            <div class="slider-products__source">
+              <a class="slider-products__source-link button" href="catalog.html">Перейти в каталог</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="workshop">
+        <div class="workshop__container">
+          <div class="workshop__desription">
+            <h2 class="workshop__title title">Мастерская</h2>
+            <p class="workshop__text">Наши мастера всегда готовы привести в чувства вашего коня,
+              кастомизировать любую модель или просто помочь советом.</p>
+            <p class="workshop__text">Возможен выезд по вашему адресу. Для велосипедов, купленных у нас, обслуживание предоставляется бесплатно.</p>
+            <div class="workshop__button-wrapper">
+              <a class="workshop__button button" href="#">Подробнее</a>
+            </div>
+          </div>
+          <div class="workshop__picture">
+            <img src="http://placehold.it/463x357" alt="Мастерская" width="463" height="357">
+          </div>
+        </div>
+      </section>
+
+      <section class="extra">
+        <div class="extra__container">
+          <h2 class="extra__title">Аксессуары и запчасти</h2>
+          <p class="extra__text">Всегда большой выбор запчастей и аксессуаров для чоппер-байков.
+            Если вы ничего не нашли в наличии, наши консультанты помогут заказать и доставить товар из любой точки мира</p>
+          <div class="extra__slider slider-products">
+            <div class="slider-products__slides">
+              <div class="slider-products__slide">
+                <ul class="slider-products__list">
+                  <li class="slider-products__item product-card">
+                    <div class="product-card__container">
+                      <div class="product-card__picture">
+                        <img src="http://placehold.it/196x89" alt="Сумка на руль B-soul" width="196" height="89">
+                      </div>
+                      <a class="product-card__buy" href="#">
+                        <span class="visually-hidden">Добавить в корзину</span>
+                      </a>
+                      <div class="product-card__description">
+                        <h3 class="product-card__name">Сумка на руль B-soul</h3>
+                        <p class="product-card__info">15x10 x5 cm</p>
+                        <p class="product-card__info">натуральная кожа</p>
+                        <b class="product-card__price">3200 ₽</b>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="slider-products__item product-card">
+                    <div class="product-card__container">
+                      <div class="product-card__picture">
+                        <img src="http://placehold.it/167x93" alt="Грипсы Propalm" width="167" height="93">
+                      </div>
+                      <a class="product-card__buy" href="#">
+                        <span class="visually-hidden">Добавить в корзину</span>
+                      </a>
+                      <div class="product-card__description">
+                        <h3 class="product-card__name">Грипсы Propalm</h3>
+                        <p class="product-card__info">натуральная кожа</p>
+                        <p class="product-card__info">с фиксаторами</p>
+                        <b class="product-card__price">1800 ₽</b>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="slider-products__item product-card">
+                    <div class="product-card__container">
+                      <div class="product-card__picture">
+                        <img src="http://placehold.it/197x143" alt="Седло Brooks B66 S" width="197" height="143">
+                      </div>
+                      <a class="product-card__buy" href="#">
+                        <span class="visually-hidden">Добавить в корзину</span>
+                      </a>
+                      <div class="product-card__description">
+                        <h3 class="product-card__name">Седло Brooks B66 S</h3>
+                        <p class="product-card__info">натуральная кожа</p>
+                        <p class="product-card__info">доступно в 3 цветах</p>
+                        <b class="product-card__price">8625 ₽</b>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="slider-products__item product-card">
+                    <div class="product-card__container">
+                      <div class="product-card__picture">
+                        <img src="http://placehold.it/215x155" alt="Коллеса Strida 18" width="215" height="155">
+                      </div>
+                      <a class="product-card__buy" href="#">
+                        <span class="visually-hidden">Добавить в корзину</span>
+                      </a>
+                      <div class="product-card__description">
+                        <h3 class="product-card__name">Коллеса Strida 18"</h3>
+                        <p class="product-card__info">покрышки Innova</p>
+                        <p class="product-card__info">цена за 2 колеса</p>
+                        <b class="product-card__price">6780 ₽</b>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-products__toggle slider-products__toggle--prev">
+          <button class="toggle toogle--prev" type="button">
+            <span class="visually-hidden">Предыдущий слайд</span>
+            <span class="toggle__arrow toggle__arrow--prev"></span>
+          </button>
+        </div>
+        <div class="slider-products__toggle slider-products__toggle--next">
+          <button class="toggle toogle--next" type="button">
+            <span class="visually-hidden">Следующий слайд</span>
+            <span class="toggle__arrow toggle__arrow--next"></span>
+          </button>
+        </div>
+        <div class="slider-products__source">
+          <a class="slider-products__source-link button" href="catalog.html">Перейти в каталог</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer page-footer--main">
+      <section class="join">
+        <div class="join__container">
+          <div class="join__description">
+            <h2 class="join__title">Вступай в клуб</h2>
+            <p class="join__text">У тебя уже есть чоппер-байк?</p>
+            <p class="join__text">Регистрируйся и получай специальные привелегии, приглашения на закрытые мероприятия, специальные цены
+              в нашем магазине и многое других плюшек.</p>
+            <div class="join__button-wrapper">
+              <a class="join__button button" href="#">Вступить</a>
+            </div>
+          </div>
+          <div class="join__picture">
+            <img src="http://placehold.it/290x300" alt="" width="290" height="300">
+          </div>
+        </div>
+      </section>
+      <div class="page-footer__container">
+        <div class="page-footer__top">
+          <div class="page-footer__site-nav site-nav">
+            <b class="visually-hidden">Навигация по сайту</b>
+            <ul class="site-nav__list">
+              <li class="site-nav__item site-nav__item--bikes">
+                <a class="site-nav__link site-nav__link--page-main" href="#">Велосипеды</a>
+              </li>
+              <li class="site-nav__item site-nav__item--accessories">
+                <a class="site-nav__link site-nav__link--page-main" href="#">Аксессуары</a>
+              </li>
+              <li class="site-nav__item site-nav__item--spares">
+                <a class="site-nav__link site-nav__link--page-main" href="#">Запчасти</a>
+              </li>
+              <li class="site-nav__item site-nav__item--workshop">
+                <a class="site-nav__link site-nav__link--page-main" href="#">Мастерская</a>
+              </li>
+              <li class="site-nav__item site-nav__item--testdrive">
+                <a class="site-nav__link site-nav__link--page-main" href="#">Тест-драйв</a>
+              </li>
+              <li class="site-nav__item site-nav__item--delivery">
+                <a class="site-nav__link site-nav__link--page-main" href="#">Доставка и оплата</a>
+              </li>
+              <li class="site-nav__item site-nav__item--installment">
+                <a class="site-nav__link site-nav__link--page-main" href="#">Рассрочка</a>
+              </li>
+              <li class="site-nav__item site-nav__item--join">
+                <a class="site-nav__link site-nav__link--page-main" href="#">Вступление в клуб</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="page-footer__bottom">
+          <div class="page-footer__logo-wrapper">
+            <a class="page-footer__logo" href="#">
+              <img src="img/logo.svg" alt="Chopper Bikeshop" width="184" height="30">
+            </a>
+          </div>
+          <div class="page-footer__social">
+            <b class="social__title">Мы в социальных сетях</b>
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <span class="visually-hidden">Vk</span>
+                  <svg class="social__icon social__icon--vk" width="21.39" height="12.03">
+                    <use xlink:href="#icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <span class="visually-hidden">Facebook</span>
+                  <svg class="social__icon social__icon--fb" width="9.18" height="18.04">
+                    <use xlink:href="#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <span class="visually-hidden">Instagram</span>
+                  <svg class="social__icon social__icon--inst" width="17.14" height="17.14">
+                    <use xlink:href="#icon-inst"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="copyright">
+            <p class="copyright__info">
+              <span class="copyright__year">@2018</span>
+              <span class="copyright__privacy">Политика конфиденциальности</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
