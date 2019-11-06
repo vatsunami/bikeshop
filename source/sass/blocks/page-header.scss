@@ -15,12 +15,12 @@
 .page-header__top {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding: 35px 34px 0 53px;
 }
 
 .page-header__logo-wrapper {
   width: 184px;
-  margin-right: 54px;
 }
 
 .page-header__logo {
@@ -29,8 +29,13 @@
   height: 30px;
 }
 
-.page-header__nav {
-  margin-left: auto;
+.page-header__top-right {
+  display: flex;
+  flex-wrap: wrap;
+  width: 976px;
+}
+
+.page-header__main-nav {
   margin-right: auto;
 }
 
