@@ -26,9 +26,13 @@
 }
 
 @media (max-width: 768px) {
+  .promo {
+    min-height: 521px;
+  }
+
   .promo__container {
     width: 100%;
-    padding: 33px 0 248px;
+    padding: 36px 0 218px;
   }
 
   .promo__slogan-wrapper {

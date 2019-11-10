@@ -1,0 +1,41 @@
+.user-logout {
+  display: none;
+}
+
+.user-logout__link {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  min-width: 36px;
+  min-height: 36px;
+  color: #9b8869;
+  text-decoration: none;
+}
+
+.user-logout__icon {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+}
+
+.user-logout__text {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .user-logout {
+    display: block;
+    width: 40px;
+    margin-top: 9px;
+  }
+
+  .user-logout__link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .user-logout__icon {
+    top: 11px;
+    left: 12px;
+  }
+}

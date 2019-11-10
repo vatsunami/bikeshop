@@ -13,6 +13,7 @@
 }
 
 .page-header__top-container {
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   padding: 35px 22px 0 53px;
@@ -20,7 +21,7 @@
 
 .page-header__logo-wrapper {
   width: 184px;
-  margin-right: 35px;
+  margin: 1px 35px 0 0;
 }
 
 .page-header__logo {
@@ -64,6 +65,7 @@
 
     &--closed {
       justify-content: space-between;
+      min-height: 47px;
       padding: 7px 5px 0 4px;
     }
   }
@@ -107,7 +109,7 @@
     display: block;
     width: 100%;
     margin-right: 0;
-    margin-bottom: 23px;
+    margin-bottom: 24px;
     order: 0;
   }
 
