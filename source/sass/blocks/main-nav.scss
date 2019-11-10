@@ -1,5 +1,6 @@
 .main-nav {
-  width: 767px;
+  // width: 767px;
+  width: 59.411309%;
 }
 
 .main-nav__list {
@@ -43,5 +44,36 @@
   &--page-main {
     text-transform: uppercase;
     color: #817155;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 8px;
+
+    &--closed {
+      display: none;
+    }
+  }
+
+  .main-nav__list {
+    box-sizing: border-box;
+    flex-direction: column;
+    width: 304px;
+    padding: 0 30px;
+  }
+
+  .main-nav__item {
+    padding: 0;
+  }
+
+  .main-nav__link {
+    display: block;
+    padding: 10px 0;
   }
 }

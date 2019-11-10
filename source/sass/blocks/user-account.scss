@@ -1,0 +1,122 @@
+.user-account {
+  width: 36px;
+  margin-right: 10px;
+}
+
+.user-account__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.user-account__item {
+  margin-right: 8px;
+
+  &--logout {
+    display: none;
+  }
+}
+
+.user-account__link {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  min-width: 36px;
+  min-height: 36px;
+  color: #9b8869;
+  text-decoration: none;
+}
+
+.user-account__icon {
+  position: absolute;
+
+  &--profile {
+    top: 6px;
+    left: 6px;
+    width: 24px;
+    height: 23.11px;
+  }
+
+  &--logout {
+    top: 9px;
+    left: 9px;
+  }
+}
+
+.user-account__text {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .user-account {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+
+    &--closed {
+      display: none;
+    }
+  }
+
+  .user-account__list {
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 225px;
+    margin-left: auto;
+    padding-right: 3px;
+  }
+
+  .user-account__item {
+    margin-right: 0;
+
+    &--profile {
+      width: 155px;
+    }
+
+    &--logout {
+      display: block;
+      width: 40px;
+      margin-top: 8px;
+    }
+  }
+
+  .user-account__link {
+    &--profile {
+      width: 155px;
+      min-height: 55px;
+      height: auto;
+      padding: 17px 0 0 24px;
+    }
+
+    &--logout {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .user-account__icon {
+    &--profile {
+      top: 21px;
+      left: 1px;
+      width: 12px;
+      height: 14px;
+    }
+
+    &--logout {
+      top: 11px;
+      left: 12px;
+    }
+  }
+
+  .user-account__text {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.04em;
+
+    &--profile {
+      display: block;
+    }
+  }
+}

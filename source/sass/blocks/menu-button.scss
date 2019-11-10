@@ -1,0 +1,21 @@
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background-image: url("../img/icon-menu.svg");
+    background-repeat: no-repeat;
+    background-size: 18px 12px;
+    background-position: 11px 14px;
+    background-color: transparent;
+    border: none;
+
+    &--close {
+      background-image: url("../img/icon-close.svg");
+      background-repeat: no-repeat;
+      background-size: 13.31px 13.38px;
+      background-position: 13px 12.5px;
+    }
+  }
+}

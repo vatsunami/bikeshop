@@ -1,0 +1,154 @@
+.user-nav {
+  box-sizing: border-box;
+  position: relative;
+  width: 92px;
+  padding: 0;
+  list-style: none;
+}
+
+.user-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.user-nav__item {
+  margin-right: 8px;
+}
+
+.user-nav__link {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  min-width: 36px;
+  min-height: 36px;
+  color: #9b8869;
+  text-decoration: none;
+}
+
+.user-nav__icon {
+  position: absolute;
+
+  &--search {
+    top: 8px;
+    left: 9px;
+  }
+
+  &--cart {
+    top: 7px;
+    left: 7px;
+  }
+}
+
+.user-nav__text,
+.user-nav__count {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .user-nav {
+    width: 100%;
+
+    &--closed {
+      width: 40px;
+    }
+  }
+
+  .user-nav__list {
+    flex-direction: column;
+    padding: 0 30px;
+
+    &--closed {
+      padding: 0;
+    }
+  }
+
+  .user-nav__item {
+    position: relative;
+    margin-right: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: calc(100% - 2px);
+      height: 2px;
+      background-color: #9b8869;
+    }
+
+    &--search {
+      padding: 8px 0 10px;
+      order: 2;
+    }
+
+    &--cart {
+      padding: 9px 0 11px;
+      order: 1;
+    }
+
+    &--search-closed {
+      display: none;
+    }
+
+    &--cart-closed {
+      padding: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .user-nav__link {
+    box-sizing: border-box;
+    width: 244px;
+    height: auto;
+    padding: 4px 0;
+
+    &--search {
+      padding-left: 26px;
+    }
+
+    &--cart-closed {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+    }
+  }
+
+  .user-nav__icon {
+    &--search {
+      top: 12px;
+      left: 0;
+    }
+
+    &--cart {
+      display: none;
+    }
+
+    &--cart-closed {
+      display: block;
+      top: 11px;
+      left: 9px;
+    }
+  }
+
+  .user-nav__text,
+  .user-nav__count {
+    display: inline-block;
+    font-family: "Hagin Caps Medium", "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    &--cart-closed {
+      display: none;
+    }
+  }
+}
