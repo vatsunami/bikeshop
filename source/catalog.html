@@ -11,73 +11,92 @@
     <div style="display:none">
       <include src="build/img/sprite.svg"></include>
     </div>
-    <header class="page-header page-header--main">
+    <header class="page-header">
       <div class="page-header__container">
         <div class="page-header__top">
-          <div class="page-header__logo-wrapper">
-            <a class="page-header__logo" href="#">
-              <img src="img/logo.svg" alt="Chopper Bikeshop" width="184" height="30">
-            </a>
-          </div>
+          <div class="page-header__top-container page-header__top-container--page-catalog">
+            <div class="page-header__logo-wrapper">
+              <a class="page-header__logo" href="#">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="img/logo-tablet.svg">
+                  <img src="img/logo.svg" alt="BikeShop" width="184" height="29">
+                </picture>
+              </a>
+            </div>
 
-          <nav class="page-header__nav main-nav">
-            <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--bikes">
-                <a class="main-nav__link main-nav__link--page-main" href="catalog.html">Велосипеды</a>
-              </li>
-              <li class="main-nav__item main-nav__item--accessories">
-                <a class="main-nav__link main-nav__link--page-main" href="#">Аксессуары</a>
-              </li>
-              <li class="main-nav__item main-nav__item--spares">
-                <a class="main-nav__link main-nav__link--page-main" href="#">Запчасти</a>
-              </li>
-              <li class="main-nav__item main-nav__item--workshop">
-                <a class="main-nav__link main-nav__link--page-main" href="#">Мастерская</a>
-              </li>
-              <li class="main-nav__item main-nav__item--delivery">
-                <a class="main-nav__link main-nav__link--page-main" href="#">Доставка и оплата</a>
-              </li>
-              <li class="main-nav__item main-nav__item--contacts">
-                <a class="main-nav__link main-nav__link--page-main" href="#">Контакты</a>
-              </li>
-            </ul>
-          </nav>
+            <button class="page-header__menu-button menu-button" type="button">
+              <span class="visually-hidden">Меню</span>
+            </button>
 
-          <div class="user-item user-item--profile">
-            <a class="user-item__link" href="#">
-              <svg class="user-item__icon user-item__icon--profile" width="24" height="24">
-                <use xlink:href="#icon-user"></use>
-              </svg>
-              <span class="visually-hidden">Михаил Иванов</span>
-            </a>
-          </div>
+            <nav class="page-header__main-nav main-nav">
+              <ul class="main-nav__list">
+                <li class="main-nav__item main-nav__item--inner-page main-nav__item--inner-page-bikes main-nav__item--bikes">
+                  <a class="main-nav__link main-nav__link--inner-page" href="catalog.html">Велосипеды</a>
+                </li>
+                <li class="main-nav__item main-nav__item--inner-page main-nav__item--inner-page-accessories main-nav__item--accessories">
+                  <a class="main-nav__link main-nav__link--inner-page" href="#">Аксессуары</a>
+                </li>
+                <li class="main-nav__item main-nav__item--inner-page main-nav__item--inner-page-spares main-nav__item--spares">
+                  <a class="main-nav__link main-nav__link--inner-page" href="#">Запчасти</a>
+                </li>
+                <li class="main-nav__item main-nav__item--inner-page main-nav__item--inner-page-workshop main-nav__item--workshop">
+                  <a class="main-nav__link main-nav__link--inner-page" href="#">Мастерская</a>
+                </li>
+                <li class="main-nav__item main-nav__item--inner-page main-nav__item--inner-page-delivery main-nav__item--delivery">
+                  <a class="main-nav__link main-nav__link--inner-page" href="#">Доставка и оплата</a>
+                </li>
+                <li class="main-nav__item main-nav__item--inner-page main-nav__item--inner-page-contacts main-nav__item--contacts">
+                  <a class="main-nav__link main-nav__link--inner-page" href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
 
-          <div class="user-item user-item--search">
-            <a class="user-item__link" href="#">
-              <svg class="user-item__icon user-item__icon--search" width="24" height="24">
-                <use xlink:href="#icon-search"></use>
-              </svg>
-              <span class="visually-hidden">Поиск</span>
-            </a>
-          </div>
+            <div class="page-header__user-account user-account">
+              <ul class="user-account__list">
+                <li class="user-account__item user-profile">
+                  <a class="user-profile__link" href="#">
+                    <svg class="user-profile__icon" width="12" height="14" viewBox="0 0 12 14">
+                      <use xlink:href="#icon-user"></use>
+                    </svg>
+                    <span class="user-profile__text">Михаил Иванов</span>
+                  </a>
+                </li>
+                <li class="user-account__item user-logout">
+                  <a class="user-logout__link " href="#">
+                    <svg class="user-logout__icon " width="24" height="24">
+                      <use xlink:href="#icon-logout"></use>
+                    </svg>
+                    <span class="user-logout__text ">Выйти</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-          <div class="user-item user-item--basket">
-            <a class="user-item__link" href="#">
-              <svg class="user-item__icon user-item__icon--basket" width="24" height="24">
-                <use xlink:href="#icon-basket"></use>
-              </svg>
-              <span class="visually-hidden">Корзина</span>
-              <span class="visually-hidden">(1)</span>
-            </a>
-          </div>
-
-          <div class="user-item user-item--logout">
-            <a class="user-item__link" href="#">
-              <svg class="user-item__icon user-item__icon--logout" width="24" height="24">
-                <use xlink:href="#icon-logout"></use>
-              </svg>
-              <span class="visually-hidden">Выйти</span>
-            </a>
+            <div class="page-header__user-nav user-nav user-nav--inner-page">
+              <ul class="user-nav__list">
+                <li class="user-nav__item user-search">
+                  <a class="user-search__link" href="#">
+                    <svg class="user-search__icon" width="24" height="24">
+                      <use xlink:href="#icon-search"></use>
+                    </svg>
+                    <span class="user-search__text">Поиск</span>
+                  </a>
+                </li>
+                <li class="user-nav__item user-cart">
+                  <a class="user-cart__link" href="#">
+                    <svg class="user-cart__icon" width="18.85" height="17" viewBox="0 0 18.85 17">
+                      <use xlink:href="#icon-basket"></use>
+                    </svg>
+                    <span class="user-cart__text">Корзина</span>
+                    <span class="user-cart__count count">
+                      <span class="count__bracket">(</span>
+                      <span class="count__number">1</span>
+                      <span class="count__bracket">)</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -542,5 +561,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

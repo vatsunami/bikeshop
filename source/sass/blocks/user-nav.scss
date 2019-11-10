@@ -1,9 +1,19 @@
 .user-nav {
   box-sizing: border-box;
   position: relative;
-  width: 92px;
+  width: 88px;
+  margin-right: 6px;
   padding: 0;
   list-style: none;
+
+  &--inner-page {
+    margin-right: 7px;
+  }
+
+  &--inner-page-card {
+    width: 132px;
+    margin-right: 20px;
+  }
 }
 
 .user-nav__list {
@@ -21,6 +31,7 @@
 @media (max-width: 768px) {
   .user-nav {
     width: 100%;
+    margin-right: 0;
 
     &--closed {
       width: 40px;

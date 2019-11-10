@@ -31,22 +31,22 @@
             <nav class="page-header__main-nav main-nav">
               <ul class="main-nav__list">
                 <li class="main-nav__item main-nav__item--bikes">
-                  <a class="main-nav__link main-nav__link--page-main" href="catalog.html">Велосипеды</a>
+                  <a class="main-nav__link" href="catalog.html">Велосипеды</a>
                 </li>
                 <li class="main-nav__item main-nav__item--accessories">
-                  <a class="main-nav__link main-nav__link--page-main" href="#">Аксессуары</a>
+                  <a class="main-nav__link" href="#">Аксессуары</a>
                 </li>
                 <li class="main-nav__item main-nav__item--spares">
-                  <a class="main-nav__link main-nav__link--page-main" href="#">Запчасти</a>
+                  <a class="main-nav__link" href="#">Запчасти</a>
                 </li>
                 <li class="main-nav__item main-nav__item--workshop">
-                  <a class="main-nav__link main-nav__link--page-main" href="#">Мастерская</a>
+                  <a class="main-nav__link" href="#">Мастерская</a>
                 </li>
                 <li class="main-nav__item main-nav__item--delivery">
-                  <a class="main-nav__link main-nav__link--page-main" href="#">Доставка и оплата</a>
+                  <a class="main-nav__link" href="#">Доставка и оплата</a>
                 </li>
                 <li class="main-nav__item main-nav__item--contacts">
-                  <a class="main-nav__link main-nav__link--page-main" href="#">Контакты</a>
+                  <a class="main-nav__link" href="#">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -84,11 +84,15 @@
                 </li>
                 <li class="user-nav__item user-cart">
                   <a class="user-cart__link" href="#">
-                    <svg class="user-cart__icon" width="18.85" height="17">
+                    <svg class="user-cart__icon" width="18.85" height="17" viewBox="0 0 18.85 17">
                       <use xlink:href="#icon-basket"></use>
                     </svg>
                     <span class="user-cart__text">Корзина</span>
-                    <span class="user-cart__count">(1)</span>
+                    <span class="user-cart__count count">
+                      <span class="count__bracket">(</span>
+                      <span class="count__number">1</span>
+                      <span class="count__bracket">)</span>
+                    </span>
                   </a>
                 </li>
               </ul>

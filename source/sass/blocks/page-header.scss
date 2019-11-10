@@ -1,7 +1,4 @@
 .page-header {
-  max-width: 1366px;
-  margin: 0 auto;
-
   &--main {
     min-height: 768px;
     background-image: url("../img/background-promo.jpg");
@@ -12,16 +9,26 @@
   }
 }
 
+.page-header__container {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
 .page-header__top-container {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  padding: 35px 22px 0 53px;
+  padding: 35px 20px 0 53px;
+
+  &--page-catalog {
+    padding-right: 19px;
+  }
 }
 
 .page-header__logo-wrapper {
   width: 184px;
-  margin: 1px 35px 0 0;
+  margin-top: 1px;
+  margin-right: 36px;
 }
 
 .page-header__logo {

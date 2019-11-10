@@ -1,0 +1,28 @@
+.user-addition__link {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  min-width: 36px;
+  min-height: 36px;
+  color: #9b8869;
+  text-decoration: none;
+}
+
+.user-addition__icon {
+  position: absolute;
+  top: 9px;
+  left: 6px;
+  width: 28px;
+  height: 14px;
+}
+
+.user-addition__text,
+.user-addition__count {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .user-addition {
+    display: none;
+  }
+}
