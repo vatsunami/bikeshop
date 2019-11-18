@@ -1,0 +1,50 @@
+.workshop__wrapper {
+  max-width: 1366px;
+  margin: 0 auto;
+  background-color: brown;
+}
+
+.workshop__container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 119px 0 96px;
+}
+
+.workshop__picture {
+  width: 463px;
+  height: 357px;
+  margin-top: 4px;
+
+  img {
+    display: block;
+    width: 463px;
+    height: 357px;
+  }
+}
+
+.workshop__desription {
+  box-sizing: border-box;
+  width: 508px;
+  padding-right: 40px;
+}
+
+.workshop__title {
+  margin: 0;
+  margin-bottom: 12px;
+  color: #baa480;
+}
+
+.workshop__text {
+  max-width: 480px;
+  margin: 0;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  color: #e9e1d5;
+}
+
+.workshop__button {
+  margin-top: 44px;
+}

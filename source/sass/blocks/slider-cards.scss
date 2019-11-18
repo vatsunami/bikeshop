@@ -1,0 +1,33 @@
+.slider-cards {
+  width: 990px;
+  margin: 0 auto;
+
+  &--extra {
+    width: 1132px;
+  }
+}
+
+.slider-cards__list {
+  display: flex;
+  max-width: 1366px;
+  margin: 0;
+  margin-bottom: 11px;
+  padding: 0;
+  list-style: none;
+
+  &--extra {
+    max-width: 1132px;
+  }
+}
+
+.slider-cards__item {
+  width: 340px;
+
+  &--extra {
+    width: 283px;
+  }
+}
+
+.slider-cards__toggle {
+  display: none;
+}

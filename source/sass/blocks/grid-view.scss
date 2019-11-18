@@ -1,0 +1,33 @@
+.grid-view {
+  width: 48px;
+  font-family: "Hagin Caps Medium", "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+}
+
+.grid-view__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.grid-view__toggle {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.grid-view__icon {
+  position: absolute;
+  top: 7px;
+  left: 6px;
+
+  &--gallery {
+    left: 7px;
+  }
+}

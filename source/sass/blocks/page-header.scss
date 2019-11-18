@@ -7,6 +7,10 @@
     background-position: center 1px;
     background-size: cover;
   }
+
+  &--underline {
+    border-bottom: 1px solid #9b8869;
+  }
 }
 
 .page-header__container {
@@ -18,7 +22,7 @@
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  padding: 35px 20px 0 53px;
+  padding: 35px 20px 34px 53px;
 
   &--page-catalog {
     padding-right: 19px;

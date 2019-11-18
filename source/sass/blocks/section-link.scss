@@ -1,0 +1,23 @@
+.section-link {
+  display: flex;
+  // width: 1122px;
+  width: 82.137628%;
+  margin: 0 auto;
+
+  &::before,
+  &::after {
+    content: "";
+    flex-grow: 1;
+    align-self: center;
+    width: 1px;
+    height: 1px;
+    background-color: #9b8869;
+  }
+}
+
+.section-link__button {
+  width: 273px;
+  margin: 0 10px;
+  color: #817155;
+  border-color: #9b8869;
+}

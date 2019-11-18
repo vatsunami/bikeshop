@@ -1,0 +1,69 @@
+.review {
+  margin: 0;
+}
+
+.review__top {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.review__author,
+.review__date {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 0.2px;
+  color: #9b8869;
+}
+
+.review__author {
+  margin-right: 10px;
+}
+
+.review__date {
+  margin: 0;
+  display: inline;
+}
+
+.review__title {
+  display: block;
+  margin-bottom: 2px;
+  padding-left: 2px;
+  font-family: "Hagin Caps Medium", "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #817155;
+}
+
+.review__text {
+  margin: 0;
+  margin-bottom: 5px;
+  padding-left: 2px;
+  color: #817155;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: 0.3px;
+}
+
+.review__rating {
+  display: flex;
+  width: 95px;
+  margin-bottom: 21px;
+}
+
+.review__rating-star {
+  width: 17px;
+  height: 16px;
+  margin-right: 2px;
+  background-image: url("../img/review-rating-star.svg");
+  background-repeat: no-repeat;
+}
+
+.review__button {
+  width: 273px;
+  margin-top: 35px;
+  margin-left: 2px;
+}

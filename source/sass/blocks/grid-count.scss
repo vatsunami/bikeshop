@@ -1,0 +1,50 @@
+.grid-count {
+  display: flex;
+  width: 241px;
+  padding-top: 5px;
+  font-family: "Hagin Caps Medium", "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+}
+
+.grid-count__label {
+  width: 119px;
+  flex-shrink: 0;
+}
+
+.grid-count__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.grid-count__toggle {
+  position: relative;
+  display: block;
+  padding: 0 11px 0 10px;
+  color: #9b8869;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 1px;
+    height: 14px;
+    background-color: #9b8869;
+  }
+
+  &--all {
+    padding: 0 7px;
+
+    &::after {
+      display: none;
+    }
+  }
+}

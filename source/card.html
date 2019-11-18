@@ -11,7 +11,7 @@
     <div style="display:none">
       <include src="build/img/sprite.svg"></include>
     </div>
-    <header class="page-header">
+    <header class="page-header page-header--underline">
       <div class="page-header__container">
         <div class="page-header__top">
           <div class="page-header__top-container">
@@ -19,7 +19,7 @@
               <a class="page-header__logo" href="#">
                 <picture>
                   <source media="(max-width: 768px)" srcset="img/logo-tablet.svg">
-                  <img src="img/logo.svg" alt="BikeShop" width="184" height="29">
+                  <img src="img/logo-desktop.svg" alt="BikeShop" width="184" height="29">
                 </picture>
               </a>
             </div>
@@ -116,11 +116,12 @@
     </header>
 
     <main class="page-inner">
-      <div class="container">
-        <h1 class="visually-hidden">Подробное описание товара</h1>
-        <div class="breadcrumbs">
+
+      <div class="breadcrumbs">
+        <div class="breadcrumbs__container">
+          <h1 class="visually-hidden">Подробное описание товара</h1>
           <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Аксессуры</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Аксессуары</a></li>
             <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Седла</a></li>
             <li class="breadcrumbs__item"><a class="breadcrumbs__link">Brooks</a></li>
           </ul>
@@ -129,222 +130,259 @@
 
       <section class="product">
         <div class="product__container">
-          <div class="product__top">
-            <h2 class="product__title">Седло Brooks B67</h2>
-            <div class="product__rating">
-              <fieldset class="rating">
-                <legend class="rating__caption">Рейтинг</legend>
-                <div class="rating__group">
-                  <input class="rating__star" type="radio" name="health" value="1" aria-label="Ужасно">
-                  <input class="rating__star" type="radio" name="health" value="2" aria-label="Сносно">
-                  <input class="rating__star" type="radio" name="health" value="3" aria-label="Нормально">
-                  <input class="rating__star" type="radio" name="health" value="4" aria-label="Хорошо" checked>
-                  <input class="rating__star" type="radio" name="health" value="5" aria-label="Отлично">
-                  <span class="rating__count">(9)</span>
+          <div class="product__card">
+            <div class="product__card-top">
+              <h2 class="product__title">Седло Brooks B67</h2>
+              <div class="product__rating rating">
+                <div class="rating__stars">
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
                 </div>
-              </fieldset>
+              </div>
+              <b class="product__price">7 935 ₽</b>
             </div>
-            <b class="product__price">7 935 ₽</b>
-          </div>
 
-          <div class="product__view">
-            <div class="slider-color">
-              <div class="slider-color__pictures">
-                <ul class="slider-color__pictures-list">
-                  <li class="slider-color__pictures-item">
-                    <div class="slider-color__picture">
-                      <img src="http://placehold.it/290x212" alt="Седло Brooks B67" width="290" height="212">
-                    </div>
+            <div class="product__view slider-view">
+              <div class="slider-view__bottom">
+                <ul class="slider-view__toggles">
+                  <li class="slider-view__toggle">
+                    <input class="slider-view__input visually-hidden" type="radio" name="color" value="black" id="color-black" checked>
+                    <label class="slider-view__label slider-view__label--color-black" for="color-black">
+                      <span class="visually-hidden">Чёрный</span>
+                    </label>
+                  </li>
+                  <li class="slider-view__toggle">
+                    <input class="slider-view__input visually-hidden" type="radio" name="color" value="brown" id="color-brown">
+                    <label class="slider-view__label slider-view__label--color-brown" for="color-brown">
+                      <span class="visually-hidden">Коричневый</span>
+                    </label>
+                  </li>
+                  <li class="slider-view__toggle">
+                    <input class="slider-view__input visually-hidden" type="radio" name="color" value="beige" id="color-beige">
+                    <label class="slider-view__label slider-view__label--color-beige" for="color-beige">
+                      <span class="visually-hidden">Бежевый</span>
+                    </label>
+                  </li>
+                </ul>
+                <div class="slider-view__button-zoom">
+                  <a class="button-zoom" href="#">
+                    <span class="visually-hidden">Увеличить изображение</span>
+                    <!-- <svg class="button-zoom__icon" width="26" height="26" viewBox="0 0 26 26">
+                      <use xlink:href="#icon-zoom"></use>
+                    </svg> -->
+                  </a>
+                </div>
+                <div class="slider-view__button-extra">
+                  <a class="button-extra" href="#">
+                    <span class="visually-hidden">Дополнительно</span>
+                    <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
+                      <use xlink:href="#icon-burger-plus"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="slider-view__slides-container">
+                <div class="slider-view__border-wrapper">
+                  <div class="slider-view__border"></div>
+                </div>
+                <ul class="slider-view__slides">
+                  <li class="slider-view__slide" id="slide-1">
+                    <!-- <div class="slider-view__picture">
+                      <img src="http://placehold.it/518x376" alt="Седло Brooks B67" width="518" height="376">
+                    </div> -->
+                  </li>
+                  <li class="slider-view__slide" id="slide-2">
+                    <!-- <div class="slider-view__picture">
+                      <img src="http://placehold.it/518x376" alt="Седло Brooks B67" width="518" height="376">
+                    </div> -->
+                  </li>
+                  <li class="slider-view__slide" id="slide-3">
+                    <!-- <div class="slider-view__picture">
+                      <img src="http://placehold.it/518x376" alt="Седло Brooks B67" width="518" height="376">
+                    </div> -->
                   </li>
                 </ul>
               </div>
-              <div class="slider-color__toggles">
-                <div class="color-toggles">
-                  <ul class="color-toggles__list">
-                    <li class="color-toggles__item">
-                      <label>
-                        <input type="radio" name="color" value="black" checked>
-                        <span class="visually-hidden">Чёрный</span>
-                      </label>
-                    </li>
-                    <li class="color-toggles__item">
-                      <label>
-                        <input type="radio" name="color" value="brown">
-                        <span class="visually-hidden">Коричневый</span>
-                      </label>
-                    </li>
-                    <li class="color-toggles__item">
-                      <label>
-                        <input type="radio" name="color" value="beige">
-                        <span class="visually-hidden">Бежевый</span>
-                      </label>
-                    </li>
-                  </ul>
+           </div>
+
+           <div class="product__card-bottom">
+             <p class="product__description">В комплекте ключ для регулировки, газета с&nbsp;полезной информацией и рекомендациями по уходу от компании-производителя. Фирменная картонная упаковка.</p>
+             <span class="product__guarantee">Гарантия 1 год</span>
+             <a class="product__button button button--buy" href="#">
+               <svg class="button__icon" width="18.85" height="17" viewBox="0 0 18.85 17">
+                 <use xlink:href="#icon-basket"></use>
+               </svg>В корзину
+             </a>
+           </div>
+          </div>
+          <div class="product__details product-details">
+            <a class="product-details__toggle button product-details__toggle--description">Подробное описание</a>
+            <section class="product-details__section product-details__section--description product-details__section--hidden">
+              <h2 class="visually-hidden">Подробное описание</h2>
+            </section>
+            <a class="product-details__toggle button product-details__toggle--guarantee">Условия гарантии</a>
+            <section class="product-details__section product-details__section--guarantee product-details__section--hidden">
+              <h2 class="visually-hidden">Условия гарантии</h2>
+            </section>
+            <a class="product-details__toggle product-details__toggle--active button product-details__toggle--reviews">Отзывы</a>
+            <section class="product-details__section product-details__section--reviews">
+              <h2 class="visually-hidden">Отзывы</h2>
+              <blockquote class="review">
+                <div class="review__top">
+                  <cite class="review__author">JawPike</cite>
+                  <p class="review__date">18 / 03 / 2018</p>
                 </div>
+                <div class="review__rating">
+                  <span class="review__rating-star"></span>
+                  <span class="review__rating-star"></span>
+                  <span class="review__rating-star"></span>
+                  <span class="review__rating-star"></span>
+                  <span class="review__rating-star"></span>
+                </div>
+                <b class="review__title">Лучшее, что могло придумать человечество</b>
+                <p class="review__text">Это седло заменило мне женщину. Ни о чем не жалею.</p>
+              </blockquote>
+              <div class="review__button-wrapper">
+                <a class="review__button button" href="#">Оставить отзыв</a>
               </div>
-              <div class="slider-color__zoom">
-                <button class="zoom-button" type="button">
-                  <span class="visually-hidden">Увеличить изображение</span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="product__bottom">
-            <p class="product__description">В комплекте ключ для регулировки, газета с полезной информацией и рекомендациями по уходу от компании-производителя. Фирменная картонная упаковка.</p>
-            <span class="product__guarantee">Гарантия 1 год</span>
-            <div class="product__button-wrapper">
-              <a class="product__button" href="#">В корзину</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Слайдер -->
-
-        <div class="product__details">
-          <div class="slider-details">
-            <div class="slider-details__toggles">
-              <ul class="slider-details__toggles-list">
-                <li class="slider-details__toggles-item">
-                  <label class="slider-details__toggle">
-                    <input class="visually-hidden" type="radio" name="section" value="description">
-                    <span class="slider-details__toogle-name">Подробное описание</span>
-                  </label>
-                </li>
-                <li class="slider-details__toggles-item">
-                  <label class="slider-details__toggle">
-                    <input class="visually-hidden" type="radio" name="section" value="guarantee">
-                    <span class="slider-details__toogle-name">Гарантия</span>
-                  </label>
-                </li>
-                <li class="slider-details__toggles-item">
-                  <label class="slider-details__toggle">
-                    <input class="visually-hidden" type="radio" name="section" value="reviews" checked>
-                    <span class="slider-details__toogle-name">Отзывы</span>
-                  </label>
-                </li>
-                <li class="slider-details__toggles-item">
-                  <label class="slider-details__toggle">
-                    <input class="visually-hidden" type="radio" name="section" value="overwiew">
-                    <span class="slider-details__toogle-name">Обзор</span>
-                  </label>
-                </li>
-              </ul>
-            </div>
-            <div class="slider-details__slides">
-              <ul class="slider-details__slides-list">
-                <li class="slider-details__slides-item"></li>
-                <li class="slider-details__slides-item"></li>
-                <li class="slider-details__slides-item">
-                  <div class="slider-details__reviews">
-                    <blockquote class="review">
-                      <cite class="review__author-name">JawPike</cite>
-                      <p class="review__date">18 / 03 / 2018</p>
-                      <div class="review__rating">
-                        <span class="review__rating-star"></span>
-                        <span class="review__rating-star"></span>
-                        <span class="review__rating-star"></span>
-                        <span class="review__rating-star"></span>
-                        <span class="review__rating-star"></span>
-                      </div>
-                      <b class="review__title">Лучшее, что могло придумать человечество.</b>
-                      <p class="review__text">Это седло заменило мне женщину. Ни о чем не жалею.</p>
-                      <div class="review__button-wrapper">
-                        <a class="review__button" href="#">Оставить отзыв</a>
-                      </div>
-                    </blockquote>
-                  </div>
-                </li>
-                <li class="slider-details__slides-item"></li>
-              </ul>
-            </div>
+            </section>
+            <a class="product-details__toggle button product-details__toggle--overview">Обзоры</a>
+            <section class="product-details__section product-details__section--overview product-details__section--hidden">
+              <h2 class="visually-hidden">Обзоры</h2>
+            </section>
           </div>
         </div>
       </section>
 
-      <section class="extra">
-        <div class="extra__container">
-          <h2 class="extra__title">С этим товаром смотрят:</h2>
-          <div class="extra__slider slider-products">
-            <div class="slider-products__slides">
-              <div class="slider-products__slide">
-                <ul class="slider-products__list">
-                  <li class="slider-products__item product-card">
-                    <div class="product-card__container">
-                      <div class="product-card__picture">
-                        <img src="http://placehold.it/196x89" alt="Сумка на руль B-soul" width="196" height="89">
-                      </div>
-                      <a class="product-card__buy" href="#">
-                        <span class="visually-hidden">Добавить в корзину</span>
-                      </a>
-                      <div class="product-card__description">
-                        <h3 class="product-card__name">Сумка на руль B-soul</h3>
-                        <p class="product-card__info">15x10 x5 cm</p>
-                        <p class="product-card__info">натуральная кожа</p>
-                        <b class="product-card__price">3200 ₽</b>
+      <section class="catalog-extra product-extra">
+        <div class="catalog-extra__container product-extra__container">
+          <div class="catalog-extra__description product-extra__description">
+            <h2 class="catalog-extra__title product-extra__title title">С этим товаром смотрят:</h2>
+          </div>
+          <div class="catalog-extra__slider slider-cards slider-cards--extra">
+            <ul class="slider-cards__list slider-cards__list--extra">
+              <li class="slider-cards__item slider-cards__item--extra product-card">
+                <div class="product-card__container">
+                  <div class="product-card__picture product-view">
+                    <!-- <div class="product-card__picture">
+                      <img src="http://placehold.it/196x89" alt="Сумка на руль B-soul" width="196" height="89">
+                    </div> -->
+                    <div class="product-view__border-wrapper">
+                      <div class="product-view__border"></div>
+                    </div>
+                  </div>
+                  <div class="product-card__description">
+                    <h3 class="product-card__name">Сумка на руль B-soul</h3>
+                    <p class="product-card__info">15x10 x5 cm</p>
+                    <p class="product-card__info">натуральная кожа</p>
+                    <b class="product-card__price product-card__price--extra">3200 ₽</b>
+                    <div class="product-card__buttons">
+                      <div class="product-card__button-buy">
+                        <a class="button-buy" href="#">
+                          <span class="visually-hidden">Добавить в корзину</span>
+                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                            <use xlink:href="#icon-cart-plus"></use>
+                          </svg>
+                        </a>
                       </div>
                     </div>
-                  </li>
-                  <li class="slider-products__item product-card">
-                    <div class="product-card__container">
-                      <div class="product-card__picture">
-                        <img src="http://placehold.it/167x93" alt="Грипсы Propalm" width="167" height="93">
-                      </div>
-                      <a class="product-card__buy" href="#">
-                        <span class="visually-hidden">Добавить в корзину</span>
-                      </a>
-                      <div class="product-card__description">
-                        <h3 class="product-card__name">Грипсы Propalm</h3>
-                        <p class="product-card__info">натуральная кожа</p>
-                        <p class="product-card__info">с фиксаторами</p>
-                        <b class="product-card__price">1800 ₽</b>
+                  </div>
+                </div>
+              </li>
+              <li class="slider-cards__item slider-cards__item--extra product-card">
+                <div class="product-card__container">
+                  <div class="product-card__picture product-view">
+                    <!-- <div class="product-card__picture">
+                      <img src="http://placehold.it/167x93" alt="Грипсы Propalm" width="167" height="93">
+                    </div> -->
+                    <div class="product-view__border-wrapper">
+                      <div class="product-view__border"></div>
+                    </div>
+                  </div>
+                  <div class="product-card__description">
+                    <h3 class="product-card__name">Грипсы Propalm</h3>
+                    <p class="product-card__info">натуральная кожа</p>
+                    <p class="product-card__info">с фиксаторами</p>
+                    <b class="product-card__price product-card__price--extra">1800 ₽</b>
+                    <div class="product-card__buttons">
+                      <div class="product-card__button-buy">
+                        <a class="button-buy" href="#">
+                          <span class="visually-hidden">Добавить в корзину</span>
+                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                            <use xlink:href="#icon-cart-plus"></use>
+                          </svg>
+                        </a>
                       </div>
                     </div>
-                  </li>
-                  <li class="slider-products__item product-card">
-                    <div class="product-card__container">
-                      <div class="product-card__picture">
-                        <img src="http://placehold.it/197x143" alt="Седло Brooks B66 S" width="197" height="143">
-                      </div>
-                      <a class="product-card__buy" href="#">
-                        <span class="visually-hidden">Добавить в корзину</span>
-                      </a>
-                      <div class="product-card__description">
-                        <h3 class="product-card__name">Седло Brooks B66 S</h3>
-                        <p class="product-card__info">натуральная кожа</p>
-                        <p class="product-card__info">доступно в 3 цветах</p>
-                        <b class="product-card__price">8625 ₽</b>
+                  </div>
+                </div>
+              </li>
+              <li class="slider-cards__item slider-cards__item--extra product-card">
+                <div class="product-card__container">
+                  <div class="product-card__picture product-view">
+                    <!-- <div class="product-card__picture">
+                      <img src="http://placehold.it/197x143" alt="Седло Brooks B66 S" width="197" height="143">
+                    </div> -->
+                    <div class="product-view__border-wrapper">
+                      <div class="product-view__border"></div>
+                    </div>
+                  </div>
+                  <div class="product-card__description">
+                    <h3 class="product-card__name">Седло Brooks&nbsp;B66 S</h3>
+                    <p class="product-card__info">натуральная кожа</p>
+                    <p class="product-card__info">доступно в 3 цветах</p>
+                    <b class="product-card__price product-card__price--extra">8625 ₽</b>
+                    <div class="product-card__buttons">
+                      <div class="product-card__button-buy">
+                        <a class="button-buy" href="#">
+                          <span class="visually-hidden">Добавить в корзину</span>
+                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                            <use xlink:href="#icon-cart-plus"></use>
+                          </svg>
+                        </a>
                       </div>
                     </div>
-                  </li>
-                  <li class="slider-products__item product-card">
-                    <div class="product-card__container">
-                      <div class="product-card__picture">
-                        <img src="http://placehold.it/215x155" alt="Коллеса Strida 18" width="215" height="155">
-                      </div>
-                      <a class="product-card__buy" href="#">
-                        <span class="visually-hidden">Добавить в корзину</span>
-                      </a>
-                      <div class="product-card__description">
-                        <h3 class="product-card__name">Коллеса Strida 18"</h3>
-                        <p class="product-card__info">покрышки Innova</p>
-                        <p class="product-card__info">цена за 2 колеса</p>
-                        <b class="product-card__price">6780 ₽</b>
+                </div>
+              </li>
+              <li class="slider-cards__item slider-cards__item--extra product-card">
+                <div class="product-card__container">
+                  <div class="product-card__picture product-view">
+                    <!-- <div class="product-card__picture">
+                      <img src="http://placehold.it/215x155" alt="Коллеса Strida 18" width="215" height="155">
+                    </div> -->
+                    <div class="product-view__border-wrapper">
+                      <div class="product-view__border"></div>
+                    </div>
+                  </div>
+                  <div class="product-card__description">
+                    <h3 class="product-card__name">Коллеса Strida&nbsp;18"</h3>
+                    <p class="product-card__info">покрышки Innova</p>
+                    <p class="product-card__info">цена за 2 колеса</p>
+                    <b class="product-card__price product-card__price--extra">6780 ₽</b>
+                    <div class="product-card__buttons">
+                      <div class="product-card__button-buy">
+                        <a class="button-buy" href="#">
+                          <span class="visually-hidden">Добавить в корзину</span>
+                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                            <use xlink:href="#icon-cart-plus"></use>
+                          </svg>
+                        </a>
                       </div>
                     </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="slider-products__toggle slider-products__toggle--prev">
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="slider-cards__toggle slider-cards__toggle--prev">
               <button class="toggle toogle--prev" type="button">
                 <span class="visually-hidden">Предыдущий слайд</span>
                 <span class="toggle__arrow toggle__arrow--prev"></span>
               </button>
             </div>
-
-            <div class="slider-products__toggle slider-products__toggle--next">
+            <div class="slider-cards__toggle slider-cards__toggle--next">
               <button class="toggle toogle--next" type="button">
                 <span class="visually-hidden">Следующий слайд</span>
                 <span class="toggle__arrow toggle__arrow--next"></span>
@@ -357,45 +395,43 @@
 
     <footer class="page-footer page-footer--main">
       <div class="page-footer__container">
-        <div class="page-footer__top">
-          <div class="page-footer__site-nav site-nav">
-            <b class="visually-hidden">Навигация по сайту</b>
-            <ul class="site-nav__list">
-              <li class="site-nav__item site-nav__item--bikes">
-                <a class="site-nav__link site-nav__link--page-main" href="#">Велосипеды</a>
-              </li>
-              <li class="site-nav__item site-nav__item--accessories">
-                <a class="site-nav__link site-nav__link--page-main" href="#">Аксессуары</a>
-              </li>
-              <li class="site-nav__item site-nav__item--spares">
-                <a class="site-nav__link site-nav__link--page-main" href="#">Запчасти</a>
-              </li>
-              <li class="site-nav__item site-nav__item--workshop">
-                <a class="site-nav__link site-nav__link--page-main" href="#">Мастерская</a>
-              </li>
-              <li class="site-nav__item site-nav__item--testdrive">
-                <a class="site-nav__link site-nav__link--page-main" href="#">Тест-драйв</a>
-              </li>
-              <li class="site-nav__item site-nav__item--delivery">
-                <a class="site-nav__link site-nav__link--page-main" href="#">Доставка и оплата</a>
-              </li>
-              <li class="site-nav__item site-nav__item--installment">
-                <a class="site-nav__link site-nav__link--page-main" href="#">Рассрочка</a>
-              </li>
-              <li class="site-nav__item site-nav__item--join">
-                <a class="site-nav__link site-nav__link--page-main" href="#">Вступление в клуб</a>
-              </li>
-            </ul>
-          </div>
+        <div class="page-footer__top site-nav">
+          <b class="visually-hidden">Навигация по сайту</b>
+          <ul class="site-nav__list">
+            <li class="site-nav__item site-nav__item--bikes">
+              <a class="site-nav__link site-nav__link--page-main" href="#">Велосипеды</a>
+            </li>
+            <li class="site-nav__item site-nav__item--accessories">
+              <a class="site-nav__link site-nav__link--page-main" href="#">Аксессуары</a>
+            </li>
+            <li class="site-nav__item site-nav__item--spares">
+              <a class="site-nav__link site-nav__link--page-main" href="#">Запчасти</a>
+            </li>
+            <li class="site-nav__item site-nav__item--workshop">
+              <a class="site-nav__link site-nav__link--page-main" href="#">Мастерская</a>
+            </li>
+            <li class="site-nav__item site-nav__item--testdrive">
+              <a class="site-nav__link site-nav__link--page-main" href="#">Тест-драйв</a>
+            </li>
+            <li class="site-nav__item site-nav__item--delivery">
+              <a class="site-nav__link site-nav__link--page-main" href="#">Доставка и оплата</a>
+            </li>
+            <li class="site-nav__item site-nav__item--installment">
+              <a class="site-nav__link site-nav__link--page-main" href="#">Рассрочка</a>
+            </li>
+            <li class="site-nav__item site-nav__item--join">
+              <a class="site-nav__link site-nav__link--page-main" href="#">Вступление в клуб</a>
+            </li>
+          </ul>
         </div>
         <div class="page-footer__bottom">
-          <div class="page-footer__logo-wrapper">
-            <a class="page-footer__logo" href="#">
-              <img src="img/logo.svg" alt="Chopper Bikeshop" width="184" height="30">
+          <div class="page-footer__logo logo">
+            <a class="logo__link" href="#">
+              <img src="img/logo-desktop.svg" alt="Chopper Bikeshop" width="184" height="30">
             </a>
           </div>
-          <div class="page-footer__social">
-            <b class="social__title">Мы в социальных сетях</b>
+          <div class="page-footer__social social">
+            <b class="visually-hidden">Мы в социальных сетях</b>
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link" href="#">
@@ -423,9 +459,9 @@
               </li>
             </ul>
           </div>
-          <div class="copyright">
+          <div class="page-footer__copyright copyright">
             <p class="copyright__info">
-              <span class="copyright__year">@2018</span>
+              <span class="copyright__year">©2018</span>
               <span class="copyright__privacy">Политика конфиденциальности</span>
             </p>
           </div>

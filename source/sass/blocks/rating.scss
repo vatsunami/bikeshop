@@ -1,0 +1,13 @@
+.rating__stars {
+  display: flex;
+  justify-content: space-between;
+  width: 136px;
+}
+
+.rating__star {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/icon-star.svg");
+  background-repeat: no-repeat;
+}

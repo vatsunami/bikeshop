@@ -1,0 +1,67 @@
+.catalog {
+  margin-bottom: 76px;
+}
+
+.catalog__container {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1314px;
+  margin: 0 auto;
+  padding: 33px 10px 0 27px;
+}
+
+.catalog__top {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 44px;
+  padding: 13px 0 19px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: calc(100% - 6px);
+    height: 2px;
+    background-color: #9b8869;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.catalog__filter {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 460px;
+  padding-top: 7px;
+}
+
+.catalog__grid {
+  display: flex;
+  justify-content: space-between;
+  width: 307px;
+  padding-top: 4px;
+}
+
+.catalog__form {
+  width: 182px;
+}
+
+.catalog__cards {
+  width: 1047px;
+  margin-bottom: 47px;
+}

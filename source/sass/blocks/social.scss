@@ -13,10 +13,20 @@
   display: block;
   width: 25px;
   height: 25px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .social__icon {
   position: absolute;
+  fill: #9b8869;
 
   &--vk {
     top: 6px;

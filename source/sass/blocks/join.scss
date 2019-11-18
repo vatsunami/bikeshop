@@ -1,0 +1,48 @@
+.join__wrapper {
+  max-width: 1366px;
+  margin: 0 auto;
+  background-color: brown;
+}
+
+.join__container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 125px 47px 118px 0;
+  max-width: 1120px;
+  margin: 0 auto;
+  background-color: brown;
+}
+
+.join__description {
+  width: 508px;
+}
+
+.join__title {
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.join__text {
+  margin: 0;
+  margin-bottom: 10px;
+  letter-spacing: 0.2px;
+  color: #e9e1d5;
+}
+
+.join__picture {
+  width: 529px;
+  height: 358px;
+  margin-top: 4px;
+  order: 1;
+
+  img {
+    display: block;
+    width: 529px;
+    height: 358px;
+  }
+}
+
+.join__button {
+  margin-top: 74px;
+}

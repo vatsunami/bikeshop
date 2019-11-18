@@ -1,0 +1,66 @@
+.filter-price {
+  padding-bottom: 18px;
+}
+
+.filter-price__fields {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.filter-price__fields input {
+  box-sizing: border-box;
+  width: 76px;
+  padding: 5px 9px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #9b8869;
+  background-color: transparent;
+  border: 1px solid #9b8869;
+}
+
+.filter-price__range {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.filter-price__scale {
+  display: block;
+  height: 2px;
+  background-color: #9b8869;
+}
+
+.filter-price__bar {
+  position: absolute;
+  top: 0;
+  left: 26px;
+  display: block;
+  width: 91px;
+  height: 2px;
+  background-color: #817155;
+}
+
+.filter-price__toggle {
+  box-sizing: border-box;
+  position: absolute;
+  top: -2px;
+  display: block;
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  background-color: #817155;
+  border: 0;
+  border-radius: 50%;
+
+  &--min {
+    left: 23px;
+  }
+
+  &--max {
+    left: 114px;
+  }
+}
