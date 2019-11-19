@@ -9,16 +9,26 @@
 
 .page-footer__container {
   box-sizing: border-box;
-  max-width: 1160px;
+  max-width: 1150px;
   margin: 0 auto;
+
+  &--main {
+    max-width: 1160px;
+    padding-left: 6px;
+  }
 }
 
 .page-footer__bottom {
   box-sizing: border-box;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 33px 18px 48px 12px;
+  padding: 33px 13px 48px 7px;
+
+  &--main {
+    padding: 33px 16px 48px 9px;
+  }
 }
 
 .page-footer__social {

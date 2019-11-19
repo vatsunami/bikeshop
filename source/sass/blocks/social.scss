@@ -22,6 +22,19 @@
   &:active {
     opacity: 0.5;
   }
+
+  &--promo {
+    opacity: 0.5;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
 }
 
 .social__icon {
@@ -41,5 +54,9 @@
   &--inst {
     top: 4px;
     left: 4px;
+  }
+
+  &--promo {
+    fill: #baa480;
   }
 }

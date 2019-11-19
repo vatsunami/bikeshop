@@ -14,12 +14,36 @@
   text-align: center;
   border: 1px solid #baa480;
 
+  &:hover,
+  &:focus,
+  &:active {
+    color: #ffffff;
+    background-color: #baa480;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
   &--buy {
     width: 273px;
     padding-top: 18px;
     color: #e9e1d5;
     background-color: #ba4f4f;
     border: none;
+
+    &:hover,
+    &:focus {
+      color: #e9e1d5;
+      background-color: #ba4f4f;
+      opacity: 0.7;
+    }
+
+    &:active {
+      color: #e9e1d5;
+      background-color: #ba4f4f;
+      opacity: 0.5;
+    }
   }
 }
 

@@ -1,6 +1,6 @@
 .site-nav {
   box-sizing: border-box;
-  max-width: 1160px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
@@ -10,16 +10,16 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  padding: 13px 15px 10px;
+  padding: 13px 10px 10px;
   list-style: none;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    left: 16px;
+    left: 11px;
     display: block;
-    width: 1120px;
+    width: 97.391304%; //1120px
     height: 1px;
     background-color: #9b8869;
   }
@@ -30,6 +30,13 @@
 
   &::after {
     bottom: 0;
+  }
+
+  &--main {
+    &::before,
+    &::after {
+      background-color: #baa480;
+    }
   }
 }
 
@@ -50,6 +57,10 @@
   letter-spacing: 0.04em;
   color: #9b8869;
   text-decoration: none;
+
+  &--main {
+    color: #baa480;
+  }
 
   &:hover,
   &:focus {

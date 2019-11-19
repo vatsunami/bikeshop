@@ -20,14 +20,37 @@
   display: block;
   width: 24px;
   height: 24px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &--active {
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+    }
+  }
 }
 
 .grid-view__icon {
   position: absolute;
   top: 7px;
   left: 6px;
+  fill: #9b8869;
 
   &--gallery {
     left: 7px;
+  }
+
+  &--active {
+    fill: #ba4f4f;
   }
 }

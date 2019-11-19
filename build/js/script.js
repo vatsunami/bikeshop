@@ -3,7 +3,7 @@
 var pageHeader = document.querySelector('.page-header');
 var pageHeaderTop = pageHeader.querySelector('.page-header__top');
 var pageHeaderTopContainer = pageHeader.querySelector('.page-header__top-container');
-var pageHeaderLogoWrapper = pageHeader.querySelector('.page-header__logo-wrapper');
+var pageHeaderLogo = pageHeader.querySelector('.page-header__logo');
 var mainNav = pageHeader.querySelector('.page-header__main-nav');
 var menuButton = pageHeader.querySelector('.page-header__menu-button');
 var userAccount = pageHeader.querySelector('.page-header__user-account');
@@ -21,7 +21,7 @@ var closeHeaderMenu = function () {
   menuButton.classList.remove('menu-button--close');
   pageHeaderTop.classList.add('page-header__top--closed');
   pageHeaderTopContainer.classList.add('page-header__top-container--closed');
-  pageHeaderLogoWrapper.classList.add('page-header__logo-wrapper--closed');
+  pageHeaderLogo.classList.add('page-header__logo--closed');
   mainNav.classList.add('main-nav--closed');
   userAccount.classList.add('user-account--closed');
   userNav.classList.add('user-nav--closed');
@@ -40,7 +40,7 @@ var openHeaderMenu = function () {
   menuButton.classList.add('menu-button--close');
   pageHeaderTop.classList.remove('page-header__top--closed');
   pageHeaderTopContainer.classList.remove('page-header__top-container--closed');
-  pageHeaderLogoWrapper.classList.remove('page-header__logo-wrapper--closed');
+  pageHeaderLogo.classList.remove('page-header__logo--closed');
   mainNav.classList.remove('main-nav--closed');
   userAccount.classList.remove('user-account--closed');
   userNav.classList.remove('user-nav--closed');

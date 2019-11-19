@@ -10,7 +10,20 @@
   letter-spacing: 0.04em;
   color: #9b8869;
   background-color: transparent;
+  background-image: url("../img/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: top 6px right;
   border-radius: 0;
   border: none;
   appearance: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }

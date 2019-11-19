@@ -12,6 +12,7 @@
 .grid-count__label {
   width: 119px;
   flex-shrink: 0;
+  color: #9b8869;
 }
 
 .grid-count__list {
@@ -28,6 +29,16 @@
   padding: 0 11px 0 10px;
   color: #9b8869;
   text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 
   &::after {
     content: "";
@@ -45,6 +56,16 @@
 
     &::after {
       display: none;
+    }
+  }
+
+  &--active {
+    color: #ba4f4f;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
     }
   }
 }

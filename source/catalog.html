@@ -14,12 +14,12 @@
     <header class="page-header">
       <div class="page-header__container">
         <div class="page-header__top">
-          <div class="page-header__top-container page-header__top-container--page-catalog">
-            <div class="page-header__logo-wrapper">
-              <a class="page-header__logo" href="#">
+          <div class="page-header__top-container">
+            <div class="page-header__logo">
+              <a class="logo__link" href="main.html">
                 <picture>
-                  <source media="(max-width: 768px)" srcset="img/logo-tablet.svg">
-                  <img src="img/logo.svg" alt="BikeShop" width="184" height="29">
+                  <source media="(max-width: 768px)" srcset="img/logo-mobile.svg">
+                  <img src="img/logo-desktop.svg" alt="BikeShop" width="184" height="29">
                 </picture>
               </a>
             </div>
@@ -30,23 +30,23 @@
 
             <nav class="page-header__main-nav main-nav">
               <ul class="main-nav__list">
-                <li class="main-nav__item main-nav__item--inner-page main-nav__item--inner-page-bikes main-nav__item--bikes">
-                  <a class="main-nav__link main-nav__link--inner-page" href="catalog.html">Велосипеды</a>
+                <li class="main-nav__item">
+                  <a class="main-nav__link main-nav__link--active">Велосипеды</a>
                 </li>
-                <li class="main-nav__item main-nav__item--inner-page main-nav__item--inner-page-accessories main-nav__item--accessories">
-                  <a class="main-nav__link main-nav__link--inner-page" href="#">Аксессуары</a>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="card.html">Аксессуары</a>
                 </li>
-                <li class="main-nav__item main-nav__item--inner-page main-nav__item--inner-page-spares main-nav__item--spares">
-                  <a class="main-nav__link main-nav__link--inner-page" href="#">Запчасти</a>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Запчасти</a>
                 </li>
-                <li class="main-nav__item main-nav__item--inner-page main-nav__item--inner-page-workshop main-nav__item--workshop">
-                  <a class="main-nav__link main-nav__link--inner-page" href="#">Мастерская</a>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Мастерская</a>
                 </li>
-                <li class="main-nav__item main-nav__item--inner-page main-nav__item--inner-page-delivery main-nav__item--delivery">
-                  <a class="main-nav__link main-nav__link--inner-page" href="#">Доставка и оплата</a>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Доставка и оплата</a>
                 </li>
-                <li class="main-nav__item main-nav__item--inner-page main-nav__item--inner-page-contacts main-nav__item--contacts">
-                  <a class="main-nav__link main-nav__link--inner-page" href="#">Контакты</a>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -62,17 +62,17 @@
                   </a>
                 </li>
                 <li class="user-account__item user-logout">
-                  <a class="user-logout__link " href="#">
-                    <svg class="user-logout__icon " width="24" height="24">
+                  <a class="user-logout__link" href="#">
+                    <svg class="user-logout__icon" width="24" height="24">
                       <use xlink:href="#icon-logout"></use>
                     </svg>
-                    <span class="user-logout__text ">Выйти</span>
+                    <span class="user-logout__text">Выйти</span>
                   </a>
                 </li>
               </ul>
             </div>
 
-            <div class="page-header__user-nav user-nav user-nav--inner-page">
+            <div class="page-header__user-nav user-nav--inner-page-card user-nav">
               <ul class="user-nav__list">
                 <li class="user-nav__item user-search">
                   <a class="user-search__link" href="#">
@@ -109,7 +109,10 @@
         <div class="catalog__container">
           <div class="catalog__top">
             <div class="catalog__filter">
-              <button class="catalog__button-reset button-reset" type="button">Сбросить фильтры</button>
+              <button class="catalog__button-reset button-reset">
+                <span class="button-reset__text">Сбросить фильтры</span>
+                <span class="button-reset__count">(3)</span>
+              </button>
               <div class="catalog__sort">
                 <span class="visually-hidden">Сортировка</span>
                 <select class="sort" name="sort">
@@ -123,7 +126,7 @@
                 <span class="grid-count__label">Показывать по</span>
                 <ul class="grid-count__list">
                   <li class="grid-count__item">
-                    <a class="grid-count__toggle" href="#">12</a>
+                    <a class="grid-count__toggle grid-count__toggle--active">12</a>
                   </li>
                   <li class="grid-count__item">
                     <a class="grid-count__toggle" href="#">24</a>
@@ -138,9 +141,9 @@
                 <span class="visually-hidden">Вид сетки</span>
                 <ul class="grid-view__list">
                   <li class="grid-view__item">
-                    <a class="grid-view__toggle" href="#">
+                    <a class="grid-view__toggle grid-view__toggle--active" href="#">
                       <span class="visually-hidden">Галерея</span>
-                      <svg class="grid-view__icon grid-view__icon--gallery" width="11" height="11" viewBox="0 0 11 11">
+                      <svg class="grid-view__icon grid-view__icon--gallery grid-view__icon--active" width="11" height="11" viewBox="0 0 11 11">
                         <use xlink:href="#icon-grid-icons"></use>
                       </svg>
                     </a>
@@ -180,7 +183,11 @@
               </div>
 
               <div class="filters-group filters-group--underline filters-group--electrobike">
-                <h3 class="filters-group__title">Электровелосипед</h3>
+                <h3 class="filters-group__title visually-hidden">Электровелосипед</h3>
+                <div class="filters-group__toggle toggle-filter">
+                  <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-electrobike" checked>
+                  <label class="toggle-filter__label" for="toggle-electrobike">Электровелосипед</label>
+                </div>
                 <ul class="filters-group__list filters-group__list--electrobike">
                   <li class="filters-group__item">
                     <input class="visually-hidden" type="checkbox" name="bike" id="bike">
@@ -194,11 +201,19 @@
               </div>
 
                <div class="filters-group filters-group--underline filters-group--closed">
-                <h3 class="filters-group__title">Производитель</h3>
+                <h3 class="filters-group__title visually-hidden">Производитель</h3>
+                <div class="filters-group__toggle toggle-filter toggle-filter--closed">
+                  <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-brand">
+                  <label class="toggle-filter__label toggle-filter__label--closed" for="toggle-brand">Производитель</label>
+                </div>
               </div>
 
               <div class="filters-group filters-group--underline filters-group--material">
-                <h3 class="filters-group__title">Материал рамы</h3>
+                <h3 class="filters-group__title visually-hidden">Материал рамы</h3>
+                <div class="filters-group__toggle toggle-filter">
+                  <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-material" checked>
+                  <label class="toggle-filter__label" for="toggle-material">Материал рамы</label>
+                </div>
                 <ul class="filters-group__list filters-group__list--material">
                   <li class="filters-group__item">
                     <input class="visually-hidden" type="checkbox" name="steel" id="steel" checked>
@@ -212,7 +227,11 @@
               </div>
 
               <div class="filters-group filters-group--underline filters-group--color">
-                <h3 class="filters-group__title">Цвет</h3>
+                <h3 class="filters-group__title visually-hidden">Цвет</h3>
+                <div class="filters-group__toggle toggle-filter">
+                  <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-color" checked>
+                  <label class="toggle-filter__label" for="toggle-color">Цвет</label>
+                </div>
                 <ul class="filters-group__list filters-group__list--color">
                   <li class="filters-group__item">
                     <input class="visually-hidden" type="checkbox" name="black" id="black">
@@ -238,12 +257,20 @@
               </div>
 
               <div class="filters-group filters-group--underline filters-group--closed">
-                <h3 class="filters-group__title">Размер</h3>
+                <h3 class="filters-group__title visually-hidden">Размер</h3>
+                <div class="filters-group__toggle toggle-filter">
+                  <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-size">
+                  <label class="toggle-filter__label toggle-filter__label--closed" for="toggle-size">Размер</label>
+                </div>
               </div>
 
 
               <div class="filters-group filters-group--underline filters-group--wheels">
-                <h3 class="filters-group__title">Колеса</h3>
+                <h3 class="filters-group__title visually-hidden">Колеса</h3>
+                <div class="filters-group__toggle toggle-filter">
+                  <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-wheels" checked>
+                  <label class="toggle-filter__label" for="toggle-wheels">Колеса</label>
+                </div>
                 <div class="filters-group__container">
                   <ul class="filters-group__list filters-group__list--wheels">
                     <li class="filters-group__item">
@@ -267,7 +294,11 @@
               </div>
 
               <div class="filters-group">
-                <h3 class="filters-group__title">Кол-во скоростей</h3>
+                <h3 class="filters-group__title visually-hidden">Кол-во скоростей</h3>
+                <div class="filters-group__toggle toggle-filter">
+                  <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-guests">
+                  <label class="toggle-filter__label toggle-filter__label--closed" for="toggle-guests">Кол-во скоростей</label>
+                </div>
               </div>
             </form>
           </div>
@@ -725,14 +756,14 @@
 
           <div class="catalog__pagination pagination">
             <div class="pagination__container">
-              <a class="pagination__button pagination__button--prev" href="#">
+              <a class="pagination__button pagination__button--disabled pagination__button--prev" href="#">
                 <span class="visually-hidden">Предыдущая страница</span>
               </a>
               <ul class="pagination__list">
-                <li class="pagination__item"><a class="pagination__link">1</a></li>
+                <li class="pagination__item"><a class="pagination__link pagination__link--active">1</a></li>
                 <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
                 <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
-                <li class="pagination__item"><a class="pagination__link pagination__link--dots">...</a></li>
+                <li class="pagination__item"><span class="pagination__link pagination__link--dots">...</span></li>
                 <li class="pagination__item"><a class="pagination__link" href="#">26</a></li>
               </ul>
               <a class="pagination__button pagination__button--next" href="#">
@@ -749,29 +780,29 @@
         <div class="page-footer__top site-nav">
           <b class="visually-hidden">Навигация по сайту</b>
           <ul class="site-nav__list">
-            <li class="site-nav__item site-nav__item--bikes">
-              <a class="site-nav__link site-nav__link--page-main" href="#">Велосипеды</a>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Велосипеды</a>
             </li>
-            <li class="site-nav__item site-nav__item--accessories">
-              <a class="site-nav__link site-nav__link--page-main" href="#">Аксессуары</a>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Аксессуары</a>
             </li>
-            <li class="site-nav__item site-nav__item--spares">
-              <a class="site-nav__link site-nav__link--page-main" href="#">Запчасти</a>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Запчасти</a>
             </li>
-            <li class="site-nav__item site-nav__item--workshop">
-              <a class="site-nav__link site-nav__link--page-main" href="#">Мастерская</a>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Мастерская</a>
             </li>
-            <li class="site-nav__item site-nav__item--testdrive">
-              <a class="site-nav__link site-nav__link--page-main" href="#">Тест-драйв</a>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Тест-драйв</a>
             </li>
-            <li class="site-nav__item site-nav__item--delivery">
-              <a class="site-nav__link site-nav__link--page-main" href="#">Доставка и оплата</a>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Доставка и оплата</a>
             </li>
-            <li class="site-nav__item site-nav__item--installment">
-              <a class="site-nav__link site-nav__link--page-main" href="#">Рассрочка</a>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Рассрочка</a>
             </li>
-            <li class="site-nav__item site-nav__item--join">
-              <a class="site-nav__link site-nav__link--page-main" href="#">Вступление в клуб</a>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Вступление в клуб</a>
             </li>
           </ul>
         </div>

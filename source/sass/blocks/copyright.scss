@@ -17,6 +17,14 @@
     background-color: #9b8869;
     order: 1;
   }
+
+  &--main {
+    color: #baa480;
+
+    &::before {
+      background-color: #baa480;
+    }
+  }
 }
 
 .copyright__year {

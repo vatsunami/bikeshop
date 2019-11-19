@@ -20,4 +20,10 @@
   margin: 0 10px;
   color: #817155;
   border-color: #9b8869;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: #9b8869;
+  }
 }

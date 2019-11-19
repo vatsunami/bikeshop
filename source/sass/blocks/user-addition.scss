@@ -6,6 +6,15 @@
   min-height: 36px;
   color: #9b8869;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .user-addition__icon {
@@ -14,6 +23,7 @@
   left: 6px;
   width: 28px;
   height: 14px;
+  fill: #9b8869;
 }
 
 .user-addition__text,

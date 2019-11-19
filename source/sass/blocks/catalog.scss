@@ -1,5 +1,5 @@
 .catalog {
-  margin-bottom: 76px;
+  margin-bottom: 77px;
 }
 
 .catalog__container {
@@ -7,9 +7,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 1314px;
+  max-width: 1350px;
   margin: 0 auto;
-  padding: 33px 10px 0 27px;
+  padding: 0 28px 0 45px;
 }
 
 .catalog__top {
@@ -19,7 +19,7 @@
   justify-content: space-between;
   width: 100%;
   margin-bottom: 44px;
-  padding: 13px 0 19px;
+  padding: 12px 0 19px;
 
   &::before,
   &::after {
@@ -27,7 +27,7 @@
     position: absolute;
     display: block;
     width: calc(100% - 6px);
-    height: 2px;
+    height: 1px;
     background-color: #9b8869;
   }
 

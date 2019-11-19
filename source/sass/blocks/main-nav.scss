@@ -1,6 +1,7 @@
 .main-nav {
-  // width: 767px;
-  width: 59.319412%;
+  box-sizing: border-box;
+  width: 800px;
+  padding: 0 10px;
 }
 
 .main-nav__list {
@@ -12,42 +13,10 @@
 }
 
 .main-nav__item {
-  margin-right: 24px;
+  margin-right: 30px;
 
-  &--inner-page {
-    margin-right: 31px;
-  }
-
-  &--accessories {
-    margin-right: 26px;
-  }
-
-  &--inner-page-accessories {
-    margin-right: 31px;
-  }
-
-  &--spares {
-    margin-right: 26px;
-  }
-
-  &--inner-page-spares {
-    margin-right: 31px;
-  }
-
-  &--workshop {
+  &--main {
     margin-right: 25px;
-  }
-
-  &--inner-page-workshop {
-    margin-right: 30px;
-  }
-
-  &--delivery {
-    margin-right: 22px;
-  }
-
-  &--inner-page-delivery {
-    margin-right: 30px;
   }
 }
 
@@ -60,13 +29,31 @@
   font-weight: 500;
   line-height: 18px;
   letter-spacing: 0.04em;
-  color: #817155;
+  color: #9b8869;
   text-decoration: none;
-  text-transform: uppercase;
+  cursor: pointer;
 
-  &--inner-page {
-    text-transform: none;
-    color: #9b8869;
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &--main {
+    text-transform: uppercase;
+  }
+
+  &--active {
+    color: #ba4f4f;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+    }
   }
 }
 
@@ -78,6 +65,7 @@
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 8px;
+    padding: 0;
 
     &--closed {
       display: none;

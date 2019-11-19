@@ -15,10 +15,10 @@
       <div class="page-header__container">
         <div class="page-header__top">
           <div class="page-header__top-container">
-            <div class="page-header__logo-wrapper">
-              <a class="page-header__logo" href="#">
+            <div class="page-header__logo">
+              <a class="logo__link" href="main.html">
                 <picture>
-                  <source media="(max-width: 768px)" srcset="img/logo-tablet.svg">
+                  <source media="(max-width: 768px)" srcset="img/logo-mobile.svg">
                   <img src="img/logo-desktop.svg" alt="BikeShop" width="184" height="29">
                 </picture>
               </a>
@@ -30,23 +30,23 @@
 
             <nav class="page-header__main-nav main-nav">
               <ul class="main-nav__list">
-                <li class="main-nav__item main-nav__item--inner-page main-nav__item--inner-page-bikes main-nav__item--bikes">
-                  <a class="main-nav__link main-nav__link--inner-page" href="catalog.html">Велосипеды</a>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="catalog.html">Велосипеды</a>
                 </li>
-                <li class="main-nav__item main-nav__item--inner-page main-nav__item--inner-page-accessories main-nav__item--accessories">
-                  <a class="main-nav__link main-nav__link--inner-page" href="#">Аксессуары</a>
+                <li class="main-nav__item">
+                  <a class="main-nav__link main-nav__link--active" href="card.html">Аксессуары</a>
                 </li>
-                <li class="main-nav__item main-nav__item--inner-page main-nav__item--inner-page-spares main-nav__item--spares">
-                  <a class="main-nav__link main-nav__link--inner-page" href="#">Запчасти</a>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Запчасти</a>
                 </li>
-                <li class="main-nav__item main-nav__item--inner-page main-nav__item--inner-page-workshop main-nav__item--workshop">
-                  <a class="main-nav__link main-nav__link--inner-page" href="#">Мастерская</a>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Мастерская</a>
                 </li>
-                <li class="main-nav__item main-nav__item--inner-page main-nav__item--inner-page-delivery main-nav__item--delivery">
-                  <a class="main-nav__link main-nav__link--inner-page" href="#">Доставка и оплата</a>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Доставка и оплата</a>
                 </li>
-                <li class="main-nav__item main-nav__item--inner-page main-nav__item--inner-page-contacts main-nav__item--contacts">
-                  <a class="main-nav__link main-nav__link--inner-page" href="#">Контакты</a>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -72,8 +72,8 @@
               </ul>
             </div>
 
-            <div class="page-header__user-nav user-nav--inner-page-card user-nav">
-              <ul class="user-nav__list">
+            <div class="page-header__user-nav user-nav user-nav--long">
+              <ul class="user-nav__list user-nav__list--long">
                 <li class="user-nav__item user-search">
                   <a class="user-search__link" href="#">
                     <svg class="user-search__icon" width="24" height="24">
@@ -97,7 +97,7 @@
                 </li>
                 <li class="user-nav__item user-addition">
                   <a class="user-addition__link" href="#">
-                    <svg class="user-addition__icon" width="24.86" height="12">
+                    <svg class="user-addition__icon" width="24.86" height="12" viewBox="0 0 24.86 12">
                       <use xlink:href="#icon-burger-plus"></use>
                     </svg>
                     <span class="user-addition__text">Дополнительно</span>
@@ -188,23 +188,23 @@
                 <div class="slider-view__border-wrapper">
                   <div class="slider-view__border"></div>
                 </div>
-                <ul class="slider-view__slides">
-                  <li class="slider-view__slide" id="slide-1">
-                    <!-- <div class="slider-view__picture">
+                <!-- <ul class="slider-view__slides">
+                  <li class="slider-view__slide">
+                    <div class="slider-view__picture">
                       <img src="http://placehold.it/518x376" alt="Седло Brooks B67" width="518" height="376">
-                    </div> -->
+                    </div>
                   </li>
-                  <li class="slider-view__slide" id="slide-2">
-                    <!-- <div class="slider-view__picture">
+                  <li class="slider-view__slide">
+                    <div class="slider-view__picture">
                       <img src="http://placehold.it/518x376" alt="Седло Brooks B67" width="518" height="376">
-                    </div> -->
+                    </div>
                   </li>
-                  <li class="slider-view__slide" id="slide-3">
-                    <!-- <div class="slider-view__picture">
+                  <li class="slider-view__slide">
+                    <div class="slider-view__picture">
                       <img src="http://placehold.it/518x376" alt="Седло Brooks B67" width="518" height="376">
-                    </div> -->
+                    </div>
                   </li>
-                </ul>
+                </ul> -->
               </div>
            </div>
 
@@ -218,6 +218,7 @@
              </a>
            </div>
           </div>
+
           <div class="product__details product-details">
             <a class="product-details__toggle button product-details__toggle--description">Подробное описание</a>
             <section class="product-details__section product-details__section--description product-details__section--hidden">
@@ -398,29 +399,29 @@
         <div class="page-footer__top site-nav">
           <b class="visually-hidden">Навигация по сайту</b>
           <ul class="site-nav__list">
-            <li class="site-nav__item site-nav__item--bikes">
-              <a class="site-nav__link site-nav__link--page-main" href="#">Велосипеды</a>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Велосипеды</a>
             </li>
-            <li class="site-nav__item site-nav__item--accessories">
-              <a class="site-nav__link site-nav__link--page-main" href="#">Аксессуары</a>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Аксессуары</a>
             </li>
-            <li class="site-nav__item site-nav__item--spares">
-              <a class="site-nav__link site-nav__link--page-main" href="#">Запчасти</a>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Запчасти</a>
             </li>
-            <li class="site-nav__item site-nav__item--workshop">
-              <a class="site-nav__link site-nav__link--page-main" href="#">Мастерская</a>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Мастерская</a>
             </li>
-            <li class="site-nav__item site-nav__item--testdrive">
-              <a class="site-nav__link site-nav__link--page-main" href="#">Тест-драйв</a>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Тест-драйв</a>
             </li>
-            <li class="site-nav__item site-nav__item--delivery">
-              <a class="site-nav__link site-nav__link--page-main" href="#">Доставка и оплата</a>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Доставка и оплата</a>
             </li>
-            <li class="site-nav__item site-nav__item--installment">
-              <a class="site-nav__link site-nav__link--page-main" href="#">Рассрочка</a>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Рассрочка</a>
             </li>
-            <li class="site-nav__item site-nav__item--join">
-              <a class="site-nav__link site-nav__link--page-main" href="#">Вступление в клуб</a>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Вступление в клуб</a>
             </li>
           </ul>
         </div>

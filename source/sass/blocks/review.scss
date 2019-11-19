@@ -66,4 +66,12 @@
   width: 273px;
   margin-top: 35px;
   margin-left: 2px;
+  color: #817155;
+  border-color: #817155;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: #817155;
+  }
 }

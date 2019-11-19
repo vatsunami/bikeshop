@@ -1,20 +1,22 @@
 .page-header {
-  &--main {
-    min-height: 768px;
-    background-image: url("../img/background-promo.jpg");
-    background-color: #2c2c27;
-    background-repeat: no-repeat;
-    background-position: center 1px;
-    background-size: cover;
-  }
-
   &--underline {
     border-bottom: 1px solid #9b8869;
   }
 }
 
-.page-header__container {
+.page-header__wrapper {
   max-width: 1366px;
+  min-height: 768px;
+  margin: 0 auto;
+  background-image: url("../img/background-promo.jpg");
+  background-color: #2c2c27;
+  background-repeat: no-repeat;
+  background-position: center 1px;
+  background-size: cover;
+}
+
+.page-header__container {
+  max-width: 1350px;
   margin: 0 auto;
 }
 
@@ -22,23 +24,16 @@
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  padding: 35px 20px 34px 53px;
-
-  &--page-catalog {
-    padding-right: 19px;
-  }
-}
-
-.page-header__logo-wrapper {
-  width: 184px;
-  margin-top: 1px;
-  margin-right: 36px;
+  padding: 35px 12px 34px 45px;
 }
 
 .page-header__logo {
-  display: block;
-  width: 184px;
-  height: 29px;
+  margin-top: 1px;
+  margin-right: 51px;
+
+  &--main {
+    margin-right: 47px;
+  }
 }
 
 .page-header__menu-button {
@@ -51,10 +46,8 @@
 }
 
 @media (max-width: 768px) {
-  .page-header {
-    &--main {
-      min-height: 568px;
-    }
+  .page-header__wrapper {
+    min-height: 568px;
   }
 
   .page-header__top {
@@ -81,7 +74,7 @@
     }
   }
 
-  .page-header__logo-wrapper {
+  .page-header__logo {
     display: none;
     width: 130px;
     height: 22px;
@@ -92,12 +85,6 @@
       margin-top: 9px;
       order: 1;
     }
-  }
-
-  .page-header__logo {
-    position: absolute;
-    width: 130px;
-    height: 22px;
   }
 
   .page-header__menu-button {
