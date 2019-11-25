@@ -1,7 +1,14 @@
+.rating {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .rating__stars {
   display: flex;
   justify-content: space-between;
   width: 136px;
+  margin-right: 8px;
+  padding-top: 5px;
 }
 
 .rating__star {
@@ -10,4 +17,21 @@
   height: 24px;
   background-image: url("../img/icon-star.svg");
   background-repeat: no-repeat;
+
+  &--inactive {
+    opacity: 0.3;
+  }
+}
+
+.rating__count {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+@media (max-width: 768px) {
+  .rating__count {
+    padding-top: 5px;
+    font-size: 16px;
+    line-height: 30px;
+  }
 }

@@ -1,6 +1,7 @@
 .button-reset {
   box-sizing: border-box;
   display: block;
+  width: 167px;
   padding: 0;
   padding-right: 20px;
   font-family: "Hagin Caps Medium", "Times New Roman", serif;
@@ -12,7 +13,7 @@
   background-color: transparent;
   background-image: url("../img/icon-close-filter.svg");
   background-repeat: no-repeat;
-  background-position: top 3px right;
+  background-position: top 1px right;
   border: none;
   cursor: pointer;
 
@@ -28,4 +29,19 @@
 
 .button-reset__count {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .button-reset {
+    display: block;
+    width: auto;
+    padding-top: 3px;
+    padding-right: 0;
+    background: none;
+  }
+
+  .button-reset__count,
+  .button-reset__text {
+    display: inline-block;
+  }
 }

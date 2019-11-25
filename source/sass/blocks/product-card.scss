@@ -1,6 +1,10 @@
 .product-card {
   position: relative;
-  width: 330px;
+  width: 300px;
+
+  &--extra {
+    width: 273px;
+  }
 }
 
 .product-card__description {
@@ -9,15 +13,14 @@
   flex-direction: column;
   flex-wrap: wrap;
   box-sizing: border-box;
-  margin-top: -25px;
-  padding: 0 50px;
+  width: 220px;
+  margin: -25px auto 0;
   text-align: center;
 }
 
 .product-card__name {
-  width: 160px;
-  margin: 0 auto;
-  margin-bottom: 2px;
+  margin: 0 auto 2px;
+  padding: 0 30px;
   font-family: "Hagin Caps Medium", "Times New Roman", serif;
   font-size: 24px;
   font-weight: 500;
@@ -37,7 +40,6 @@
   letter-spacing: 0.2px;
   order: 2;
 }
-
 
 .product-card__price {
   margin-top: 13px;
@@ -66,4 +68,15 @@
   right: -55px;
   width: 35px;
   height: 35px;
+}
+
+@media (max-width: 768px) {
+  .product-card__name,
+  .product-card__price {
+    font-size: 22px;
+  }
+
+  .product-card__price {
+    margin-top: 8px;
+  }
 }

@@ -2,7 +2,7 @@
   box-sizing: border-box;
   width: 675px;
   margin-left: auto;
-  padding: 146px 30px 23px 39px;
+  padding: 146px 30px 31px 39px;
 }
 
 .promo__slogan-wrapper {
@@ -15,11 +15,8 @@
 }
 
 .promo__button {
-  width: 240px;
   margin-left: 141px;
   margin-bottom: 194px;
-  text-transform: lowercase;
-  letter-spacing: 1px;
 }
 
 .promo__social {
@@ -28,13 +25,9 @@
 }
 
 @media (max-width: 768px) {
-  .promo {
-    min-height: 521px;
-  }
-
   .promo__container {
     width: 100%;
-    padding: 36px 0 218px;
+    padding: 26px 0 218px;
   }
 
   .promo__slogan-wrapper {
@@ -50,7 +43,6 @@
   }
 
   .promo__button {
-    width: 240px;
     margin: 0 auto;
   }
 

@@ -25,6 +25,28 @@
     opacity: 0.7;
   }
 
+  &--promo {
+    text-transform: lowercase;
+    letter-spacing: 1px;
+  }
+
+  &--source {
+    width: 273px;
+    color: #817155;
+    border-color: #9b8869;
+
+    &:hover,
+    &:focus {
+      color: #ffffff;
+      background-color: #9b8869;
+    }
+  }
+
+  &--info {
+    color: #baa480;
+    border-color: #baa480;
+  }
+
   &--buy {
     width: 273px;
     padding-top: 18px;
@@ -54,4 +76,31 @@
   margin-top: 2px;
   margin-right: 10px;
   fill: #e9e1d5;
+}
+
+@media (max-width: 768px) {
+  .button {
+    width: 196px;
+    padding: 16px 10px 12px;
+    font-size: 24px;
+    line-height: 30px;
+
+    &--promo {
+      width: 240px;
+    }
+
+    &--source {
+      padding: 12px 10px 8px;
+      font-size: 22px;
+    }
+
+    &--info {
+      padding: 12px 10px 6px;
+      font-size: 22px;
+    }
+
+    &--buy {
+      padding: 13px 10px 9px;
+    }
+  }
 }

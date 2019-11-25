@@ -31,7 +31,7 @@
       display: block;
       width: 1px;
       height: 12px;
-      background-color: black;
+      background-color: #9b8869;
       transform: rotate(20deg);
     }
   }
@@ -52,5 +52,20 @@
 
   &:active {
     opacity: 0.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs {
+    margin-bottom: 39px;
+  }
+
+  .breadcrumbs__container {
+    width: 100%;
+    padding: 10px 30px 0;
+  }
+
+  .breadcrumbs__list {
+    margin-left: 27px;
   }
 }

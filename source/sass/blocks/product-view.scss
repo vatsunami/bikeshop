@@ -3,10 +3,24 @@
   position: relative;
   width: 100%;
   min-height: 240px;
+
+  img {
+    display: block;
+  }
 }
 
 .product-view__picture {
   z-index: 1;
+
+  &--product-1 img {
+    padding-top: 63px;
+    padding-left: 21px;
+  }
+
+  &--product-2 img {
+    padding-top: 50px;
+    padding-left: 25px;
+  }
 }
 
 .product-view__border-wrapper {
@@ -22,8 +36,14 @@
 .product-view__border {
   box-sizing: border-box;
   width: 178px;
-  height: 240px;
+  height: 100%;
   margin: 0 auto;
   padding: 0;
   border: 6px solid #f0ede8;
+}
+
+@media (max-width: 768px) {
+  .product-view {
+    min-height: 178px;
+  }
 }

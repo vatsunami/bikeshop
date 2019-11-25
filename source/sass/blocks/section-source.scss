@@ -1,0 +1,31 @@
+.section-source {
+  display: flex;
+  width: 82.137628%; //1122px;
+  margin: 0 auto;
+
+  &::before,
+  &::after {
+    content: "";
+    flex-grow: 1;
+    align-self: center;
+    width: 1px;
+    height: 1px;
+    background-color: #9b8869;
+  }
+}
+
+.section-source__link {
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .section-source {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 14px;
+  }
+
+  .section-source__link {
+    margin: 0 8px;
+  }
+}

@@ -40,3 +40,30 @@
   letter-spacing: 0.3px;
   order: 2;
 }
+
+@media (max-width: 768px) {
+  .copyright__info {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .copyright__year,
+  .copyright__privacy {
+    width: 100%;
+    text-align: center;
+  }
+
+  .copyright__year {
+    order: 1;
+  }
+
+  .copyright__privacy {
+    margin-bottom: 18px;
+    order: 0;
+  }
+}

@@ -107,65 +107,70 @@
       <section class="catalog">
         <h2 class="visually-hidden">Велосипеды</h2>
         <div class="catalog__container">
-          <div class="catalog__top">
-            <div class="catalog__filter">
-              <button class="catalog__button-reset button-reset">
-                <span class="button-reset__text">Сбросить фильтры</span>
-                <span class="button-reset__count">(3)</span>
-              </button>
-              <div class="catalog__sort">
-                <span class="visually-hidden">Сортировка</span>
-                <select class="sort" name="sort">
-                  <option value="popular">По популярности</option>
-                </select>
+          <div class="catalog__menu">
+            <div class="catalog__header catalog-header">
+              <div class="catalog-header__buttons">
+                <button class="catalog-header__button-filters">
+                  <span class="catalog-header__button-filters-text">Фильтры</span>
+                  <span class="catalog-header__button-filters-count">(3)</span>
+                </button>
+                <button class="catalog-header__button-reset button-reset">Сбросить фильтры
+                  <span class="button-reset__count">(3)</span>
+                </button>
+                <button class="catalog-header__button-close menu-button menu-button--close">
+                  <span class="visually-hidden">Спрятать фильтры</span>
+                </button>
+              </div>
+              <div class="catalog-header__content">
+                <div class="catalog-header__sort">
+                  <span class="visually-hidden">Сортировка</span>
+                  <select class="sort" name="sort">
+                    <option value="popular">По популярности</option>
+                  </select>
+                </div>
+                <div class="catalog-header__grid">
+                  <div class="grid-count">
+                    <span class="grid-count__label">Показывать по</span>
+                    <ul class="grid-count__list">
+                      <li class="grid-count__item">
+                        <a class="grid-count__toggle grid-count__toggle--active">12</a>
+                      </li>
+                      <li class="grid-count__item">
+                        <a class="grid-count__toggle" href="#">24</a>
+                      </li>
+                      <li class="grid-count__item">
+                        <a class="grid-count__toggle grid-count__toggle--all" href="#">все</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="grid-view">
+                    <span class="visually-hidden">Вид сетки</span>
+                    <ul class="grid-view__list">
+                      <li class="grid-view__item">
+                        <a class="grid-view__toggle grid-view__toggle--active" href="#">
+                          <span class="visually-hidden">Галерея</span>
+                          <svg class="grid-view__icon grid-view__icon--gallery grid-view__icon--active" width="11" height="11" viewBox="0 0 11 11">
+                            <use xlink:href="#icon-grid-icons"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="grid-view__item">
+                        <a class="grid-view__toggle" href="#">
+                          <span class="visually-hidden">Список</span>
+                          <svg class="grid-view__icon grid-view__icon--list" width="12" height="11" viewBox="0 0 12 11">
+                            <use xlink:href="#icon-grid-list"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="catalog__grid">
-              <div class="grid-count">
-                <span class="grid-count__label">Показывать по</span>
-                <ul class="grid-count__list">
-                  <li class="grid-count__item">
-                    <a class="grid-count__toggle grid-count__toggle--active">12</a>
-                  </li>
-                  <li class="grid-count__item">
-                    <a class="grid-count__toggle" href="#">24</a>
-                  </li>
-                  <li class="grid-count__item">
-                    <a class="grid-count__toggle grid-count__toggle--all" href="#">все</a>
-                  </li>
-                </ul>
-              </div>
+            <!-- Фильтры -->
 
-              <div class="grid-view">
-                <span class="visually-hidden">Вид сетки</span>
-                <ul class="grid-view__list">
-                  <li class="grid-view__item">
-                    <a class="grid-view__toggle grid-view__toggle--active" href="#">
-                      <span class="visually-hidden">Галерея</span>
-                      <svg class="grid-view__icon grid-view__icon--gallery grid-view__icon--active" width="11" height="11" viewBox="0 0 11 11">
-                        <use xlink:href="#icon-grid-icons"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="grid-view__item">
-                    <a class="grid-view__toggle" href="#">
-                      <span class="visually-hidden">Список</span>
-                      <svg class="grid-view__icon grid-view__icon--list" width="12" height="11" viewBox="0 0 12 11">
-                        <use xlink:href="#icon-grid-list"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Фильтры -->
-
-          <div class="catalog__form">
-            <form class="catalog__form-filters" action="https://echo.htmlacademy.ru" method="post">
-
+            <form class="catalog__form" action="https://echo.htmlacademy.ru" method="post">
               <div class="filter-price">
                 <h3 class="visually-hidden">Цена</h3>
                 <div class="filter-price__fields">
@@ -181,7 +186,6 @@
                   <button class="filter-price__toggle filter-price__toggle--max" type="button"></button>
                 </div>
               </div>
-
               <div class="filters-group filters-group--underline filters-group--electrobike">
                 <h3 class="filters-group__title visually-hidden">Электровелосипед</h3>
                 <div class="filters-group__toggle toggle-filter">
@@ -199,7 +203,6 @@
                   </li>
                 </ul>
               </div>
-
                <div class="filters-group filters-group--underline filters-group--closed">
                 <h3 class="filters-group__title visually-hidden">Производитель</h3>
                 <div class="filters-group__toggle toggle-filter toggle-filter--closed">
@@ -207,7 +210,6 @@
                   <label class="toggle-filter__label toggle-filter__label--closed" for="toggle-brand">Производитель</label>
                 </div>
               </div>
-
               <div class="filters-group filters-group--underline filters-group--material">
                 <h3 class="filters-group__title visually-hidden">Материал рамы</h3>
                 <div class="filters-group__toggle toggle-filter">
@@ -225,7 +227,6 @@
                   </li>
                 </ul>
               </div>
-
               <div class="filters-group filters-group--underline filters-group--color">
                 <h3 class="filters-group__title visually-hidden">Цвет</h3>
                 <div class="filters-group__toggle toggle-filter">
@@ -255,7 +256,6 @@
                   </li>
                 </ul>
               </div>
-
               <div class="filters-group filters-group--underline filters-group--closed">
                 <h3 class="filters-group__title visually-hidden">Размер</h3>
                 <div class="filters-group__toggle toggle-filter">
@@ -263,8 +263,6 @@
                   <label class="toggle-filter__label toggle-filter__label--closed" for="toggle-size">Размер</label>
                 </div>
               </div>
-
-
               <div class="filters-group filters-group--underline filters-group--wheels">
                 <h3 class="filters-group__title visually-hidden">Колеса</h3>
                 <div class="filters-group__toggle toggle-filter">
@@ -292,7 +290,6 @@
                   </ul>
                 </div>
               </div>
-
               <div class="filters-group">
                 <h3 class="filters-group__title visually-hidden">Кол-во скоростей</h3>
                 <div class="filters-group__toggle toggle-filter">
@@ -307,13 +304,12 @@
 
           <div class="catalog__cards catalog-cards">
             <ul class="catalog-cards__list">
-
               <li class="catalog-cards__item product-card">
                 <div class="product-card__container">
                   <div class="product-card__picture product-view">
-                    <!-- <div class="product-view__picture">
-                      <img src="http://placehold.it/283x131" alt="Neuzer Chopper Apocalypse" width="283" height="131">
-                    </div> -->
+                    <div class="product-view__picture product-view__picture--product-1">
+                      <img src="img/product-bike-1.png" alt="Neuzer Chopper Apocalypse" width="263" height="114">
+                    </div>
                     <div class="product-view__border-wrapper">
                       <div class="product-view__border"></div>
                     </div>
@@ -344,13 +340,12 @@
                   </div>
                 </div>
               </li>
-
               <li class="catalog-cards__item product-card">
                 <div class="product-card__container">
                   <div class="product-card__picture product-view">
-                    <!-- <div class="product-card__picture">
-                      <img src="http://placehold.it/262x128" alt="Schwinn Stingray Occ" width="262" height="128">
-                    </div> -->
+                    <div class="product-card__picture product-view__picture--product-2">
+                      <img src="img/product-bike-2.png" alt="Schwinn Stingray Occ" width="259" height="124">
+                    </div>
                     <div class="product-view__border-wrapper">
                       <div class="product-view__border"></div>
                     </div>
@@ -381,7 +376,6 @@
                   </div>
                 </div>
               </li>
-
               <li class="catalog-cards__item product-card">
                 <div class="product-card__container">
                   <div class="product-card__picture product-view">
@@ -418,7 +412,6 @@
                   </div>
                 </div>
               </li>
-
               <li class="catalog-cards__item product-card">
                 <div class="product-card__container">
                   <div class="product-card__picture product-view">
@@ -455,7 +448,6 @@
                   </div>
                 </div>
               </li>
-
               <li class="catalog-cards__item product-card">
                 <div class="product-card__container">
                   <div class="product-card__picture product-view">
@@ -492,7 +484,6 @@
                   </div>
                 </div>
               </li>
-
               <li class="catalog-cards__item product-card">
                 <div class="product-card__container">
                   <div class="product-card__picture product-view">
@@ -529,7 +520,6 @@
                   </div>
                 </div>
               </li>
-
               <li class="catalog-cards__item product-card">
                 <div class="product-card__container">
                   <div class="product-card__picture product-view">
@@ -566,7 +556,6 @@
                   </div>
                 </div>
               </li>
-
               <li class="catalog-cards__item product-card">
                 <div class="product-card__container">
                   <div class="product-card__picture product-view">
@@ -603,7 +592,6 @@
                   </div>
                 </div>
               </li>
-
               <li class="catalog-cards__item product-card">
                 <div class="product-card__container">
                   <div class="product-card__picture product-view">
@@ -640,7 +628,6 @@
                   </div>
                 </div>
               </li>
-
               <li class="catalog-cards__item product-card">
                 <div class="product-card__container">
                   <div class="product-card__picture product-view">
@@ -677,7 +664,6 @@
                   </div>
                 </div>
               </li>
-
               <li class="catalog-cards__item product-card">
                 <div class="product-card__container">
                   <div class="product-card__picture product-view">
@@ -714,7 +700,6 @@
                   </div>
                 </div>
               </li>
-
               <li class="catalog-cards__item product-card">
                 <div class="product-card__container">
                   <div class="product-card__picture product-view">
@@ -753,26 +738,27 @@
               </li>
             </ul>
           </div>
-
-          <div class="catalog__pagination pagination">
-            <div class="pagination__container">
-              <a class="pagination__button pagination__button--disabled pagination__button--prev" href="#">
-                <span class="visually-hidden">Предыдущая страница</span>
-              </a>
-              <ul class="pagination__list">
-                <li class="pagination__item"><a class="pagination__link pagination__link--active">1</a></li>
-                <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
-                <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
-                <li class="pagination__item"><span class="pagination__link pagination__link--dots">...</span></li>
-                <li class="pagination__item"><a class="pagination__link" href="#">26</a></li>
-              </ul>
-              <a class="pagination__button pagination__button--next" href="#">
-                <span class="visually-hidden">Следующая страница</span>
-              </a>
-            </div>
-          </div>
         </div>
       </section>
+      <div class="pagination">
+        <div class="pagination__container">
+          <a class="pagination__button pagination__button--disabled pagination__button--prev" href="#">
+            <span class="visually-hidden">Предыдущая страница</span>
+          </a>
+          <ul class="pagination__list">
+            <li class="pagination__item"><a class="pagination__link pagination__link--active">1</a></li>
+            <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+            <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+            <li class="pagination__item"><span class="pagination__link pagination__link--dots">...</span></li>
+            <li class="pagination__item  pagination__item--more"><a class="pagination__link" href="#">24</a></li>
+            <li class="pagination__item  pagination__item--more"><a class="pagination__link" href="#">25</a></li>
+            <li class="pagination__item"><a class="pagination__link" href="#">26</a></li>
+          </ul>
+          <a class="pagination__button pagination__button--next" href="#">
+            <span class="visually-hidden">Следующая страница</span>
+          </a>
+        </div>
+      </div>
     </main>
 
     <footer class="page-footer page-footer--main">
@@ -809,7 +795,10 @@
         <div class="page-footer__bottom">
           <div class="page-footer__logo logo">
             <a class="logo__link" href="#">
-              <img src="img/logo-desktop.svg" alt="Chopper Bikeshop" width="184" height="30">
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/logo-mobile.svg">
+                <img src="img/logo-desktop-main.svg" alt="Chopper Bikeshop" width="184" height="30">
+              </picture>
             </a>
           </div>
           <div class="page-footer__social social">

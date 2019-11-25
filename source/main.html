@@ -11,10 +11,8 @@
     <div style="display:none">
       <include src="build/img/sprite.svg"></include>
     </div>
-    <header class="page-header">
+    <header class="page-header page-header--main">
       <div class="page-header__wrapper">
-
-
         <div class="page-header__container">
           <div class="page-header__top">
             <div class="page-header__top-container">
@@ -111,7 +109,7 @@
                   <use xlink:href="#slogan"></use>
                 </svg>
               </div>
-              <a class="promo__button button" href="catalog.html">В магазин</a>
+              <a class="promo__button button button--promo" href="catalog.html">В магазин</a>
               <div class="promo__social social">
                 <b class="visually-hidden">Мы в социальных сетях</b>
                 <ul class="social__list">
@@ -148,102 +146,109 @@
     </header>
 
     <main class="page-main">
-      <section class="catalog-product bikes">
-        <div class="catalog-product__container bikes__container">
-          <div class="catalog-product__description bikes__description">
-            <h2 class="visually-hidden">Каталог</h2>
-            <p class="catalog-product__title title bikes__title">У нас более 200 моделей прогулочных велосипедов для настоящих мужчин</p>
-            <p class="catalog-product__text bikes__text">Бесплатный выездной тест-драйв на все модели.
+      <section class="catalog-section">
+        <div class="catalog-section__container">
+          <div class="catalog-section__description">
+            <h2 class="visually-hidden">Каталог велосипедов</h2>
+            <p class="catalog-section__title title">У нас более 200 моделей прогулочных велосипедов для настоящих мужчин</p>
+            <p class="catalog-section__text">Бесплатный выездной тест-драйв на все модели.
               Система рассрочки 0-0-5. Для членов клуба бесплатно предоставляется выездной сервис, зимнее&nbsp;хранение и куча привелегий от партнеров.</p>
           </div>
-          <div class="catalog-product__slider slider-cards bikes__slider">
-            <ul class="slider-cards__list">
-              <li class="slider-cards__item product-card">
-                <div class="product-card__container">
-                  <div class="product-card__picture product-view">
-                    <!-- <div class="product-view__picture">
-                      <img src="http://placehold.it/283x131" alt="Neuzer Chopper Apocalypse" width="283" height="131">
-                    </div> -->
-                    <div class="product-view__border-wrapper">
-                      <div class="product-view__border"></div>
+          <div class="catalog-section__slider slider-cards">
+            <div class="slider-cards__container">
+              <ul class="slider-cards__list">
+                <li class="slider-cards__item product-card"></li>
+                <li class="slider-cards__item product-card"></li>
+                <li class="slider-cards__item product-card"></li>
+                <li class="slider-cards__item product-card">
+                  <div class="product-card__container">
+                    <div class="product-card__picture product-view">
+                      <!-- <div class="product-view__picture">
+                        <img src="http://placehold.it/283x131" alt="Neuzer Chopper Apocalypse" width="283" height="131">
+                      </div> -->
+                      <div class="product-view__border-wrapper">
+                        <div class="product-view__border"></div>
+                      </div>
                     </div>
-                  </div>
-
-                  <div class="product-card__description">
-                    <h3 class="product-card__name">Neuzer Chopper Apocalypse</h3>
-                    <p class="product-card__info">24", сталь Hi-Ten</p>
-                    <p class="product-card__info">Венгрия</p>
-                    <b class="product-card__price">75 000 ₽</b>
-                    <div class="product-card__buttons">
-                      <div class="product-card__button-buy">
-                        <a class="button-buy" href="#">
-                          <span class="visually-hidden">Добавить в корзину</span>
-                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
-                            <use xlink:href="#icon-cart-plus"></use>
-                          </svg>
-                        </a>
+                    <div class="product-card__description">
+                      <h3 class="product-card__name">Neuzer Chopper Apocalypse</h3>
+                      <p class="product-card__info">24", сталь Hi-Ten</p>
+                      <p class="product-card__info">Венгрия</p>
+                      <b class="product-card__price">75 000 ₽</b>
+                      <div class="product-card__buttons">
+                        <div class="product-card__button-buy">
+                          <a class="button-buy" href="#">
+                            <span class="visually-hidden">Добавить в корзину</span>
+                            <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                              <use xlink:href="#icon-cart-plus"></use>
+                            </svg>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li class="slider-cards__item product-card">
-                <div class="product-card__container">
-                  <div class="product-card__picture product-view">
-                    <!-- <div class="product-card__picture">
-                      <img src="http://placehold.it/262x128" alt="Schwinn Stingray Occ" width="262" height="128">
-                    </div> -->
-                    <div class="product-view__border-wrapper">
-                      <div class="product-view__border"></div>
+                </li>
+                <li class="slider-cards__item product-card">
+                  <div class="product-card__container">
+                    <div class="product-card__picture product-view">
+                      <!-- <div class="product-card__picture">
+                        <img src="http://placehold.it/262x128" alt="Schwinn Stingray Occ" width="262" height="128">
+                      </div> -->
+                      <div class="product-view__border-wrapper">
+                        <div class="product-view__border"></div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="product-card__description">
-                    <h3 class="product-card__name">Schwinn Stingray&nbsp;Occ</h3>
-                    <p class="product-card__info">20"+24", сталь</p>
-                    <p class="product-card__info">США</p>
-                    <b class="product-card__price">34 000 ₽</b>
-                    <div class="product-card__buttons">
-                      <div class="product-card__button-buy">
-                        <a class="button-buy" href="#">
-                          <span class="visually-hidden">Добавить в корзину</span>
-                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
-                            <use xlink:href="#icon-cart-plus"></use>
-                          </svg>
-                        </a>
+                    <div class="product-card__description">
+                      <h3 class="product-card__name">Schwinn Stingray&nbsp;Occ</h3>
+                      <p class="product-card__info">20"+24", сталь</p>
+                      <p class="product-card__info">США</p>
+                      <b class="product-card__price">34 000 ₽</b>
+                      <div class="product-card__buttons">
+                        <div class="product-card__button-buy">
+                          <a class="button-buy" href="#">
+                            <span class="visually-hidden">Добавить в корзину</span>
+                            <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                              <use xlink:href="#icon-cart-plus"></use>
+                            </svg>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li class="slider-cards__item product-card">
-                <div class="product-card__container">
-                  <div class="product-card__picture product-view">
-                    <!-- <div class="product-card__picture">
-                      <img src="http://placehold.it/266x189" alt="Harley Davidson" width="266" height="189">
-                    </div> -->
-                    <div class="product-view__border-wrapper">
-                      <div class="product-view__border"></div>
+                </li>
+                <li class="slider-cards__item product-card">
+                  <div class="product-card__container">
+                    <div class="product-card__picture product-view">
+                      <!-- <div class="product-card__picture">
+                        <img src="http://placehold.it/266x189" alt="Harley Davidson" width="266" height="189">
+                      </div> -->
+                      <div class="product-view__border-wrapper">
+                        <div class="product-view__border"></div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="product-card__description">
-                    <h3 class="product-card__name">Harley Davidson</h3>
-                    <p class="product-card__info">20", сталь</p>
-                    <p class="product-card__info">Китай</p>
-                    <b class="product-card__price">23 000 ₽</b>
-                    <div class="product-card__buttons">
-                      <div class="product-card__button-buy">
-                        <a class="button-buy" href="#">
-                          <span class="visually-hidden">Добавить в корзину</span>
-                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
-                            <use xlink:href="#icon-cart-plus"></use>
-                          </svg>
-                        </a>
+                    <div class="product-card__description">
+                      <h3 class="product-card__name">Harley Davidson</h3>
+                      <p class="product-card__info">20", сталь</p>
+                      <p class="product-card__info">Китай</p>
+                      <b class="product-card__price">23 000 ₽</b>
+                      <div class="product-card__buttons">
+                        <div class="product-card__button-buy">
+                          <a class="button-buy" href="#">
+                            <span class="visually-hidden">Добавить в корзину</span>
+                            <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                              <use xlink:href="#icon-cart-plus"></use>
+                            </svg>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </li>
-            </ul>
+                </li>
+                <li class="slider-cards__item product-card"></li>
+                <li class="slider-cards__item product-card"></li>
+                <li class="slider-cards__item product-card"></li>
+              </ul>
+            </div>
             <div class="slider-cards__toggle slider-toggle__toggle--prev">
               <button class="toggle toogle--prev" type="button">
                 <span class="visually-hidden">Предыдущий слайд</span>
@@ -257,45 +262,48 @@
               </button>
             </div>
           </div>
-          <div class="section-product__link section-link">
-            <a class="section-link__button button" href="catalog.html">Все велосипеды</a>
+          <div class="catalog-section__source section-source">
+            <a class="section-source__link button button--source" href="catalog.html">Все велосипеды</a>
           </div>
         </div>
       </section>
 
 
-      <section class="workshop">
-        <div class="workshop__wrapper section-background">
-          <div class="workshop__container">
-            <div class="workshop__picture">
-              <img src="img/image-workshop-desktop.jpg" alt="Мастерская" width="463" height="357">
+      <section class="info">
+        <div class="info__wrapper section-background">
+          <div class="info__container">
+            <div class="info__picture">
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/image-workshop-mobile.jpg">
+                <img src="img/image-workshop-desktop.jpg" alt="Мастерская" width="463" height="357">
+              </picture>
             </div>
-            <div class="workshop__desription">
-              <h2 class="workshop__title title">Мастерская</h2>
-              <p class="workshop__text">Наши мастера всегда готовы привести в&nbsp;чувство вашего коня,
-                кастомизировать любую модель или просто помочь советом.</p>
-              <p class="workshop__text">Возможен выезд по вашему адресу. Для&nbsp;велосипедов, купленных у нас, обслуживание предоставляется бесплатно.</p>
-              <a class="workshop__button button" href="#">Подробнее</a>
+            <div class="info__desription">
+              <h2 class="info__title title">Мастерская</h2>
+              <p class="info__text">Наши мастера всегда готовы привести в&nbsp;чувство вашего коня,
+                кастомизировать любую модель или&nbsp;просто помочь советом.</p>
+              <p class="info__text">Возможен выезд по вашему адресу. Для&nbsp;велосипедов, купленных у нас, обслуживание предоставляется бесплатно.</p>
+              <a class="info__button info__button--hidden button button--info" href="#">Подробнее</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="catalog-extra">
-        <div class="catalog-extra__container">
-          <div class="catalog-extra__description">
-            <h2 class="catalog-extra__title title">Запчасти и аксессуары</h2>
-            <p class="catalog-extra__text">Всегда большой выбор запчастей и аксессуаров для чоппер-байков.
-              Если вы чего-то не нашли в наличии, наши консультанты помогут заказать и доставить товар из любой точки мира</p>
+      <section class="catalog-section">
+        <div class="catalog-section__container catalog-section__container--extra">
+          <div class="catalog-section__description catalog-section__description--extra">
+            <h2 class="catalog-section__title catalog-section__title--extra title">Запчасти и аксессуары</h2>
+            <p class="catalog-section__text">Всегда большой выбор запчастей и&nbsp;аксессуаров для чоппер-байков.
+              Если вы чего-то не нашли в наличии, наши консультанты помогут заказать&nbsp;и доставить товар из&nbsp;любой&nbsp;точки мира</p>
           </div>
-          <div class="catalog-extra__slider slider-cards slider-cards--extra">
+          <div class="catalog-section__slider slider-cards slider-cards--extra">
             <ul class="slider-cards__list slider-cards__list--extra">
               <li class="slider-cards__item slider-cards__item--extra product-card">
                 <div class="product-card__container">
                   <div class="product-card__picture product-view">
-                    <!-- <div class="product-card__picture">
+                    <div class="product-card__picture">
                       <img src="http://placehold.it/196x89" alt="Сумка на руль B-soul" width="196" height="89">
-                    </div> -->
+                    </div>
                     <div class="product-view__border-wrapper">
                       <div class="product-view__border"></div>
                     </div>
@@ -321,9 +329,9 @@
               <li class="slider-cards__item slider-cards__item--extra product-card">
                 <div class="product-card__container">
                   <div class="product-card__picture product-view">
-                    <!-- <div class="product-card__picture">
+                    <div class="product-card__picture">
                       <img src="http://placehold.it/167x93" alt="Грипсы Propalm" width="167" height="93">
-                    </div> -->
+                    </div>
                     <div class="product-view__border-wrapper">
                       <div class="product-view__border"></div>
                     </div>
@@ -349,9 +357,9 @@
               <li class="slider-cards__item slider-cards__item--extra product-card">
                 <div class="product-card__container">
                   <div class="product-card__picture product-view">
-                    <!-- <div class="product-card__picture">
+                    <div class="product-card__picture">
                       <img src="http://placehold.it/197x143" alt="Седло Brooks B66 S" width="197" height="143">
-                    </div> -->
+                    </div>
                     <div class="product-view__border-wrapper">
                       <div class="product-view__border"></div>
                     </div>
@@ -376,15 +384,15 @@
               <li class="slider-cards__item slider-cards__item--extra product-card">
                 <div class="product-card__container">
                   <div class="product-card__picture product-view">
-                    <!-- <div class="product-card__picture">
-                      <img src="http://placehold.it/215x155" alt="Коллеса Strida 18" width="215" height="155">
-                    </div> -->
+                    <div class="product-card__picture">
+                      <img src="http://placehold.it/215x155" alt="Колеса Strida 18" width="215" height="155">
+                    </div>
                     <div class="product-view__border-wrapper">
                       <div class="product-view__border"></div>
                     </div>
                   </div>
                   <div class="product-card__description">
-                    <h3 class="product-card__name">Коллеса Strida&nbsp;18"</h3>
+                    <h3 class="product-card__name">Колеса Strida&nbsp;18"</h3>
                     <p class="product-card__info">покрышки Innova</p>
                     <p class="product-card__info">цена за 2 колеса</p>
                     <b class="product-card__price product-card__price--extra">6780 ₽</b>
@@ -415,8 +423,8 @@
               </button>
             </div>
           </div>
-          <div class="section-product__link section-link">
-            <a class="section-link__button button" href="catalog.html">Перейти в каталог</a>
+          <div class="catalog-section__source section-source">
+            <a class="section-source__link button button--source" href="catalog.html">Перейти в каталог</a>
           </div>
         </div>
       </section>
@@ -424,17 +432,20 @@
 
     <footer class="page-footer page-footer--main">
       <div class="page-footer__wrapper section-background">
-        <section class="join">
-          <div class="join__container">
-            <div class="join__picture">
-              <img src="img/image-join-desktop.jpg" alt="Вступай в клуб" width="290" height="300">
+        <section class="info">
+          <div class="info__container info__container--revers">
+            <div class="info__picture info__picture--revers">
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/image-join-mobile.jpg">
+                <img src="img/image-join-desktop.jpg" alt="Вступай в клуб" width="529" height="358">
+              </picture>
             </div>
-            <div class="join__description">
-              <h2 class="join__title title ">Вступай в клуб</h2>
-              <p class="join__text">У тебя уже есть чоппер-байк?</p>
-              <p class="join__text">Регистрируйся и получай специальные привелегии, приглашения на закрытые мероприятия, специальные цены
-                в&nbsp;нашем&nbsp;магазине и много других плюшек.</p>
-              <a class="join__button button" href="#">Вступить</a>
+            <div class="info__desription info__desription--revers">
+              <h2 class="info__title title">Вступай в клуб</h2>
+              <p class="info__text">У тебя уже есть чоппер-байк?</p>
+              <p class="info__text">Регистрируйся и получай специальные привелегии, приглашения на закрытые мероприятия, специальные цены
+                в&nbsp;нашем&nbsp;магазине и&nbsp;много других плюшек.</p>
+              <a class="info__button button button--info" href="#">Вступить</a>
             </div>
           </div>
         </section>
@@ -471,7 +482,10 @@
           <div class="page-footer__bottom page-footer__bottom--main">
             <div class="page-footer__logo logo">
               <a class="logo__link" href="#">
-                <img src="img/logo-desktop-main.svg" alt="Chopper Bikeshop" width="184" height="30">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="img/logo-mobile.svg">
+                  <img src="img/logo-desktop-main.svg" alt="Chopper Bikeshop" width="184" height="30">
+                </picture>
               </a>
             </div>
             <div class="page-footer__social social">

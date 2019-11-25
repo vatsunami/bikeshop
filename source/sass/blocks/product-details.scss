@@ -9,10 +9,23 @@
 }
 
 .product-details__toggle {
+  position: relative;
+  box-sizing: border-box;
   display: block;
   width: 25%;
-  color: #817155;
-  opacity: 0.3;
+  padding: 16px 20px 12px;
+  font-family: "Hagin Caps Medium", "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid rgba(155, 136, 105, 0.3);
+  border-right: none;
+  background-color: transparent;
+  color: rgba(129, 113, 85, 0.3);
   order: 0;
   cursor: pointer;
 
@@ -23,14 +36,31 @@
     color: #817155;
   }
 
-  &:not(:last-of-type) {
-    border-right: none;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    display: block;
+    width: calc(100% + 2px);
+    height: 1px;
+    background-color: rgb(155, 136, 105);
+  }
+
+  &:last-of-type {
+    border-right: 1px solid rgba(155, 136, 105, 0.3);
   }
 
   &--active {
-    opacity: 1;
+    color: rgb(129, 113, 85);
+    border: 1px solid rgb(155, 136, 105);
     border-bottom: none;
-    box-shadow: 1px 0 0 #baa480;
+    border-right: none;
+    box-shadow: 1px 0 0 rgb(155, 136, 105);
+
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -40,11 +70,68 @@
   width: 100%;
   min-height: 330px;
   padding: 50px 49px 61px;
-  border: 1px solid #baa480;
+  border: 1px solid #9b8869;
   border-top: none;
   order: 1;
 
   &--hidden {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-details {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .product-details__toggle {
+    flex-direction: column;
+    width: 100%;
+    padding: 17px 50px 11px 16px;
+    text-align: left;
+    border-top: 1px solid rgba(155, 136, 105, 0.5);
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 19px;
+      right: 14px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-image: url("../img/icon-arrow-down.svg");
+      background-repeat: no-repeat;
+      background-size: 18px auto;
+      background-position: 1px 6px;
+      opacity: 0.5;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &--last {
+      border-bottom: 1px solid rgba(155, 136, 105, 0.5);
+    }
+
+    &--active {
+      border-top: 1px solid rgb(155, 136, 105);
+      box-shadow: none;
+
+      &::before {
+        opacity: 1;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .product-details__section {
+    padding: 21px 15px 30px 15px;
+    order: 0;
+    border: none;
   }
 }

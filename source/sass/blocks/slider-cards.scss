@@ -1,33 +1,44 @@
 .slider-cards {
-  width: 990px;
+  max-width: 1650px;
+  overflow: hidden;
   margin: 0 auto;
-
-  &--extra {
-    width: 1132px;
-  }
 }
 
 .slider-cards__list {
+  box-sizing: border-box;
+  position: relative;
   display: flex;
-  max-width: 1366px;
+  width: 2970px;
   margin: 0;
-  margin-bottom: 11px;
   padding: 0;
   list-style: none;
 
   &--extra {
-    max-width: 1132px;
+    width: 3396px;
   }
 }
 
 .slider-cards__item {
-  width: 340px;
+  box-sizing: border-box;
+  width: 283px;
+  margin: 0 22px 0 25px;
+  flex-shrink: 0;
 
   &--extra {
-    width: 283px;
+    margin: 0;
   }
 }
 
 .slider-cards__toggle {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .slider-cards {
+    width: 100%;
+  }
+
+  .slider-cards__item {
+    margin: 0;
+  }
 }
