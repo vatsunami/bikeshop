@@ -17,10 +17,10 @@
   }
 
   .catalog-cards__item {
-    margin-bottom: 22px;
+    margin: 0 10px -7px;
 
-    &:nth-of-type(n + 6) {
-      display: none;
-    }
+    // &:nth-of-type(n + 6) {
+    //   display: none;
+    // }
   }
 }

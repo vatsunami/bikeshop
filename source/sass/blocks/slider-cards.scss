@@ -8,20 +8,22 @@
   box-sizing: border-box;
   position: relative;
   display: flex;
-  width: 2970px;
+  width: 2880px;
   margin: 0;
   padding: 0;
   list-style: none;
+  transform: translateX(-802px);
 
   &--extra {
     width: 3396px;
+    transform: translateX(-1018px);
   }
 }
 
 .slider-cards__item {
   box-sizing: border-box;
-  width: 283px;
-  margin: 0 22px 0 25px;
+  margin: 0 15px;
+  padding: 0;
   flex-shrink: 0;
 
   &--extra {
@@ -36,6 +38,14 @@
 @media (max-width: 768px) {
   .slider-cards {
     width: 100%;
+  }
+
+  .slider-cards__list {
+    transform: translateX(-890px);
+
+    &--extra {
+      transform: translateX(-1113px);
+    }
   }
 
   .slider-cards__item {
