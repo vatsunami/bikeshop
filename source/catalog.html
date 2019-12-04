@@ -11,833 +11,837 @@
     <div style="display:none">
       <include src="build/img/sprite.svg"></include>
     </div>
-    <header class="page-header">
-      <div class="page-header__container">
-        <div class="page-header__top">
-          <div class="page-header__top-container">
-            <div class="page-header__logo">
-              <a class="logo__link" href="main.html">
-                <picture>
-                  <source media="(max-width: 768px)" srcset="img/logo-mobile.svg">
-                  <img src="img/logo-desktop.svg" alt="BikeShop" width="184" height="29">
-                </picture>
-              </a>
-            </div>
-
-            <button class="page-header__menu-button menu-button" type="button">
-              <span class="visually-hidden">Меню</span>
-            </button>
-
-            <nav class="page-header__main-nav main-nav">
-              <ul class="main-nav__list">
-                <li class="main-nav__item">
-                  <a class="main-nav__link main-nav__link--active">Велосипеды</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="card.html">Аксессуары</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="#">Запчасти</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="#">Мастерская</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="#">Доставка и оплата</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="#">Контакты</a>
-                </li>
-              </ul>
-            </nav>
-
-            <div class="page-header__user-account user-account">
-              <ul class="user-account__list">
-                <li class="user-account__item user-profile">
-                  <a class="user-profile__link" href="#">
-                    <svg class="user-profile__icon" width="12" height="14" viewBox="0 0 12 14">
-                      <use xlink:href="#icon-user"></use>
-                    </svg>
-                    <span class="user-profile__text">Михаил Иванов</span>
+    <div class="page-wrapper">
+      <div class="page-content">
+        <header class="page-header">
+          <div class="page-header__container">
+            <div class="page-header__top">
+              <div class="page-header__top-container">
+                <div class="page-header__logo">
+                  <a class="logo__link" href="main.html">
+                    <picture>
+                      <source media="(max-width: 768px)" srcset="img/logo-mobile.svg">
+                      <img src="img/logo-desktop.svg" alt="BikeShop" width="184" height="29">
+                    </picture>
                   </a>
-                </li>
-                <li class="user-account__item user-logout">
-                  <a class="user-logout__link" href="#">
-                    <svg class="user-logout__icon" width="24" height="24">
-                      <use xlink:href="#icon-logout"></use>
-                    </svg>
-                    <span class="user-logout__text">Выйти</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+                </div>
 
-            <div class="page-header__user-nav user-nav">
-              <ul class="user-nav__list">
-                <li class="user-nav__item user-search">
-                  <a class="user-search__link" href="#">
-                    <svg class="user-search__icon" width="24" height="24">
-                      <use xlink:href="#icon-search"></use>
-                    </svg>
-                    <span class="user-search__text">Поиск</span>
-                  </a>
-                </li>
-                <li class="user-nav__item user-cart">
-                  <a class="user-cart__link" href="#">
-                    <svg class="user-cart__icon" width="18.85" height="17" viewBox="0 0 18.85 17">
-                      <use xlink:href="#icon-basket"></use>
-                    </svg>
-                    <span class="user-cart__text">Корзина</span>
-                    <span class="user-cart__count count">
-                      <span class="count__bracket">(</span>
-                      <span class="count__number">1</span>
-                      <span class="count__bracket">)</span>
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <main class="page-inner">
-      <h1 class="visually-hidden">Страница каталога</h1>
-      <section class="catalog">
-        <h2 class="visually-hidden">Велосипеды</h2>
-        <div class="catalog__container">
-          <div class="catalog__menu">
-            <div class="catalog__header catalog-header">
-              <div class="catalog-header__buttons">
-                <button class="catalog-header__button-filters">
-                  <span class="catalog-header__button-filters-text">Фильтры</span>
-                  <span class="catalog-header__button-filters-count">(3)</span>
+                <button class="page-header__menu-button menu-button" type="button">
+                  <span class="visually-hidden">Меню</span>
                 </button>
-                <button class="catalog-header__button-reset button-reset">Сбросить фильтры
-                  <span class="button-reset__count">(3)</span>
-                </button>
-                <button class="catalog-header__button-close menu-button menu-button--close">
-                  <span class="visually-hidden">Спрятать фильтры</span>
-                </button>
-              </div>
-              <div class="catalog-header__content">
-                <div class="catalog-header__sort">
-                  <span class="visually-hidden">Сортировка</span>
-                  <select class="sort" name="sort">
-                    <option value="popular">По популярности</option>
-                  </select>
-                </div>
-                <div class="catalog-header__grid">
-                  <div class="grid-count">
-                    <span class="grid-count__label">Показывать по</span>
-                    <ul class="grid-count__list">
-                      <li class="grid-count__item">
-                        <a class="grid-count__toggle grid-count__toggle--active">12</a>
-                      </li>
-                      <li class="grid-count__item">
-                        <a class="grid-count__toggle" href="#">24</a>
-                      </li>
-                      <li class="grid-count__item">
-                        <a class="grid-count__toggle grid-count__toggle--all" href="#">все</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="grid-view">
-                    <span class="visually-hidden">Вид сетки</span>
-                    <ul class="grid-view__list">
-                      <li class="grid-view__item">
-                        <a class="grid-view__toggle grid-view__toggle--active" href="#">
-                          <span class="visually-hidden">Галерея</span>
-                          <svg class="grid-view__icon grid-view__icon--gallery grid-view__icon--active" width="11" height="11" viewBox="0 0 11 11">
-                            <use xlink:href="#icon-grid-icons"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li class="grid-view__item">
-                        <a class="grid-view__toggle" href="#">
-                          <span class="visually-hidden">Список</span>
-                          <svg class="grid-view__icon grid-view__icon--list" width="12" height="11" viewBox="0 0 12 11">
-                            <use xlink:href="#icon-grid-list"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <!-- Фильтры -->
+                <nav class="page-header__main-nav main-nav">
+                  <ul class="main-nav__list">
+                    <li class="main-nav__item">
+                      <a class="main-nav__link main-nav__link--active">Велосипеды</a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="card.html">Аксессуары</a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="#">Запчасти</a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="#">Мастерская</a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="#">Доставка и оплата</a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="#">Контакты</a>
+                    </li>
+                  </ul>
+                </nav>
 
-            <form class="catalog__form" action="https://echo.htmlacademy.ru" method="post">
-              <div class="filter-price">
-                <h3 class="visually-hidden">Цена</h3>
-                <div class="filter-price__fields">
-                  <label class="visually-hidden">От</label>
-                  <input type="text" name="min" value="28 000">
-                  <label class="visually-hidden">До</label>
-                  <input type="text" name="max" value="180 000">
-                </div>
-                <div class="filter-price__range">
-                  <div class="filter-price__scale"></div>
-                  <div class="filter-price__bar"></div>
-                  <button class="filter-price__toggle filter-price__toggle--min" type="button"></button>
-                  <button class="filter-price__toggle filter-price__toggle--max" type="button"></button>
-                </div>
-              </div>
-              <div class="filters-group filters-group--underline filters-group--electrobike">
-                <h3 class="filters-group__title visually-hidden">Электровелосипед</h3>
-                <div class="filters-group__toggle toggle-filter">
-                  <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-electrobike" checked>
-                  <label class="toggle-filter__label" for="toggle-electrobike">Электровелосипед</label>
-                </div>
-                <ul class="filters-group__list filters-group__list--electrobike">
-                  <li class="filters-group__item">
-                    <input class="visually-hidden" type="checkbox" name="bike" id="bike">
-                    <label for="bike">Да</label>
-                  </li>
-                  <li class="filters-group__item">
-                    <input class="visually-hidden" type="checkbox" name="electrobike" id="electrobike">
-                    <label for="electrobike">Нет</label>
-                  </li>
-                </ul>
-              </div>
-               <div class="filters-group filters-group--underline filters-group--closed">
-                <h3 class="filters-group__title visually-hidden">Производитель</h3>
-                <div class="filters-group__toggle toggle-filter toggle-filter--closed">
-                  <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-brand">
-                  <label class="toggle-filter__label toggle-filter__label--closed" for="toggle-brand">Производитель</label>
-                </div>
-              </div>
-              <div class="filters-group filters-group--underline filters-group--material">
-                <h3 class="filters-group__title visually-hidden">Материал рамы</h3>
-                <div class="filters-group__toggle toggle-filter">
-                  <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-material" checked>
-                  <label class="toggle-filter__label" for="toggle-material">Материал рамы</label>
-                </div>
-                <ul class="filters-group__list filters-group__list--material">
-                  <li class="filters-group__item">
-                    <input class="visually-hidden" type="checkbox" name="steel" id="steel" checked>
-                    <label for="steel">Сталь</label>
-                  </li>
-                  <li class="filters-group__item">
-                    <input class="visually-hidden" type="checkbox" name="carbon" id="carbon">
-                    <label for="carbon">Карбон</label>
-                  </li>
-                </ul>
-              </div>
-              <div class="filters-group filters-group--underline filters-group--color">
-                <h3 class="filters-group__title visually-hidden">Цвет</h3>
-                <div class="filters-group__toggle toggle-filter">
-                  <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-color" checked>
-                  <label class="toggle-filter__label" for="toggle-color">Цвет</label>
-                </div>
-                <ul class="filters-group__list filters-group__list--color">
-                  <li class="filters-group__item">
-                    <input class="visually-hidden" type="checkbox" name="black" id="black">
-                    <label for="black">Черный</label>
-                  </li>
-                  <li class="filters-group__item">
-                    <input class="visually-hidden" type="checkbox" name="brown" id="brown">
-                    <label for="brown">Коричневый</label>
-                  </li>
-                  <li class="filters-group__item">
-                    <input class="visually-hidden" type="checkbox" name="red" id="red">
-                    <label for="red">Красный</label>
-                  </li>
-                  <li class="filters-group__item">
-                    <input class="visually-hidden" type="checkbox" name="blue" id="blue">
-                    <label for="blue">Голубой</label>
-                  </li>
-                  <li class="filters-group__item">
-                    <input class="visually-hidden" type="checkbox" name="khaki" id="khaki">
-                    <label for="khaki">Хаки</label>
-                  </li>
-                </ul>
-              </div>
-              <div class="filters-group filters-group--underline filters-group--closed">
-                <h3 class="filters-group__title visually-hidden">Размер</h3>
-                <div class="filters-group__toggle toggle-filter">
-                  <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-size">
-                  <label class="toggle-filter__label toggle-filter__label--closed" for="toggle-size">Размер</label>
-                </div>
-              </div>
-              <div class="filters-group filters-group--underline filters-group--wheels">
-                <h3 class="filters-group__title visually-hidden">Колеса</h3>
-                <div class="filters-group__toggle toggle-filter">
-                  <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-wheels" checked>
-                  <label class="toggle-filter__label" for="toggle-wheels">Колеса</label>
-                </div>
-                <div class="filters-group__container">
-                  <ul class="filters-group__list filters-group__list--wheels">
-                    <li class="filters-group__item">
-                      <input class="visually-hidden" type="checkbox" name="wheels-20" id="wheels-20">
-                      <label for="wheels-20">20"</label>
+                <div class="page-header__user-account user-account">
+                  <ul class="user-account__list">
+                    <li class="user-account__item user-profile">
+                      <a class="user-profile__link" href="#">
+                        <svg class="user-profile__icon" width="12" height="14" viewBox="0 0 12 14">
+                          <use xlink:href="#icon-user"></use>
+                        </svg>
+                        <span class="user-profile__text">Михаил Иванов</span>
+                      </a>
                     </li>
-                    <li class="filters-group__item">
-                      <input class="visually-hidden" type="checkbox" name="wheels-22" id="wheels-22">
-                      <label for="wheels-22">22"</label>
+                    <li class="user-account__item user-logout">
+                      <a class="user-logout__link" href="#">
+                        <svg class="user-logout__icon" width="24" height="24">
+                          <use xlink:href="#icon-logout"></use>
+                        </svg>
+                        <span class="user-logout__text">Выйти</span>
+                      </a>
                     </li>
-                    <li class="filters-group__item">
-                      <input class="visually-hidden" type="checkbox" name="wheels-24" id="wheels-24">
-                      <label for="wheels-24">24"</label>
+                  </ul>
+                </div>
+
+                <div class="page-header__user-nav user-nav">
+                  <ul class="user-nav__list">
+                    <li class="user-nav__item user-search">
+                      <a class="user-search__link" href="#">
+                        <svg class="user-search__icon" width="24" height="24">
+                          <use xlink:href="#icon-search"></use>
+                        </svg>
+                        <span class="user-search__text">Поиск</span>
+                      </a>
                     </li>
-                    <li class="filters-group__item">
-                      <input class="visually-hidden" type="checkbox" name="wheels-26" id="wheels-26">
-                      <label for="wheels-26">26"</label>
+                    <li class="user-nav__item user-cart">
+                      <a class="user-cart__link" href="#">
+                        <svg class="user-cart__icon" width="18.85" height="17" viewBox="0 0 18.85 17">
+                          <use xlink:href="#icon-basket"></use>
+                        </svg>
+                        <span class="user-cart__text">Корзина</span>
+                        <span class="user-cart__count count">
+                          <span class="count__bracket">(</span>
+                          <span class="count__number">1</span>
+                          <span class="count__bracket">)</span>
+                        </span>
+                      </a>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="filters-group">
-                <h3 class="filters-group__title visually-hidden">Кол-во скоростей</h3>
-                <div class="filters-group__toggle toggle-filter">
-                  <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-guests">
-                  <label class="toggle-filter__label toggle-filter__label--closed" for="toggle-guests">Кол-во скоростей</label>
+            </div>
+          </div>
+        </header>
+
+        <main class="page-inner">
+          <h1 class="visually-hidden">Страница каталога</h1>
+          <section class="catalog">
+            <h2 class="visually-hidden">Велосипеды</h2>
+            <div class="catalog__container">
+              <div class="catalog__menu">
+                <div class="catalog__header catalog-header">
+                  <div class="catalog-header__buttons">
+                    <button class="catalog-header__button-filters">
+                      <span class="catalog-header__button-filters-text">Фильтры</span>
+                      <span class="catalog-header__button-filters-count">(3)</span>
+                    </button>
+                    <button class="catalog-header__button-reset button-reset">Сбросить фильтры
+                      <span class="button-reset__count">(3)</span>
+                    </button>
+                    <button class="catalog-header__button-close menu-button menu-button--close">
+                      <span class="visually-hidden">Спрятать фильтры</span>
+                    </button>
+                  </div>
+                  <div class="catalog-header__content">
+                    <div class="catalog-header__sort">
+                      <span class="visually-hidden">Сортировка</span>
+                      <select class="sort" name="sort">
+                        <option value="popular">По популярности</option>
+                      </select>
+                    </div>
+                    <div class="catalog-header__grid">
+                      <div class="grid-count">
+                        <span class="grid-count__label">Показывать по</span>
+                        <ul class="grid-count__list">
+                          <li class="grid-count__item">
+                            <a class="grid-count__toggle grid-count__toggle--active">12</a>
+                          </li>
+                          <li class="grid-count__item">
+                            <a class="grid-count__toggle" href="#">24</a>
+                          </li>
+                          <li class="grid-count__item">
+                            <a class="grid-count__toggle grid-count__toggle--all" href="#">все</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="grid-view">
+                        <span class="visually-hidden">Вид сетки</span>
+                        <ul class="grid-view__list">
+                          <li class="grid-view__item">
+                            <a class="grid-view__toggle grid-view__toggle--active" href="#">
+                              <span class="visually-hidden">Галерея</span>
+                              <svg class="grid-view__icon grid-view__icon--gallery grid-view__icon--active" width="11" height="11" viewBox="0 0 11 11">
+                                <use xlink:href="#icon-grid-icons"></use>
+                              </svg>
+                            </a>
+                          </li>
+                          <li class="grid-view__item">
+                            <a class="grid-view__toggle" href="#">
+                              <span class="visually-hidden">Список</span>
+                              <svg class="grid-view__icon grid-view__icon--list" width="12" height="11" viewBox="0 0 12 11">
+                                <use xlink:href="#icon-grid-list"></use>
+                              </svg>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
+                <!-- Фильтры -->
+
+                <form class="catalog__form" action="https://echo.htmlacademy.ru" method="post">
+                  <div class="filter-price">
+                    <h3 class="visually-hidden">Цена</h3>
+                    <div class="filter-price__fields">
+                      <label class="visually-hidden">От</label>
+                      <input type="text" name="min" value="28 000">
+                      <label class="visually-hidden">До</label>
+                      <input type="text" name="max" value="180 000">
+                    </div>
+                    <div class="filter-price__range">
+                      <div class="filter-price__scale"></div>
+                      <div class="filter-price__bar"></div>
+                      <button class="filter-price__toggle filter-price__toggle--min" type="button"></button>
+                      <button class="filter-price__toggle filter-price__toggle--max" type="button"></button>
+                    </div>
+                  </div>
+                  <div class="filters-group filters-group--underline filters-group--electrobike">
+                    <h3 class="filters-group__title visually-hidden">Электровелосипед</h3>
+                    <div class="filters-group__toggle toggle-filter">
+                      <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-electrobike" checked>
+                      <label class="toggle-filter__label" for="toggle-electrobike">Электровелосипед</label>
+                    </div>
+                    <ul class="filters-group__list filters-group__list--electrobike">
+                      <li class="filters-group__item">
+                        <input class="visually-hidden" type="checkbox" name="bike" id="bike">
+                        <label for="bike">Да</label>
+                      </li>
+                      <li class="filters-group__item">
+                        <input class="visually-hidden" type="checkbox" name="electrobike" id="electrobike">
+                        <label for="electrobike">Нет</label>
+                      </li>
+                    </ul>
+                  </div>
+                   <div class="filters-group filters-group--underline filters-group--closed">
+                    <h3 class="filters-group__title visually-hidden">Производитель</h3>
+                    <div class="filters-group__toggle toggle-filter toggle-filter--closed">
+                      <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-brand">
+                      <label class="toggle-filter__label toggle-filter__label--closed" for="toggle-brand">Производитель</label>
+                    </div>
+                  </div>
+                  <div class="filters-group filters-group--underline filters-group--material">
+                    <h3 class="filters-group__title visually-hidden">Материал рамы</h3>
+                    <div class="filters-group__toggle toggle-filter">
+                      <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-material" checked>
+                      <label class="toggle-filter__label" for="toggle-material">Материал рамы</label>
+                    </div>
+                    <ul class="filters-group__list filters-group__list--material">
+                      <li class="filters-group__item">
+                        <input class="visually-hidden" type="checkbox" name="steel" id="steel" checked>
+                        <label for="steel">Сталь</label>
+                      </li>
+                      <li class="filters-group__item">
+                        <input class="visually-hidden" type="checkbox" name="carbon" id="carbon">
+                        <label for="carbon">Карбон</label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="filters-group filters-group--underline filters-group--color">
+                    <h3 class="filters-group__title visually-hidden">Цвет</h3>
+                    <div class="filters-group__toggle toggle-filter">
+                      <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-color" checked>
+                      <label class="toggle-filter__label" for="toggle-color">Цвет</label>
+                    </div>
+                    <ul class="filters-group__list filters-group__list--color">
+                      <li class="filters-group__item">
+                        <input class="visually-hidden" type="checkbox" name="black" id="black">
+                        <label for="black">Черный</label>
+                      </li>
+                      <li class="filters-group__item">
+                        <input class="visually-hidden" type="checkbox" name="brown" id="brown">
+                        <label for="brown">Коричневый</label>
+                      </li>
+                      <li class="filters-group__item">
+                        <input class="visually-hidden" type="checkbox" name="red" id="red">
+                        <label for="red">Красный</label>
+                      </li>
+                      <li class="filters-group__item">
+                        <input class="visually-hidden" type="checkbox" name="blue" id="blue">
+                        <label for="blue">Голубой</label>
+                      </li>
+                      <li class="filters-group__item">
+                        <input class="visually-hidden" type="checkbox" name="khaki" id="khaki">
+                        <label for="khaki">Хаки</label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="filters-group filters-group--underline filters-group--closed">
+                    <h3 class="filters-group__title visually-hidden">Размер</h3>
+                    <div class="filters-group__toggle toggle-filter">
+                      <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-size">
+                      <label class="toggle-filter__label toggle-filter__label--closed" for="toggle-size">Размер</label>
+                    </div>
+                  </div>
+                  <div class="filters-group filters-group--underline filters-group--wheels">
+                    <h3 class="filters-group__title visually-hidden">Колеса</h3>
+                    <div class="filters-group__toggle toggle-filter">
+                      <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-wheels" checked>
+                      <label class="toggle-filter__label" for="toggle-wheels">Колеса</label>
+                    </div>
+                    <div class="filters-group__container">
+                      <ul class="filters-group__list filters-group__list--wheels">
+                        <li class="filters-group__item">
+                          <input class="visually-hidden" type="checkbox" name="wheels-20" id="wheels-20">
+                          <label for="wheels-20">20"</label>
+                        </li>
+                        <li class="filters-group__item">
+                          <input class="visually-hidden" type="checkbox" name="wheels-22" id="wheels-22">
+                          <label for="wheels-22">22"</label>
+                        </li>
+                        <li class="filters-group__item">
+                          <input class="visually-hidden" type="checkbox" name="wheels-24" id="wheels-24">
+                          <label for="wheels-24">24"</label>
+                        </li>
+                        <li class="filters-group__item">
+                          <input class="visually-hidden" type="checkbox" name="wheels-26" id="wheels-26">
+                          <label for="wheels-26">26"</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="filters-group">
+                    <h3 class="filters-group__title visually-hidden">Кол-во скоростей</h3>
+                    <div class="filters-group__toggle toggle-filter">
+                      <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-guests">
+                      <label class="toggle-filter__label toggle-filter__label--closed" for="toggle-guests">Кол-во скоростей</label>
+                    </div>
+                  </div>
+                </form>
               </div>
-            </form>
+
+              <!-- Блок с карточками -->
+
+              <div class="catalog__cards catalog-cards">
+                <ul class="catalog-cards__list">
+                  <li class="catalog-cards__item product-card">
+                    <div class="product-card__container">
+                      <div class="product-card__top">
+                        <a class="product-card__picture" href="#">
+                          <img src="img/product-bike-1.png" alt="Neuzer Chopper Apocalypse" width="300" height="200">
+                        </a>
+                        <div class="product-card__buttons">
+                          <div class="product-card__button-buy">
+                            <a class="button-buy" href="#">
+                              <span class="visually-hidden">Добавить в корзину</span>
+                              <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                                <use xlink:href="#icon-cart-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="product-card__button-extra">
+                            <a class="button-extra" href="#">
+                              <span class="visually-hidden">Дополнительно</span>
+                              <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
+                                <use xlink:href="#icon-burger-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-card__description">
+                        <a class="product-card__link" href="#">
+                          <h3 class="product-card__name">Neuzer Chopper Apocalypse</h3>
+                        </a>
+                        <p class="product-card__info">24", сталь Hi-Ten</p>
+                        <p class="product-card__info">Венгрия</p>
+                        <b class="product-card__price">75 000 Р</b>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="catalog-cards__item product-card">
+                    <div class="product-card__container">
+                      <div class="product-card__top">
+                        <a class="product-card__picture" href="#">
+                          <img src="img/product-bike-2.png" alt="Schwinn Stingray Occ" width="300" height="200">
+                        </a>
+                        <div class="product-card__buttons">
+                          <div class="product-card__button-buy">
+                            <a class="button-buy" href="#">
+                              <span class="visually-hidden">Добавить в корзину</span>
+                              <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                                <use xlink:href="#icon-cart-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="product-card__button-extra">
+                            <a class="button-extra" href="#">
+                              <span class="visually-hidden">Дополнительно</span>
+                              <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
+                                <use xlink:href="#icon-burger-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-card__description">
+                        <a class="product-card__link" href="#">
+                          <h3 class="product-card__name">Schwinn Stingray&nbsp;Occ</h3>
+                        </a>
+                        <p class="product-card__info">20"+24", сталь</p>
+                        <p class="product-card__info">США</p>
+                        <b class="product-card__price">34 000 Р</b>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="catalog-cards__item product-card">
+                    <div class="product-card__container">
+                      <div class="product-card__top">
+                        <a class="product-card__picture" href="#">
+                          <img src="img/product-bike-3.png" alt="Harley Davidson" width="300" height="200">
+                        </a>
+                        <div class="product-card__buttons">
+                          <div class="product-card__button-buy">
+                            <a class="button-buy" href="#">
+                              <span class="visually-hidden">Добавить в корзину</span>
+                              <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                                <use xlink:href="#icon-cart-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="product-card__button-extra">
+                            <a class="button-extra" href="#">
+                              <span class="visually-hidden">Дополнительно</span>
+                              <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
+                                <use xlink:href="#icon-burger-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-card__description">
+                        <a class="product-card__link" href="#">
+                          <h3 class="product-card__name">Harley Davidson</h3>
+                        </a>
+                        <p class="product-card__info">20", сталь</p>
+                        <p class="product-card__info">Китай</p>
+                        <b class="product-card__price">23 000 Р</b>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="catalog-cards__item product-card">
+                    <div class="product-card__container">
+                      <div class="product-card__top">
+                        <a class="product-card__picture" href="#">
+                          <img src="img/product-bike-4.png" alt="Micargi Cyclone Electric" width="300" height="200">
+                        </a>
+                        <div class="product-card__buttons">
+                          <div class="product-card__button-buy">
+                            <a class="button-buy" href="#">
+                              <span class="visually-hidden">Добавить в корзину</span>
+                              <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                                <use xlink:href="#icon-cart-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="product-card__button-extra">
+                            <a class="button-extra" href="#">
+                              <span class="visually-hidden">Дополнительно</span>
+                              <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
+                                <use xlink:href="#icon-burger-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-card__description">
+                        <a class="product-card__link" href="#">
+                          <h3 class="product-card__name product-card__name--long">Micargi Cyclone Electric</h3>
+                        </a>
+                        <p class="product-card__info">26", 500W, 5 скоростей, сталь</p>
+                        <p class="product-card__info">США</p>
+                        <b class="product-card__price">154 000 Р</b>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="catalog-cards__item product-card">
+                    <div class="product-card__container">
+                      <div class="product-card__top">
+                        <a class="product-card__picture" href="#">
+                          <img src="img/product-bike-5.png" alt="X-front Snowmobile" width="300" height="200">
+                        </a>
+                        <div class="product-card__buttons">
+                          <div class="product-card__button-buy">
+                            <a class="button-buy" href="#">
+                              <span class="visually-hidden">Добавить в корзину</span>
+                              <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                                <use xlink:href="#icon-cart-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="product-card__button-extra">
+                            <a class="button-extra" href="#">
+                              <span class="visually-hidden">Дополнительно</span>
+                              <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
+                                <use xlink:href="#icon-burger-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-card__description">
+                        <a class="product-card__link" href="#">
+                          <h3 class="product-card__name">X-front Snowmobile</h3>
+                        </a>
+                        <p class="product-card__info">24", сталь</p>
+                        <p class="product-card__info">Китай</p>
+                        <b class="product-card__price">42 000 Р</b>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="catalog-cards__item product-card">
+                    <div class="product-card__container">
+                      <div class="product-card__top">
+                        <a class="product-card__picture" href="#">
+                          <img src="img/product-bike-6.png" alt="2Fast4You Chopper" width="300" height="200">
+                        </a>
+                        <div class="product-card__buttons">
+                          <div class="product-card__button-buy">
+                            <a class="button-buy" href="#">
+                              <span class="visually-hidden">Добавить в корзину</span>
+                              <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                                <use xlink:href="#icon-cart-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="product-card__button-extra">
+                            <a class="button-extra" href="#">
+                              <span class="visually-hidden">Дополнительно</span>
+                              <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
+                                <use xlink:href="#icon-burger-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-card__description">
+                        <a class="product-card__link" href="#">
+                          <h3 class="product-card__name">2Fast4You Chopper</h3>
+                        </a>
+                        <p class="product-card__info">24", сталь</p>
+                        <p class="product-card__info">Венгрия</p>
+                        <b class="product-card__price">38 000 Р</b>
+                      </div>
+                    </div>
+                  </li>
+
+
+                  <li class="catalog-cards__item product-card">
+                    <div class="product-card__container">
+                      <div class="product-card__top">
+                        <a class="product-card__picture" href="#">
+                          <img src="img/product-bike-7.png" alt="Neuzer Chopper Apocalypse" width="300" height="200">
+                        </a>
+                        <div class="product-card__buttons">
+                          <div class="product-card__button-buy">
+                            <a class="button-buy" href="#">
+                              <span class="visually-hidden">Добавить в корзину</span>
+                              <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                                <use xlink:href="#icon-cart-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="product-card__button-extra">
+                            <a class="button-extra" href="#">
+                              <span class="visually-hidden">Дополнительно</span>
+                              <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
+                                <use xlink:href="#icon-burger-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-card__description">
+                        <a class="product-card__link" href="#">
+                          <h3 class="product-card__name">Neuzer Chopper Apocalypse</h3>
+                        </a>
+                        <p class="product-card__info">24", сталь Hi-Ten</p>
+                        <p class="product-card__info">Венгрия</p>
+                        <b class="product-card__price">75 000 Р</b>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="catalog-cards__item product-card">
+                    <div class="product-card__container">
+                      <div class="product-card__top">
+                        <a class="product-card__picture" href="#">
+                          <img src="img/product-bike-8.png" alt="Schwinn Stingray Occ" width="300" height="200">
+                        </a>
+                        <div class="product-card__buttons">
+                          <div class="product-card__button-buy">
+                            <a class="button-buy" href="#">
+                              <span class="visually-hidden">Добавить в корзину</span>
+                              <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                                <use xlink:href="#icon-cart-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="product-card__button-extra">
+                            <a class="button-extra" href="#">
+                              <span class="visually-hidden">Дополнительно</span>
+                              <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
+                                <use xlink:href="#icon-burger-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-card__description">
+                        <a class="product-card__link" href="#">
+                          <h3 class="product-card__name">Schwinn Stingray Occ</h3>
+                        </a>
+                        <p class="product-card__info">20+24", сталь</p>
+                        <p class="product-card__info">США</p>
+                        <b class="product-card__price">34 000 Р</b>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="catalog-cards__item product-card">
+                    <div class="product-card__container">
+                      <div class="product-card__top">
+                        <a class="product-card__picture" href="#">
+                          <img src="img/product-bike-9.png" alt="Harley Davidson" width="300" height="200">
+                        </a>
+                        <div class="product-card__buttons">
+                          <div class="product-card__button-buy">
+                            <a class="button-buy" href="#">
+                              <span class="visually-hidden">Добавить в корзину</span>
+                              <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                                <use xlink:href="#icon-cart-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="product-card__button-extra">
+                            <a class="button-extra" href="#">
+                              <span class="visually-hidden">Дополнительно</span>
+                              <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
+                                <use xlink:href="#icon-burger-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-card__description">
+                        <a class="product-card__link" href="#">
+                          <h3 class="product-card__name">Harley Davidson</h3>
+                        </a>
+                        <p class="product-card__info">20", сталь</p>
+                        <p class="product-card__info">Китай</p>
+                        <b class="product-card__price">23 000 Р</b>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="catalog-cards__item product-card">
+                    <div class="product-card__container">
+                      <div class="product-card__top">
+                        <a class="product-card__picture" href="#">
+                          <img src="img/product-bike-10.png" alt="Micargi Cyclone Electric" width="300" height="200">
+                        </a>
+                        <div class="product-card__buttons">
+                          <div class="product-card__button-buy">
+                            <a class="button-buy" href="#">
+                              <span class="visually-hidden">Добавить в корзину</span>
+                              <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                                <use xlink:href="#icon-cart-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="product-card__button-extra">
+                            <a class="button-extra" href="#">
+                              <span class="visually-hidden">Дополнительно</span>
+                              <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
+                                <use xlink:href="#icon-burger-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-card__description">
+                        <a class="product-card__link" href="#">
+                          <h3 class="product-card__name product-card__name--long">Micargi Cyclone Electric</h3>
+                        </a>
+                        <p class="product-card__info">26", 500W, 5 скоростей, сталь</p>
+                        <p class="product-card__info">США</p>
+                        <b class="product-card__price">154 000 Р</b>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="catalog-cards__item product-card">
+                    <div class="product-card__container">
+                      <div class="product-card__top">
+                        <a class="product-card__picture" href="#">
+                          <img src="img/product-bike-11.png" alt="X-front Snowmobile" width="300" height="200">
+                        </a>
+                        <div class="product-card__buttons">
+                          <div class="product-card__button-buy">
+                            <a class="button-buy" href="#">
+                              <span class="visually-hidden">Добавить в корзину</span>
+                              <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                                <use xlink:href="#icon-cart-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="product-card__button-extra">
+                            <a class="button-extra" href="#">
+                              <span class="visually-hidden">Дополнительно</span>
+                              <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
+                                <use xlink:href="#icon-burger-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-card__description">
+                        <a class="product-card__link" href="#">
+                          <h3 class="product-card__name">X-front Snowmobile</h3>
+                        </a>
+                        <p class="product-card__info">24", сталь</p>
+                        <p class="product-card__info">Китай</p>
+                        <b class="product-card__price">42 000 Р</b>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="catalog-cards__item product-card">
+                    <div class="product-card__container">
+                      <div class="product-card__top">
+                        <a class="product-card__picture" href="#">
+                          <img src="img/product-bike-12.png" alt="2Fast4You Chopper" width="300" height="200">
+                        </a>
+                        <div class="product-card__buttons">
+                          <div class="product-card__button-buy">
+                            <a class="button-buy" href="#">
+                              <span class="visually-hidden">Добавить в корзину</span>
+                              <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                                <use xlink:href="#icon-cart-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="product-card__button-extra">
+                            <a class="button-extra" href="#">
+                              <span class="visually-hidden">Дополнительно</span>
+                              <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
+                                <use xlink:href="#icon-burger-plus"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-card__description">
+                        <a class="product-card__link" href="#">
+                          <h3 class="product-card__name">2Fast4You Chopper</h3>
+                        </a>
+                        <p class="product-card__info">24", сталь</p>
+                        <p class="product-card__info">Венгрия</p>
+                        <b class="product-card__price">38 000 Р</b>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <div class="pagination">
+            <div class="pagination__container">
+              <a class="pagination__button pagination__button--disabled pagination__button--prev" href="#">
+                <span class="visually-hidden">Предыдущая страница</span>
+              </a>
+              <ul class="pagination__list">
+                <li class="pagination__item"><a class="pagination__link pagination__link--active">1</a></li>
+                <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+                <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+                <li class="pagination__item"><span class="pagination__link pagination__link--dots">...</span></li>
+                <li class="pagination__item  pagination__item--more"><a class="pagination__link" href="#">24</a></li>
+                <li class="pagination__item  pagination__item--more"><a class="pagination__link" href="#">25</a></li>
+                <li class="pagination__item"><a class="pagination__link" href="#">26</a></li>
+              </ul>
+              <a class="pagination__button pagination__button--next" href="#">
+                <span class="visually-hidden">Следующая страница</span>
+              </a>
+            </div>
           </div>
+        </main>
+      </div>
 
-          <!-- Блок с карточками -->
-
-          <div class="catalog__cards catalog-cards">
-            <ul class="catalog-cards__list">
-              <li class="catalog-cards__item product-card">
-                <div class="product-card__container">
-                  <div class="product-card__top">
-                    <a class="product-card__picture" href="#">
-                      <img src="img/product-bike-1.png" alt="Neuzer Chopper Apocalypse" width="300" height="200">
-                    </a>
-                    <div class="product-card__buttons">
-                      <div class="product-card__button-buy">
-                        <a class="button-buy" href="#">
-                          <span class="visually-hidden">Добавить в корзину</span>
-                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
-                            <use xlink:href="#icon-cart-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                      <div class="product-card__button-extra">
-                        <a class="button-extra" href="#">
-                          <span class="visually-hidden">Дополнительно</span>
-                          <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
-                            <use xlink:href="#icon-burger-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-card__description">
-                    <a class="product-card__link" href="#">
-                      <h3 class="product-card__name">Neuzer Chopper Apocalypse</h3>
-                    </a>
-                    <p class="product-card__info">24", сталь Hi-Ten</p>
-                    <p class="product-card__info">Венгрия</p>
-                    <b class="product-card__price">75 000 Р</b>
-                  </div>
-                </div>
+      <footer class="page-footer">
+        <div class="page-footer__container">
+          <div class="page-footer__top site-nav">
+            <b class="visually-hidden">Навигация по сайту</b>
+            <ul class="site-nav__list">
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Велосипеды</a>
               </li>
-
-              <li class="catalog-cards__item product-card">
-                <div class="product-card__container">
-                  <div class="product-card__top">
-                    <a class="product-card__picture" href="#">
-                      <img src="img/product-bike-2.png" alt="Schwinn Stingray Occ" width="300" height="200">
-                    </a>
-                    <div class="product-card__buttons">
-                      <div class="product-card__button-buy">
-                        <a class="button-buy" href="#">
-                          <span class="visually-hidden">Добавить в корзину</span>
-                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
-                            <use xlink:href="#icon-cart-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                      <div class="product-card__button-extra">
-                        <a class="button-extra" href="#">
-                          <span class="visually-hidden">Дополнительно</span>
-                          <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
-                            <use xlink:href="#icon-burger-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-card__description">
-                    <a class="product-card__link" href="#">
-                      <h3 class="product-card__name">Schwinn Stingray&nbsp;Occ</h3>
-                    </a>
-                    <p class="product-card__info">20"+24", сталь</p>
-                    <p class="product-card__info">США</p>
-                    <b class="product-card__price">34 000 Р</b>
-                  </div>
-                </div>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Аксессуары</a>
               </li>
-
-              <li class="catalog-cards__item product-card">
-                <div class="product-card__container">
-                  <div class="product-card__top">
-                    <a class="product-card__picture" href="#">
-                      <img src="img/product-bike-3.png" alt="Harley Davidson" width="300" height="200">
-                    </a>
-                    <div class="product-card__buttons">
-                      <div class="product-card__button-buy">
-                        <a class="button-buy" href="#">
-                          <span class="visually-hidden">Добавить в корзину</span>
-                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
-                            <use xlink:href="#icon-cart-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                      <div class="product-card__button-extra">
-                        <a class="button-extra" href="#">
-                          <span class="visually-hidden">Дополнительно</span>
-                          <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
-                            <use xlink:href="#icon-burger-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-card__description">
-                    <a class="product-card__link" href="#">
-                      <h3 class="product-card__name">Harley Davidson</h3>
-                    </a>
-                    <p class="product-card__info">20", сталь</p>
-                    <p class="product-card__info">Китай</p>
-                    <b class="product-card__price">23 000 Р</b>
-                  </div>
-                </div>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Запчасти</a>
               </li>
-
-              <li class="catalog-cards__item product-card">
-                <div class="product-card__container">
-                  <div class="product-card__top">
-                    <a class="product-card__picture" href="#">
-                      <img src="img/product-bike-4.png" alt="Micargi Cyclone Electric" width="300" height="200">
-                    </a>
-                    <div class="product-card__buttons">
-                      <div class="product-card__button-buy">
-                        <a class="button-buy" href="#">
-                          <span class="visually-hidden">Добавить в корзину</span>
-                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
-                            <use xlink:href="#icon-cart-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                      <div class="product-card__button-extra">
-                        <a class="button-extra" href="#">
-                          <span class="visually-hidden">Дополнительно</span>
-                          <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
-                            <use xlink:href="#icon-burger-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-card__description">
-                    <a class="product-card__link" href="#">
-                      <h3 class="product-card__name product-card__name--long">Micargi Cyclone Electric</h3>
-                    </a>
-                    <p class="product-card__info">26", 500W, 5 скоростей, сталь</p>
-                    <p class="product-card__info">США</p>
-                    <b class="product-card__price">154 000 Р</b>
-                  </div>
-                </div>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Мастерская</a>
               </li>
-
-              <li class="catalog-cards__item product-card">
-                <div class="product-card__container">
-                  <div class="product-card__top">
-                    <a class="product-card__picture" href="#">
-                      <img src="img/product-bike-5.png" alt="X-front Snowmobile" width="300" height="200">
-                    </a>
-                    <div class="product-card__buttons">
-                      <div class="product-card__button-buy">
-                        <a class="button-buy" href="#">
-                          <span class="visually-hidden">Добавить в корзину</span>
-                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
-                            <use xlink:href="#icon-cart-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                      <div class="product-card__button-extra">
-                        <a class="button-extra" href="#">
-                          <span class="visually-hidden">Дополнительно</span>
-                          <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
-                            <use xlink:href="#icon-burger-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-card__description">
-                    <a class="product-card__link" href="#">
-                      <h3 class="product-card__name">X-front Snowmobile</h3>
-                    </a>
-                    <p class="product-card__info">24", сталь</p>
-                    <p class="product-card__info">Китай</p>
-                    <b class="product-card__price">42 000 Р</b>
-                  </div>
-                </div>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Тест-драйв</a>
               </li>
-
-              <li class="catalog-cards__item product-card">
-                <div class="product-card__container">
-                  <div class="product-card__top">
-                    <a class="product-card__picture" href="#">
-                      <img src="img/product-bike-6.png" alt="2Fast4You Chopper" width="300" height="200">
-                    </a>
-                    <div class="product-card__buttons">
-                      <div class="product-card__button-buy">
-                        <a class="button-buy" href="#">
-                          <span class="visually-hidden">Добавить в корзину</span>
-                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
-                            <use xlink:href="#icon-cart-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                      <div class="product-card__button-extra">
-                        <a class="button-extra" href="#">
-                          <span class="visually-hidden">Дополнительно</span>
-                          <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
-                            <use xlink:href="#icon-burger-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-card__description">
-                    <a class="product-card__link" href="#">
-                      <h3 class="product-card__name">2Fast4You Chopper</h3>
-                    </a>
-                    <p class="product-card__info">24", сталь</p>
-                    <p class="product-card__info">Венгрия</p>
-                    <b class="product-card__price">38 000 Р</b>
-                  </div>
-                </div>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Доставка и оплата</a>
               </li>
-
-
-              <li class="catalog-cards__item product-card">
-                <div class="product-card__container">
-                  <div class="product-card__top">
-                    <a class="product-card__picture" href="#">
-                      <img src="img/product-bike-7.png" alt="Neuzer Chopper Apocalypse" width="300" height="200">
-                    </a>
-                    <div class="product-card__buttons">
-                      <div class="product-card__button-buy">
-                        <a class="button-buy" href="#">
-                          <span class="visually-hidden">Добавить в корзину</span>
-                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
-                            <use xlink:href="#icon-cart-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                      <div class="product-card__button-extra">
-                        <a class="button-extra" href="#">
-                          <span class="visually-hidden">Дополнительно</span>
-                          <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
-                            <use xlink:href="#icon-burger-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-card__description">
-                    <a class="product-card__link" href="#">
-                      <h3 class="product-card__name">Neuzer Chopper Apocalypse</h3>
-                    </a>
-                    <p class="product-card__info">24", сталь Hi-Ten</p>
-                    <p class="product-card__info">Венгрия</p>
-                    <b class="product-card__price">75 000 Р</b>
-                  </div>
-                </div>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Рассрочка</a>
               </li>
-
-              <li class="catalog-cards__item product-card">
-                <div class="product-card__container">
-                  <div class="product-card__top">
-                    <a class="product-card__picture" href="#">
-                      <img src="img/product-bike-8.png" alt="Schwinn Stingray Occ" width="300" height="200">
-                    </a>
-                    <div class="product-card__buttons">
-                      <div class="product-card__button-buy">
-                        <a class="button-buy" href="#">
-                          <span class="visually-hidden">Добавить в корзину</span>
-                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
-                            <use xlink:href="#icon-cart-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                      <div class="product-card__button-extra">
-                        <a class="button-extra" href="#">
-                          <span class="visually-hidden">Дополнительно</span>
-                          <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
-                            <use xlink:href="#icon-burger-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-card__description">
-                    <a class="product-card__link" href="#">
-                      <h3 class="product-card__name">Schwinn Stingray Occ</h3>
-                    </a>
-                    <p class="product-card__info">20+24", сталь</p>
-                    <p class="product-card__info">США</p>
-                    <b class="product-card__price">34 000 Р</b>
-                  </div>
-                </div>
-              </li>
-
-              <li class="catalog-cards__item product-card">
-                <div class="product-card__container">
-                  <div class="product-card__top">
-                    <a class="product-card__picture" href="#">
-                      <img src="img/product-bike-9.png" alt="Harley Davidson" width="300" height="200">
-                    </a>
-                    <div class="product-card__buttons">
-                      <div class="product-card__button-buy">
-                        <a class="button-buy" href="#">
-                          <span class="visually-hidden">Добавить в корзину</span>
-                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
-                            <use xlink:href="#icon-cart-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                      <div class="product-card__button-extra">
-                        <a class="button-extra" href="#">
-                          <span class="visually-hidden">Дополнительно</span>
-                          <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
-                            <use xlink:href="#icon-burger-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-card__description">
-                    <a class="product-card__link" href="#">
-                      <h3 class="product-card__name">Harley Davidson</h3>
-                    </a>
-                    <p class="product-card__info">20", сталь</p>
-                    <p class="product-card__info">Китай</p>
-                    <b class="product-card__price">23 000 Р</b>
-                  </div>
-                </div>
-              </li>
-
-              <li class="catalog-cards__item product-card">
-                <div class="product-card__container">
-                  <div class="product-card__top">
-                    <a class="product-card__picture" href="#">
-                      <img src="img/product-bike-10.png" alt="Micargi Cyclone Electric" width="300" height="200">
-                    </a>
-                    <div class="product-card__buttons">
-                      <div class="product-card__button-buy">
-                        <a class="button-buy" href="#">
-                          <span class="visually-hidden">Добавить в корзину</span>
-                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
-                            <use xlink:href="#icon-cart-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                      <div class="product-card__button-extra">
-                        <a class="button-extra" href="#">
-                          <span class="visually-hidden">Дополнительно</span>
-                          <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
-                            <use xlink:href="#icon-burger-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-card__description">
-                    <a class="product-card__link" href="#">
-                      <h3 class="product-card__name product-card__name--long">Micargi Cyclone Electric</h3>
-                    </a>
-                    <p class="product-card__info">26", 500W, 5 скоростей, сталь</p>
-                    <p class="product-card__info">США</p>
-                    <b class="product-card__price">154 000 Р</b>
-                  </div>
-                </div>
-              </li>
-
-              <li class="catalog-cards__item product-card">
-                <div class="product-card__container">
-                  <div class="product-card__top">
-                    <a class="product-card__picture" href="#">
-                      <img src="img/product-bike-11.png" alt="X-front Snowmobile" width="300" height="200">
-                    </a>
-                    <div class="product-card__buttons">
-                      <div class="product-card__button-buy">
-                        <a class="button-buy" href="#">
-                          <span class="visually-hidden">Добавить в корзину</span>
-                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
-                            <use xlink:href="#icon-cart-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                      <div class="product-card__button-extra">
-                        <a class="button-extra" href="#">
-                          <span class="visually-hidden">Дополнительно</span>
-                          <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
-                            <use xlink:href="#icon-burger-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-card__description">
-                    <a class="product-card__link" href="#">
-                      <h3 class="product-card__name">X-front Snowmobile</h3>
-                    </a>
-                    <p class="product-card__info">24", сталь</p>
-                    <p class="product-card__info">Китай</p>
-                    <b class="product-card__price">42 000 Р</b>
-                  </div>
-                </div>
-              </li>
-              <li class="catalog-cards__item product-card">
-                <div class="product-card__container">
-                  <div class="product-card__top">
-                    <a class="product-card__picture" href="#">
-                      <img src="img/product-bike-12.png" alt="2Fast4You Chopper" width="300" height="200">
-                    </a>
-                    <div class="product-card__buttons">
-                      <div class="product-card__button-buy">
-                        <a class="button-buy" href="#">
-                          <span class="visually-hidden">Добавить в корзину</span>
-                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
-                            <use xlink:href="#icon-cart-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                      <div class="product-card__button-extra">
-                        <a class="button-extra" href="#">
-                          <span class="visually-hidden">Дополнительно</span>
-                          <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
-                            <use xlink:href="#icon-burger-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-card__description">
-                    <a class="product-card__link" href="#">
-                      <h3 class="product-card__name">2Fast4You Chopper</h3>
-                    </a>
-                    <p class="product-card__info">24", сталь</p>
-                    <p class="product-card__info">Венгрия</p>
-                    <b class="product-card__price">38 000 Р</b>
-                  </div>
-                </div>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Вступление в клуб</a>
               </li>
             </ul>
           </div>
-        </div>
-      </section>
-      <div class="pagination">
-        <div class="pagination__container">
-          <a class="pagination__button pagination__button--disabled pagination__button--prev" href="#">
-            <span class="visually-hidden">Предыдущая страница</span>
-          </a>
-          <ul class="pagination__list">
-            <li class="pagination__item"><a class="pagination__link pagination__link--active">1</a></li>
-            <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
-            <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
-            <li class="pagination__item"><span class="pagination__link pagination__link--dots">...</span></li>
-            <li class="pagination__item  pagination__item--more"><a class="pagination__link" href="#">24</a></li>
-            <li class="pagination__item  pagination__item--more"><a class="pagination__link" href="#">25</a></li>
-            <li class="pagination__item"><a class="pagination__link" href="#">26</a></li>
-          </ul>
-          <a class="pagination__button pagination__button--next" href="#">
-            <span class="visually-hidden">Следующая страница</span>
-          </a>
-        </div>
-      </div>
-    </main>
-
-    <footer class="page-footer">
-      <div class="page-footer__container">
-        <div class="page-footer__top site-nav">
-          <b class="visually-hidden">Навигация по сайту</b>
-          <ul class="site-nav__list">
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="#">Велосипеды</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="#">Аксессуары</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="#">Запчасти</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="#">Мастерская</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="#">Тест-драйв</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="#">Доставка и оплата</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="#">Рассрочка</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="#">Вступление в клуб</a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-footer__bottom">
-          <div class="page-footer__logo logo">
-            <a class="logo__link" href="#">
-              <picture>
-                <source media="(max-width: 768px)" srcset="img/logo-mobile.svg">
-                <img src="img/logo-desktop.svg" alt="Chopper Bikeshop" width="184" height="30">
-              </picture>
-            </a>
-          </div>
-          <div class="page-footer__social social">
-            <b class="visually-hidden">Мы в социальных сетях</b>
-            <ul class="social__list">
-              <li class="social__item">
-                <a class="social__link" href="#">
-                  <span class="visually-hidden">Vk</span>
-                  <svg class="social__icon social__icon--vk" width="21.39" height="12.03">
-                    <use xlink:href="#icon-vk"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a class="social__link" href="#">
-                  <span class="visually-hidden">Facebook</span>
-                  <svg class="social__icon social__icon--fb" width="9.18" height="18.04">
-                    <use xlink:href="#icon-fb"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a class="social__link" href="#">
-                  <span class="visually-hidden">Instagram</span>
-                  <svg class="social__icon social__icon--inst" width="17.14" height="17.14">
-                    <use xlink:href="#icon-inst"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="page-footer__copyright copyright">
-            <a class="copyright__info" href="#">
-              <span class="copyright__year">©2018</span>
-              <span class="copyright__privacy">Политика конфиденциальности</span>
-            </a>
+          <div class="page-footer__bottom">
+            <div class="page-footer__logo logo">
+              <a class="logo__link" href="#">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="img/logo-mobile.svg">
+                  <img src="img/logo-desktop.svg" alt="Chopper Bikeshop" width="184" height="30">
+                </picture>
+              </a>
+            </div>
+            <div class="page-footer__social social">
+              <b class="visually-hidden">Мы в социальных сетях</b>
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <span class="visually-hidden">Vk</span>
+                    <svg class="social__icon social__icon--vk" width="21.39" height="12.03">
+                      <use xlink:href="#icon-vk"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <span class="visually-hidden">Facebook</span>
+                    <svg class="social__icon social__icon--fb" width="9.18" height="18.04">
+                      <use xlink:href="#icon-fb"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <span class="visually-hidden">Instagram</span>
+                    <svg class="social__icon social__icon--inst" width="17.14" height="17.14">
+                      <use xlink:href="#icon-inst"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="page-footer__copyright copyright">
+              <a class="copyright__info" href="#">
+                <span class="copyright__year">©2018</span>
+                <span class="copyright__privacy">Политика конфиденциальности</span>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>
