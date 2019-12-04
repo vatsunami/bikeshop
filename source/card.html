@@ -147,54 +147,56 @@
             </div>
 
             <div class="product__view slider-view">
-              <div class="slider-view__top">
-                <div class="slider-view__border-wrapper">
-                  <div class="slider-view__border"></div>
+              <div class="slider-view__container">
+                <div class="slider-view__top">
+                  <ul class="slider-view__slides">
+                    <li class="slider-view__slide">
+                      <div class="slider-view__picture">
+                        <picture>
+                          <source media="(max-width: 768px)" srcset="img/image-extra-1-mobile.png">
+                          <img src="img/image-extra-1.png" alt="Седло Brooks B67" width="500" height="350">
+                        </picture>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-                <!-- <ul class="slider-view__slides">
-                  <li class="slider-view__slide">
-                    <div class="slider-view__picture">
-                      <img src="http://placehold.it/518x376" alt="Седло Brooks B67" width="518" height="376">
-                    </div>
-                  </li>
-                </ul> -->
-              </div>
-              <div class="slider-view__bottom">
-                <ul class="slider-view__toggles">
-                  <li class="slider-view__toggle">
-                    <input class="slider-view__input visually-hidden" type="radio" name="color" value="black" id="color-black" checked>
-                    <label class="slider-view__label slider-view__label--color-black" for="color-black">
-                      <span class="visually-hidden">Чёрный</span>
-                    </label>
-                  </li>
-                  <li class="slider-view__toggle">
-                    <input class="slider-view__input visually-hidden" type="radio" name="color" value="brown" id="color-brown">
-                    <label class="slider-view__label slider-view__label--color-brown" for="color-brown">
-                      <span class="visually-hidden">Коричневый</span>
-                    </label>
-                  </li>
-                  <li class="slider-view__toggle">
-                    <input class="slider-view__input visually-hidden" type="radio" name="color" value="beige" id="color-beige">
-                    <label class="slider-view__label slider-view__label--color-beige" for="color-beige">
-                      <span class="visually-hidden">Бежевый</span>
-                    </label>
-                  </li>
-                </ul>
-                <div class="slider-view__button-zoom">
-                  <a class="button-zoom" href="#">
-                    <span class="visually-hidden">Увеличить изображение</span>
-                    <!-- <svg class="button-zoom__icon" width="26" height="26" viewBox="0 0 26 26">
-                      <use xlink:href="#icon-zoom"></use>
-                    </svg> -->
-                  </a>
-                </div>
-                <div class="slider-view__button-extra">
-                  <a class="button-extra" href="#">
-                    <span class="visually-hidden">Дополнительно</span>
-                    <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
-                      <use xlink:href="#icon-burger-plus"></use>
-                    </svg>
-                  </a>
+                <div class="slider-view__bottom">
+                  <ul class="slider-view__toggles">
+                    <li class="slider-view__toggle">
+                      <input class="slider-view__input visually-hidden" type="radio" name="color" value="black" id="color-black" checked>
+                      <label class="slider-view__label slider-view__label--color-black" for="color-black">
+                        <span class="visually-hidden">Чёрный</span>
+                      </label>
+                    </li>
+                    <li class="slider-view__toggle">
+                      <input class="slider-view__input visually-hidden" type="radio" name="color" value="brown" id="color-brown">
+                      <label class="slider-view__label slider-view__label--color-brown" for="color-brown">
+                        <span class="visually-hidden">Коричневый</span>
+                      </label>
+                    </li>
+                    <li class="slider-view__toggle">
+                      <input class="slider-view__input visually-hidden" type="radio" name="color" value="beige" id="color-beige">
+                      <label class="slider-view__label slider-view__label--color-beige" for="color-beige">
+                        <span class="visually-hidden">Бежевый</span>
+                      </label>
+                    </li>
+                  </ul>
+                  <div class="slider-view__button-zoom">
+                    <a class="button-zoom" href="#">
+                      <span class="visually-hidden">Увеличить изображение</span>
+                      <svg class="button-zoom__icon" width="26" height="26" viewBox="0 0 26 26">
+                        <use xlink:href="#icon-zoom"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="slider-view__button-extra">
+                    <a class="button-extra" href="#">
+                      <span class="visually-hidden">Дополнительно</span>
+                      <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
+                        <use xlink:href="#icon-burger-plus"></use>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
            </div>
@@ -273,19 +275,18 @@
           <div class="catalog-section__description catalog-section__description--extra catalog-section__description--no-paragraph">
             <h2 class="catalog-section__title catalog-section__title--extra title">С этим товаром смотрят:</h2>
           </div>
-          <div class="catalog-section__slider slider-cards slider-cards--extra">
+          <div class="catalog-section__slider catalog-section__slider--extra slider-cards slider-cards--extra">
             <ul class="slider-cards__list slider-cards__list--extra">
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra"></li>
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra"></li>
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra"></li>
-              <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra"></li>
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra">
                 <div class="product-card__container">
-                  <div class="product-card__top">
-                    <div class="product-card__picture product-card__picture--extra-1">
-                      <img src="img/product-extra-1.png" alt="Сумка на руль B-soul" width="165" height="84">
-                    </div>
-                    <div class="product-card__buttons">
+                  <div class="product-card__top product-card__top--extra">
+                    <a class="product-card__picture product-card__picture--extra" href="#">
+                      <img src="img/product-extra-5.png" alt="Педали Bikein Pro" width="283" height="200">
+                    </a>
+                    <div class="product-card__buttons product-card__buttons--extra">
                       <div class="product-card__button-buy">
                         <a class="button-buy" href="#">
                           <span class="visually-hidden">Добавить в корзину</span>
@@ -297,20 +298,55 @@
                     </div>
                   </div>
                   <div class="product-card__description">
-                    <h3 class="product-card__name">Сумка на руль B-soul</h3>
+                    <a class="product-card__link" href="#">
+                      <h3 class="product-card__name product-card__name--extra">Педали Bikein&nbsp;Pro</h3>
+                    </a>
+                    <p class="product-card__info">алюминий+ольха</p>
+                    <p class="product-card__info">120x77x30мм, 394гр</p>
+                    <b class="product-card__price product-card__price--extra price">
+                      <span class="price__count">2500</span>
+                      <span class="price__currency">Р</span>
+                    </b>
+                  </div>
+                </div>
+              </li>
+              <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra">
+                <div class="product-card__container">
+                  <div class="product-card__top product-card__top--extra">
+                    <a class="product-card__picture product-card__picture--extra" href="#">
+                      <img src="img/product-extra-1.png" alt="Сумка на руль B-soul" width="283" height="200">
+                    </a>
+                    <div class="product-card__buttons product-card__buttons--extra">
+                      <div class="product-card__button-buy">
+                        <a class="button-buy" href="#">
+                          <span class="visually-hidden">Добавить в корзину</span>
+                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                            <use xlink:href="#icon-cart-plus"></use>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-card__description">
+                    <a class="product-card__link" href="#">
+                      <h3 class="product-card__name product-card__name--extra">Сумка на руль B-soul</h3>
+                    </a>
                     <p class="product-card__info">15x10 x5 cm</p>
                     <p class="product-card__info">натуральная кожа</p>
-                    <b class="product-card__price product-card__price--extra">3200 ₽</b>
+                    <b class="product-card__price product-card__price--extra price">
+                      <span class="price__count">3200</span>
+                      <span class="price__currency">Р</span>
+                    </b>
                   </div>
                 </div>
               </li>
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra">
                 <div class="product-card__container">
-                  <div class="product-card__top">
-                    <div class="product-card__picture product-card__picture--extra-2">
-                      <img src="img/product-extra-2.png" alt="Грипсы Propalm" width="160" height="93">
-                    </div>
-                    <div class="product-card__buttons">
+                  <div class="product-card__top product-card__top--extra">
+                    <a class="product-card__picture product-card__picture--extra" href="#">
+                      <img src="img/product-extra-2.png" alt="Грипсы Propalm" width="283" height="200">
+                    </a>
+                    <div class="product-card__buttons product-card__buttons--extra">
                       <div class="product-card__button-buy">
                         <a class="button-buy" href="#">
                           <span class="visually-hidden">Добавить в корзину</span>
@@ -322,20 +358,25 @@
                     </div>
                   </div>
                   <div class="product-card__description">
-                    <h3 class="product-card__name">Грипсы Propalm</h3>
+                    <a class="product-card__link" href="#">
+                      <h3 class="product-card__name product-card__name--extra">Грипсы Propalm</h3>
+                    </a>
                     <p class="product-card__info">натуральная кожа</p>
                     <p class="product-card__info">с фиксаторами</p>
-                    <b class="product-card__price product-card__price--extra">1800 ₽</b>
+                    <b class="product-card__price product-card__price--extra price">
+                      <span class="price__count">1800</span>
+                      <span class="price__currency">Р</span>
+                    </b>
                   </div>
                 </div>
               </li>
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra">
                 <div class="product-card__container">
-                  <div class="product-card__top">
-                    <div class="product-card__picture product-card__picture--extra-3">
-                      <img src="img/product-extra-3.png" alt="Седло Brooks B66 S" width="158" height="97">
-                    </div>
-                    <div class="product-card__buttons">
+                  <div class="product-card__top product-card__top--extra">
+                    <a class="product-card__picture product-card__picture--extra" href="#">
+                      <img src="img/product-extra-3.png" alt="Седло Brooks B66 S" width="283" height="97">
+                    </a>
+                    <div class="product-card__buttons product-card__buttons--extra">
                       <div class="product-card__button-buy">
                         <a class="button-buy" href="#">
                           <span class="visually-hidden">Добавить в корзину</span>
@@ -347,20 +388,25 @@
                     </div>
                   </div>
                   <div class="product-card__description">
-                    <h3 class="product-card__name">Седло Brooks&nbsp;B66 S</h3>
+                    <a class="product-card__link" href="#">
+                      <h3 class="product-card__name product-card__name--extra">Седло Brooks&nbsp;B66 S</h3>
+                    </a>
                     <p class="product-card__info">натуральная кожа</p>
                     <p class="product-card__info">доступно в 3 цветах</p>
-                    <b class="product-card__price product-card__price--extra">8625 ₽</b>
+                    <b class="product-card__price product-card__price--extra price">
+                      <span class="price__count">8625</span>
+                      <span class="price__currency">Р</span>
+                    </b>
                   </div>
                 </div>
               </li>
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra">
                 <div class="product-card__container">
-                  <div class="product-card__top">
-                    <div class="product-card__picture product-card__picture--extra-4">
-                      <img src="img/product-extra-4.png" alt="Колеса Strida 18" width="140" height="140">
-                    </div>
-                    <div class="product-card__buttons">
+                  <div class="product-card__top product-card__top--extra">
+                    <a class="product-card__picture product-card__picture--extra" href="#">
+                      <img src="img/product-extra-4.png" alt="Колеса Strida 18" width="283" height="200">
+                    </a>
+                    <div class="product-card__buttons product-card__buttons--extra">
                       <div class="product-card__button-buy">
                         <a class="button-buy" href="#">
                           <span class="visually-hidden">Добавить в корзину</span>
@@ -372,28 +418,60 @@
                     </div>
                   </div>
                   <div class="product-card__description">
-                    <h3 class="product-card__name">Колеса Strida&nbsp;18"</h3>
+                    <a class="product-card__link" href="#">
+                      <h3 class="product-card__name product-card__name--extra">Колеса Strida&nbsp;18"</h3>
+                    </a>
                     <p class="product-card__info">покрышки Innova</p>
                     <p class="product-card__info">цена за 2 колеса</p>
-                    <b class="product-card__price product-card__price--extra">6780 ₽</b>
+                    <b class="product-card__price product-card__price--extra price">
+                      <span class="price__count">6780</span>
+                      <span class="price__currency">Р</span>
+                    </b>
                   </div>
                 </div>
               </li>
-              <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra"></li>
+              <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra">
+                <div class="product-card__container">
+                  <div class="product-card__top product-card__top--extra">
+                    <a class="product-card__picture product-card__picture--extra" href="#">
+                      <img src="img/product-extra-6.png" alt="Руль Lowrider U" width="283" height="200">
+                    </a>
+                    <div class="product-card__buttons product-card__buttons--extra">
+                      <div class="product-card__button-buy">
+                        <a class="button-buy" href="#">
+                          <span class="visually-hidden">Добавить в корзину</span>
+                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                            <use xlink:href="#icon-cart-plus"></use>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-card__description">
+                    <a class="product-card__link" href="#">
+                      <h3 class="product-card__name product-card__name--extra">Руль Lowrider&nbsp;U</h3>
+                    </a>
+                    <p class="product-card__info">11" - 25.4mm</p>
+                    <p class="product-card__info">хромированная сталь</p>
+                    <b class="product-card__price product-card__price--extra price">
+                      <span class="price__count">2350</span>
+                      <span class="price__currency">Р</span>
+                    </b>
+                  </div>
+                </div>
+              </li>
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra"></li>
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra"></li>
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra"></li>
             </ul>
-            <div class="slider-cards__toggle slider-cards__toggle--prev">
-              <button class="toggle toogle--prev" type="button">
+            <div class="slider-cards__toggle slider-cards__toggle--prev-extra slider-cards__toggle--prev">
+              <button class="toggle toggle--prev" type="button">
                 <span class="visually-hidden">Предыдущий слайд</span>
-                <span class="toggle__arrow toggle__arrow--prev"></span>
               </button>
             </div>
-            <div class="slider-cards__toggle slider-cards__toggle--next">
-              <button class="toggle toogle--next" type="button">
+            <div class="slider-cards__toggle slider-cards__toggle--next-extra slider-cards__toggle--next">
+              <button class="toggle toggle--next" type="button">
                 <span class="visually-hidden">Следующий слайд</span>
-                <span class="toggle__arrow toggle__arrow--next"></span>
               </button>
             </div>
           </div>
@@ -435,7 +513,11 @@
         <div class="page-footer__bottom">
           <div class="page-footer__logo logo">
             <a class="logo__link" href="#">
-              <img src="img/logo-desktop.svg" alt="Chopper Bikeshop" width="184" height="30">
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/logo-mobile.svg">
+                <!-- <source media="(max-width: 1024px)" srcset="img/logo-mobile.svg"> -->
+                <img src="img/logo-desktop.svg" alt="Chopper Bikeshop" width="184" height="30">
+              </picture>
             </a>
           </div>
           <div class="page-footer__social social">

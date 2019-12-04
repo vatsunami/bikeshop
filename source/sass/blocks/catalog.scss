@@ -35,7 +35,14 @@
   margin-left: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .catalog__container {
+    padding: 0;
+  }
+}
+
+
+@media (max-width: 1024px) {
   .catalog {
     margin-bottom: 58px;
   }

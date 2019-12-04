@@ -6,6 +6,7 @@
 .user-account__list {
   display: flex;
   flex-wrap: wrap;
+  flex-shrink: 0;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -15,7 +16,7 @@
   margin-right: 8px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .user-account {
     display: block;
     width: 100%;

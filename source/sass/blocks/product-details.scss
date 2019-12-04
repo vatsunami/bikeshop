@@ -1,11 +1,13 @@
 .product-details {
-  box-sizing: border-box;
+  // box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  max-width: 1090px;
   min-height: 389px;
-  padding-right: 124px;
-  padding-left: 94px;
+  margin: 0 auto;
+  padding: 0 20px 0 10px;
+  // padding-right: 10px;
 }
 
 .product-details__toggle {
@@ -79,10 +81,15 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .product-details {
+    padding: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .product-details {
     flex-direction: column;
-    padding: 0;
   }
 
   .product-details__toggle {

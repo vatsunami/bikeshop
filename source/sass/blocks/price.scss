@@ -1,0 +1,32 @@
+.price {
+  display: flex;
+  justify-content: center;
+}
+
+.price__count {
+  margin-right: 5px;
+}
+
+.price__currency {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 1px;
+    width: 7px;
+    height: 1.5px;
+    background-color: #ba4f4f;
+  }
+}
+
+@media (max-width: 768px) {
+  .price__currency {
+    position: relative;
+
+    &::before {
+      top: 15px;
+    }
+  }
+}

@@ -10,6 +10,17 @@
   margin: 0 16px 40px 14px;
 }
 
+@media (max-width: 1024px) {
+  .catalog-cards__list {
+    max-width: 660px;
+    margin: 0 auto;
+  }
+
+  .catalog-cards__item {
+    margin: 0 10px 14px;
+  }
+}
+
 @media (max-width: 768px) {
   .catalog-cards__list {
     max-width: 660px;
@@ -19,8 +30,8 @@
   .catalog-cards__item {
     margin: 0 10px -7px;
 
-    // &:nth-of-type(n + 6) {
-    //   display: none;
-    // }
+    &:nth-of-type(n + 6) {
+      display: none;
+    }
   }
 }

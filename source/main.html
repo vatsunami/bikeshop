@@ -73,7 +73,7 @@
                 </ul>
               </div>
 
-              <div class="page-header__user-nav user-nav--inner-page-card user-nav">
+              <div class="page-header__user-nav user-nav">
                 <ul class="user-nav__list">
                   <li class="user-nav__item user-search">
                     <a class="user-search__link" href="#">
@@ -162,9 +162,9 @@
                 <li class="slider-cards__item product-card">
                   <div class="product-card__container">
                     <div class="product-card__top">
-                      <div class="product-card__picture product-card__picture--product-4">
-                        <img src="img/product-bike-4.png" alt="Micargi Cyclone Electric" width="273" height="137">
-                      </div>
+                      <a class="product-card__picture product-card__picture--inactive" href="#">
+                        <img src="img/product-bike-4.png" alt="Micargi Cyclone Electric" width="300" height="200">
+                      </a>
                       <div class="product-card__buttons">
                         <div class="product-card__button-buy">
                           <a class="button-buy" href="#">
@@ -174,30 +174,28 @@
                             </svg>
                           </a>
                         </div>
-                        <div class="product-card__button-extra">
-                          <a class="button-extra" href="#">
-                            <span class="visually-hidden">Дополнительно</span>
-                            <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
-                              <use xlink:href="#icon-burger-plus"></use>
-                            </svg>
-                          </a>
-                        </div>
                       </div>
                     </div>
                     <div class="product-card__description">
-                      <h3 class="product-card__name product-card__name--long">Micargi Cyclone Electric</h3>
+                      <a class="product-card__link" href="#">
+                        <h3 class="product-card__name product-card__name--long">Micargi Cyclone Electric</h3>
+                      </a>
                       <p class="product-card__info">26", 500W, 5 скоростей, сталь</p>
                       <p class="product-card__info">США</p>
-                      <b class="product-card__price">154 000 ₽</b>
+                      <!-- <b class="product-card__price">154 000 Р</b> -->
+                      <b class="product-card__price price">
+                        <span class="price__count">154 000</span>
+                        <span class="price__currency">Р</span>
+                      </b>
                     </div>
                   </div>
                 </li>
                 <li class="slider-cards__item product-card">
                   <div class="product-card__container">
                     <div class="product-card__top">
-                      <div class="product-card__picture product-card__picture--product-1">
-                        <img src="img/product-bike-1.png" alt="Neuzer Chopper Apocalypse" width="263" height="114">
-                      </div>
+                      <a class="product-card__picture" href="#">
+                        <img src="img/product-bike-1.png" alt="Neuzer Chopper Apocalypse" width="300" height="200">
+                      </a>
                       <div class="product-card__buttons">
                         <div class="product-card__button-buy">
                           <a class="button-buy" href="#">
@@ -207,77 +205,63 @@
                             </svg>
                           </a>
                         </div>
-                        <div class="product-card__button-extra">
-                          <a class="button-extra" href="#">
-                            <span class="visually-hidden">Дополнительно</span>
-                            <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
-                              <use xlink:href="#icon-burger-plus"></use>
-                            </svg>
-                          </a>
-                        </div>
                       </div>
                     </div>
                     <div class="product-card__description">
-                      <h3 class="product-card__name">Neuzer Chopper Apocalypse</h3>
+                      <a class="product-card__link" href="#">
+                        <h3 class="product-card__name">Neuzer Chopper Apocalypse</h3>
+                      </a>
                       <p class="product-card__info">24", сталь Hi-Ten</p>
                       <p class="product-card__info">Венгрия</p>
-                      <b class="product-card__price">75 000 ₽</b>
+                      <b class="product-card__price price">
+                        <span class="price__count">75 000</span>
+                        <span class="price__currency">Р</span>
+                      </b>
                     </div>
                   </div>
                 </li>
                 <li class="slider-cards__item product-card">
                   <div class="product-card__container">
                     <div class="product-card__top">
-                      <div class="product-card__picture product-card__picture--product-2">
-                        <img src="img/product-bike-2.png" alt="Schwinn Stingray Occ" width="259" height="124">
-                      </div>
+                      <a class="product-card__picture" href="#">
+                        <img src="img/product-bike-2.png" alt="Schwinn Stingray Occ" width="300" height="200">
+                      </a>
                       <div class="product-card__buttons">
                         <div class="product-card__button-buy">
                           <a class="button-buy" href="#">
                             <span class="visually-hidden">Добавить в корзину</span>
                             <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
                               <use xlink:href="#icon-cart-plus"></use>
-                            </svg>
-                          </a>
-                        </div>
-                        <div class="product-card__button-extra">
-                          <a class="button-extra" href="#">
-                            <span class="visually-hidden">Дополнительно</span>
-                            <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
-                              <use xlink:href="#icon-burger-plus"></use>
                             </svg>
                           </a>
                         </div>
                       </div>
                     </div>
                     <div class="product-card__description">
-                      <h3 class="product-card__name">Schwinn Stingray&nbsp;Occ</h3>
+                      <a class="product-card__link" href="#">
+                        <h3 class="product-card__name">Schwinn Stingray&nbsp;Occ</h3>
+                      </a>
                       <p class="product-card__info">20"+24", сталь</p>
                       <p class="product-card__info">США</p>
-                      <b class="product-card__price">34 000 ₽</b>
+                      <b class="product-card__price price">
+                        <span class="price__count">34 000</span>
+                        <span class="price__currency">Р</span>
+                      </b>
                     </div>
                   </div>
                 </li>
                 <li class="slider-cards__item product-card">
                   <div class="product-card__container">
                     <div class="product-card__top">
-                      <div class="product-card__picture product-card__picture--product-3">
-                        <img src="img/product-bike-3.png" alt="Harley Davidson" width="257" height="160">
-                      </div>
+                      <a class="product-card__picture" href="#">
+                        <img src="img/product-bike-3.png" alt="Harley Davidson" width="300" height="200">
+                      </a>
                       <div class="product-card__buttons">
                         <div class="product-card__button-buy">
                           <a class="button-buy" href="#">
                             <span class="visually-hidden">Добавить в корзину</span>
                             <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
                               <use xlink:href="#icon-cart-plus"></use>
-                            </svg>
-                          </a>
-                        </div>
-                        <div class="product-card__button-extra">
-                          <a class="button-extra" href="#">
-                            <span class="visually-hidden">Дополнительно</span>
-                            <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
-                              <use xlink:href="#icon-burger-plus"></use>
                             </svg>
                           </a>
                         </div>
@@ -287,16 +271,19 @@
                       <h3 class="product-card__name">Harley Davidson</h3>
                       <p class="product-card__info">20", сталь</p>
                       <p class="product-card__info">Китай</p>
-                      <b class="product-card__price">23 000 ₽</b>
+                      <b class="product-card__price price">
+                        <span class="price__count">23 000</span>
+                        <span class="price__currency">Р</span>
+                      </b>
                     </div>
                   </div>
                 </li>
                 <li class="slider-cards__item product-card">
                   <div class="product-card__container">
                     <div class="product-card__top">
-                      <div class="product-card__picture product-card__picture--product-5">
-                        <img src="img/product-bike-5.png" alt="X-front Snowmobile" width="263" height="151">
-                      </div>
+                      <a class="product-card__picture product-card__picture--inactive" href="#">
+                        <img src="img/product-bike-5.png" alt="X-front Snowmobile" width="300" height="200">
+                      </a>
                       <div class="product-card__buttons">
                         <div class="product-card__button-buy">
                           <a class="button-buy" href="#">
@@ -306,21 +293,19 @@
                             </svg>
                           </a>
                         </div>
-                        <div class="product-card__button-extra">
-                          <a class="button-extra" href="#">
-                            <span class="visually-hidden">Дополнительно</span>
-                            <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
-                              <use xlink:href="#icon-burger-plus"></use>
-                            </svg>
-                          </a>
-                        </div>
                       </div>
                     </div>
                     <div class="product-card__description">
-                      <h3 class="product-card__name">X-front Snowmobile</h3>
+                      <a class="product-card__link" href="#">
+                        <h3 class="product-card__name">X-front Snowmobile</h3>
+                      </a>
                       <p class="product-card__info">24", сталь</p>
                       <p class="product-card__info">Китай</p>
-                      <b class="product-card__price">42 000 ₽</b>
+                      <!-- <b class="product-card__price">42 000 Р</b> -->
+                      <b class="product-card__price price">
+                        <span class="price__count">42 000</span>
+                        <span class="price__currency">Р</span>
+                      </b>
                     </div>
                   </div>
                 </li>
@@ -328,16 +313,14 @@
                 <li class="slider-cards__item product-card"></li>
               </ul>
             </div>
-            <div class="slider-cards__toggle slider-toggle__toggle--prev">
-              <button class="toggle toogle--prev" type="button">
+            <div class="slider-cards__toggle slider-cards__toggle--prev">
+              <button class="toggle toggle--prev" type="button">
                 <span class="visually-hidden">Предыдущий слайд</span>
-                <span class="toggle__arrow toggle__arrow--prev"></span>
               </button>
             </div>
-            <div class="slider-cards__toggle slider-toggle__toggle--next">
-              <button class="toggle toogle--next" type="button">
+            <div class="slider-cards__toggle slider-cards__toggle--next">
+              <button class="toggle toggle--next" type="button">
                 <span class="visually-hidden">Следующий слайд</span>
-                <span class="toggle__arrow toggle__arrow--next"></span>
               </button>
             </div>
           </div>
@@ -353,7 +336,7 @@
             <div class="info__picture">
               <picture>
                 <source media="(max-width: 768px)" srcset="img/image-workshop-mobile.jpg">
-                <img src="img/image-workshop-desktop.jpg" alt="Мастерская" width="463" height="357">
+                <img src="img/image-workshop-desktop.jpg" alt="Мастерская" width="462" height="358">
               </picture>
             </div>
             <div class="info__desription">
@@ -374,19 +357,18 @@
             <p class="catalog-section__text">Всегда большой выбор запчастей и&nbsp;аксессуаров для чоппер-байков.
               Если вы чего-то не нашли в наличии, наши консультанты помогут заказать&nbsp;и доставить товар из&nbsp;любой&nbsp;точки мира</p>
           </div>
-          <div class="catalog-section__slider slider-cards slider-cards--extra">
+          <div class="catalog-section__slider catalog-section__slider--extra slider-cards slider-cards--extra">
             <ul class="slider-cards__list slider-cards__list--extra">
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra"></li>
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra"></li>
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra"></li>
-              <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra"></li>
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra">
                 <div class="product-card__container">
-                  <div class="product-card__top">
-                    <div class="product-card__picture product-card__picture--extra-1">
-                      <img src="img/product-extra-1.png" alt="Сумка на руль B-soul" width="165" height="84">
-                    </div>
-                    <div class="product-card__buttons">
+                  <div class="product-card__top product-card__top--extra">
+                    <a class="product-card__picture product-card__picture--extra" href="#">
+                      <img src="img/product-extra-5.png" alt="Педали Bikein Pro" width="283" height="200">
+                    </a>
+                    <div class="product-card__buttons product-card__buttons--extra">
                       <div class="product-card__button-buy">
                         <a class="button-buy" href="#">
                           <span class="visually-hidden">Добавить в корзину</span>
@@ -398,20 +380,55 @@
                     </div>
                   </div>
                   <div class="product-card__description">
-                    <h3 class="product-card__name">Сумка на руль B-soul</h3>
+                    <a class="product-card__link" href="#">
+                      <h3 class="product-card__name product-card__name--extra">Педали Bikein&nbsp;Pro</h3>
+                    </a>
+                    <p class="product-card__info">алюминий+ольха</p>
+                    <p class="product-card__info">120x77x30мм, 394гр</p>
+                    <b class="product-card__price product-card__price--extra price">
+                      <span class="price__count">2500</span>
+                      <span class="price__currency">Р</span>
+                    </b>
+                  </div>
+                </div>
+              </li>
+              <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra">
+                <div class="product-card__container">
+                  <div class="product-card__top product-card__top--extra">
+                    <a class="product-card__picture product-card__picture--extra" href="#">
+                      <img src="img/product-extra-1.png" alt="Сумка на руль B-soul" width="283" height="200">
+                    </a>
+                    <div class="product-card__buttons product-card__buttons--extra">
+                      <div class="product-card__button-buy">
+                        <a class="button-buy" href="#">
+                          <span class="visually-hidden">Добавить в корзину</span>
+                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                            <use xlink:href="#icon-cart-plus"></use>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-card__description">
+                    <a class="product-card__link" href="#">
+                      <h3 class="product-card__name product-card__name--extra">Сумка на руль B-soul</h3>
+                    </a>
                     <p class="product-card__info">15x10 x5 cm</p>
                     <p class="product-card__info">натуральная кожа</p>
-                    <b class="product-card__price product-card__price--extra">3200 ₽</b>
+                    <b class="product-card__price product-card__price--extra price">
+                      <span class="price__count">3200</span>
+                      <span class="price__currency">Р</span>
+                    </b>
                   </div>
                 </div>
               </li>
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra">
                 <div class="product-card__container">
-                  <div class="product-card__top">
-                    <div class="product-card__picture product-card__picture--extra-2">
-                      <img src="img/product-extra-2.png" alt="Грипсы Propalm" width="160" height="93">
-                    </div>
-                    <div class="product-card__buttons">
+                  <div class="product-card__top product-card__top--extra">
+                    <a class="product-card__picture product-card__picture--extra" href="#">
+                      <img src="img/product-extra-2.png" alt="Грипсы Propalm" width="283" height="200">
+                    </a>
+                    <div class="product-card__buttons product-card__buttons--extra">
                       <div class="product-card__button-buy">
                         <a class="button-buy" href="#">
                           <span class="visually-hidden">Добавить в корзину</span>
@@ -423,20 +440,25 @@
                     </div>
                   </div>
                   <div class="product-card__description">
-                    <h3 class="product-card__name">Грипсы Propalm</h3>
+                    <a class="product-card__link" href="#">
+                      <h3 class="product-card__name product-card__name--extra">Грипсы Propalm</h3>
+                    </a>
                     <p class="product-card__info">натуральная кожа</p>
                     <p class="product-card__info">с фиксаторами</p>
-                    <b class="product-card__price product-card__price--extra">1800 ₽</b>
+                    <b class="product-card__price product-card__price--extra price">
+                      <span class="price__count">1800</span>
+                      <span class="price__currency">Р</span>
+                    </b>
                   </div>
                 </div>
               </li>
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra">
                 <div class="product-card__container">
-                  <div class="product-card__top">
-                    <div class="product-card__picture product-card__picture--extra-3">
-                      <img src="img/product-extra-3.png" alt="Седло Brooks B66 S" width="158" height="97">
-                    </div>
-                    <div class="product-card__buttons">
+                  <div class="product-card__top product-card__top--extra">
+                    <a class="product-card__picture product-card__picture--extra" href="#">
+                      <img src="img/product-extra-3.png" alt="Седло Brooks B66 S" width="283" height="97">
+                    </a>
+                    <div class="product-card__buttons product-card__buttons--extra">
                       <div class="product-card__button-buy">
                         <a class="button-buy" href="#">
                           <span class="visually-hidden">Добавить в корзину</span>
@@ -448,20 +470,25 @@
                     </div>
                   </div>
                   <div class="product-card__description">
-                    <h3 class="product-card__name">Седло Brooks&nbsp;B66 S</h3>
+                    <a class="product-card__link" href="#">
+                      <h3 class="product-card__name product-card__name--extra">Седло Brooks&nbsp;B66 S</h3>
+                    </a>
                     <p class="product-card__info">натуральная кожа</p>
                     <p class="product-card__info">доступно в 3 цветах</p>
-                    <b class="product-card__price product-card__price--extra">8625 ₽</b>
+                    <b class="product-card__price product-card__price--extra price">
+                      <span class="price__count">8625</span>
+                      <span class="price__currency">Р</span>
+                    </b>
                   </div>
                 </div>
               </li>
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra">
                 <div class="product-card__container">
-                  <div class="product-card__top">
-                    <div class="product-card__picture product-card__picture--extra-4">
-                      <img src="img/product-extra-4.png" alt="Колеса Strida 18" width="140" height="140">
-                    </div>
-                    <div class="product-card__buttons">
+                  <div class="product-card__top product-card__top--extra">
+                    <a class="product-card__picture product-card__picture--extra" href="#">
+                      <img src="img/product-extra-4.png" alt="Колеса Strida 18" width="283" height="200">
+                    </a>
+                    <div class="product-card__buttons product-card__buttons--extra">
                       <div class="product-card__button-buy">
                         <a class="button-buy" href="#">
                           <span class="visually-hidden">Добавить в корзину</span>
@@ -473,28 +500,60 @@
                     </div>
                   </div>
                   <div class="product-card__description">
-                    <h3 class="product-card__name">Колеса Strida&nbsp;18"</h3>
+                    <a class="product-card__link" href="#">
+                      <h3 class="product-card__name product-card__name--extra">Колеса Strida&nbsp;18"</h3>
+                    </a>
                     <p class="product-card__info">покрышки Innova</p>
                     <p class="product-card__info">цена за 2 колеса</p>
-                    <b class="product-card__price product-card__price--extra">6780 ₽</b>
+                    <b class="product-card__price product-card__price--extra price">
+                      <span class="price__count">6780</span>
+                      <span class="price__currency">Р</span>
+                    </b>
                   </div>
                 </div>
               </li>
-              <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra"></li>
+              <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra">
+                <div class="product-card__container">
+                  <div class="product-card__top product-card__top--extra">
+                    <a class="product-card__picture product-card__picture--extra" href="#">
+                      <img src="img/product-extra-6.png" alt="Руль Lowrider U" width="283" height="200">
+                    </a>
+                    <div class="product-card__buttons product-card__buttons--extra">
+                      <div class="product-card__button-buy">
+                        <a class="button-buy" href="#">
+                          <span class="visually-hidden">Добавить в корзину</span>
+                          <svg class="button-buy__icon" width="31" height="19" viewBox="0 0 31 19">
+                            <use xlink:href="#icon-cart-plus"></use>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-card__description">
+                    <a class="product-card__link" href="#">
+                      <h3 class="product-card__name product-card__name--extra">Руль Lowrider&nbsp;U</h3>
+                    </a>
+                    <p class="product-card__info">11" - 25.4mm</p>
+                    <p class="product-card__info">хромированная сталь</p>
+                    <b class="product-card__price product-card__price--extra price">
+                      <span class="price__count">2350</span>
+                      <span class="price__currency">Р</span>
+                    </b>
+                  </div>
+                </div>
+              </li>
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra"></li>
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra"></li>
               <li class="slider-cards__item slider-cards__item--extra product-card product-card--extra"></li>
             </ul>
-            <div class="slider-cards__toggle slider-cards__toggle--prev">
-              <button class="toggle toogle--prev" type="button">
+            <div class="slider-cards__toggle slider-cards__toggle--prev-extra slider-cards__toggle--prev">
+              <button class="toggle toggle--prev" type="button">
                 <span class="visually-hidden">Предыдущий слайд</span>
-                <span class="toggle__arrow toggle__arrow--prev"></span>
               </button>
             </div>
-            <div class="slider-cards__toggle slider-cards__toggle--next">
-              <button class="toggle toogle--next" type="button">
+            <div class="slider-cards__toggle slider-cards__toggle--next-extra slider-cards__toggle--next">
+              <button class="toggle toggle--next" type="button">
                 <span class="visually-hidden">Следующий слайд</span>
-                <span class="toggle__arrow toggle__arrow--next"></span>
               </button>
             </div>
           </div>
@@ -569,7 +628,7 @@
                 <li class="social__item">
                   <a class="social__link" href="#">
                     <span class="visually-hidden">Vk</span>
-                    <svg class="social__icon social__icon--vk" width="21.39" height="12.03">
+                    <svg class="social__icon social__icon--main social__icon--vk" width="21.39" height="12.03">
                       <use xlink:href="#icon-vk"></use>
                     </svg>
                   </a>
@@ -577,7 +636,7 @@
                 <li class="social__item">
                   <a class="social__link" href="#">
                     <span class="visually-hidden">Facebook</span>
-                    <svg class="social__icon social__icon--fb" width="9.18" height="18.04">
+                    <svg class="social__icon social__icon--main social__icon--fb" width="9.18" height="18.04">
                       <use xlink:href="#icon-fb"></use>
                     </svg>
                   </a>
@@ -585,7 +644,7 @@
                 <li class="social__item">
                   <a class="social__link" href="#">
                     <span class="visually-hidden">Instagram</span>
-                    <svg class="social__icon social__icon--inst" width="17.14" height="17.14">
+                    <svg class="social__icon social__icon--main social__icon--inst" width="17.14" height="17.14">
                       <use xlink:href="#icon-inst"></use>
                     </svg>
                   </a>

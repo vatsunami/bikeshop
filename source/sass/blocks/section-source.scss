@@ -1,6 +1,7 @@
 .section-source {
   display: flex;
-  width: 82.137628%; //1122px;
+  width: 82.137628%;
+  max-width: 1122px;
   margin: 0 auto;
 
   &::before,
@@ -18,14 +19,20 @@
   margin: 0 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .section-source {
     box-sizing: border-box;
-    width: 100%;
-    padding: 0 14px;
+    width: calc(100% - 60px);
   }
 
   .section-source__link {
     margin: 0 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-source {
+    width: 100%;
+    padding: 0 14px;
   }
 }

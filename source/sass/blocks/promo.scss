@@ -2,7 +2,7 @@
   box-sizing: border-box;
   width: 675px;
   margin-left: auto;
-  padding: 146px 30px 31px 39px;
+  padding: 146px 38px 31px 31px;
 }
 
 .promo__slogan-wrapper {
@@ -24,6 +24,33 @@
   margin-left: auto;
 }
 
+@media (max-width: 1024px) {
+  .promo__container {
+    width: 100%;
+    padding: 50px 0 156px;
+  }
+
+  .promo__slogan-wrapper {
+    width: 377px;
+    margin: 0 auto 128px;
+    padding-left: 6px;
+  }
+
+  .promo__slogan {
+    width: 377px;
+    height: 109px;
+    margin: 0 auto;
+  }
+
+  .promo__button {
+    margin: 0 auto;
+  }
+
+  .promo__social {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .promo__container {
     width: 100%;
@@ -40,13 +67,5 @@
     width: 246px;
     height: 71px;
     margin: 0 auto;
-  }
-
-  .promo__button {
-    margin: 0 auto;
-  }
-
-  .promo__social {
-    display: none;
   }
 }

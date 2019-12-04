@@ -15,3 +15,12 @@
   src:  url("../fonts/robotoregular.woff2") format("woff2"),
     url("../fonts/robotoregular.woff") format("woff");
 }
+
+@font-face {
+  font-family: "Roboto Light";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src:  url("../fonts/robotolight.woff2") format("woff2"),
+    url("../fonts/robotolight.woff") format("woff");
+}

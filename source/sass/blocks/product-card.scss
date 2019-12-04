@@ -24,7 +24,6 @@
     left: calc(50% - 89px);
     box-sizing: border-box;
     width: 178px;
-    // height: 240px;
     height: calc(100% - 25px);
     z-index: -1;
     border: 6px solid #f0ede8;
@@ -32,88 +31,14 @@
 }
 
 .product-card__picture {
+  display: block;
+
   img {
     display: block;
   }
 
-  &--product-1 img {
-    margin-top: 59px;
-    margin-left: 21px;
-  }
-
-  &--product-2 img {
-    margin-top: 46px;
-    margin-left: 25px;
-  }
-
-  &--product-3 img {
-    margin-top: 14px;
-    margin-left: 20px;
-  }
-
-  &--product-4 img {
-    margin-top: 38px;
-    margin-left: 18px;
-  }
-
-  &--product-5 img {
-    margin-top: 26px;
-    margin-left: 17px;
-  }
-
-  &--product-6 img {
-    margin-top: 39px;
-    margin-left: 11px;
-  }
-
-  &--product-7 img {
-    margin-top: 32px;
-    margin-left: 15px;
-  }
-
-  &--product-8 img {
-    margin-top: 24px;
-    margin-left: 12px;
-  }
-
-  &--product-9 img {
-    margin-top: 16px;
-    margin-left: 17px;
-  }
-
-  &--product-10 img {
-    margin-top: 0;
-    margin-left: 13px;
-  }
-
-  &--product-11 img {
-    margin-top: 18px;
-    margin-left: 16px;
-  }
-
-  &--product-12 img {
-    margin-top: 19px;
-    margin-left: 12px;
-  }
-
-  &--extra-1 img {
-    margin-top: 71px;
-    margin-left: 60px;
-  }
-
-  &--extra-2 img {
-    margin-top: 57px;
-    margin-left: 65px;
-  }
-
-  &--extra-3 img {
-    margin-top: 74px;
-    margin-left: 62px;
-  }
-
-  &--extra-4 img {
-    margin-top: 42px;
-    margin-left: 70px;
+  &--inactive {
+    transform: scale(1.04) translate(-5px, 1px);
   }
 }
 
@@ -129,19 +54,29 @@
   order: 2;
 }
 
+.product-card__link {
+  display: block;
+  text-decoration: none;
+}
+
 .product-card__name {
   box-sizing: border-box;
-  margin: 0 auto 2px;
+  margin: 0 auto 3px;
   padding: 0 30px;
   font-family: "Hagin Caps Medium", "Times New Roman", serif;
   font-size: 24px;
   font-weight: 500;
   line-height: 30px;
+  color: #817155;
   text-transform: uppercase;
   order: 1;
 
   &--long {
     padding: 0 20px;
+  }
+
+  &--extra {
+    margin-bottom: 2px;
   }
 }
 
@@ -154,7 +89,7 @@
 }
 
 .product-card__price {
-  margin-top: 13px;
+  margin-top: 12px;
   font-family: "Hagin Caps Medium", "Times New Roman", serif;
   font-size: 24px;
   font-weight: 500;
@@ -172,7 +107,7 @@
   display: flex;
   justify-content: space-between;
   width: 178px;
-  margin: auto auto 0;
+  margin: -1px auto 0;
   padding: 0 9px;
   order: 1;
 }
@@ -189,24 +124,34 @@
 
 @media (max-width: 768px) {
   .product-card__top {
-    // min-height: 240px;
     min-height: 233px;
-    // margin-bottom: 9px;
     margin-bottom: 16px;
     padding-top: 0;
 
     &::before {
       content: "";
       position: absolute;
-      // bottom: 33px;
       bottom: 26px;
       left: calc(50% - 89px);
       box-sizing: border-box;
       width: 178px;
-      // height: 178px;
       height: 76.39485%;
       z-index: -1;
       border: 6px solid #f0ede8;
+    }
+
+    &--extra {
+      min-height: 235px;
+
+      &::before {
+        height: 75.744681%;
+      }
+    }
+  }
+
+  .product-card__picture {
+    &--extra img {
+      margin-top: 10px;
     }
   }
 
@@ -217,6 +162,8 @@
   }
 
   .product-card__name {
+    margin-bottom: 2px;
+
     &--long {
       padding: 0 20px;
     }
@@ -227,7 +174,11 @@
   }
 
   .product-card__buttons {
-    margin-top: auto;
+    margin-top: -17px;
+
+    &--extra {
+      margin-top: -25px;
+    }
   }
 
   .product-card__button-buy {
