@@ -78,7 +78,7 @@
   fill: #e9e1d5;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .button {
     width: 196px;
     padding: 16px 10px 12px;
@@ -87,6 +87,7 @@
 
     &--promo {
       width: 240px;
+      background-color: rgba(26, 25, 24, 0.8);
     }
 
     &--source {

@@ -30,15 +30,8 @@
   }
 
   &::after {
-    // display: none;
     transform: rotate(90deg);
   }
-
-  // &--closed {
-  //   &::after {
-  //     display: block;
-  //   }
-  // }
 }
 
 .toggle-filter__input:checked + .toggle-filter__label {

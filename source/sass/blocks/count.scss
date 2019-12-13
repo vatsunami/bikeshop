@@ -1,0 +1,30 @@
+.count {
+  font-family: "Roboto Light", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #ba4f4f;
+}
+
+.count__bracket {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .count {
+    font-family: "Hagin Caps Medium", "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #9b8869;
+  }
+
+  .count__bracket {
+    display: block;
+  }
+}

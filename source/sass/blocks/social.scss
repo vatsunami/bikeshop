@@ -1,11 +1,26 @@
+.social {
+  width: 278px;
+}
+
 .social__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
-  width: 105px;
+  width: 100%;
   list-style: none;
+
+  &--promo {
+    justify-content: flex-end;
+  }
+}
+
+.social__item {
+  margin-right: 15px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 }
 
 .social__link {
@@ -62,6 +77,16 @@
 
   &--main {
     fill: #baa480;
+  }
+}
+
+@media (max-width: 1024px) {
+  .social {
+    width: 100%;
+  }
+
+  .social__list {
+    justify-content: center;
   }
 }
 

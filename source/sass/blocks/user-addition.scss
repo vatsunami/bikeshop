@@ -1,9 +1,10 @@
 .user-addition__link {
   position: relative;
   box-sizing: border-box;
-  display: block;
+  display: flex;
+  flex-direction: column;
   min-width: 36px;
-  min-height: 36px;
+  min-height: 48px;
   color: #9b8869;
   text-decoration: none;
 
@@ -15,6 +16,13 @@
   &:active {
     opacity: 0.5;
   }
+}
+
+.user-addition__icon-wrapper {
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 36px;
 }
 
 .user-addition__icon {
@@ -29,6 +37,15 @@
 .user-addition__text,
 .user-addition__count {
   display: none;
+}
+
+.user-addition__count {
+  &--visible {
+    display: block;
+    margin-top: -6px;
+    padding-right: 3px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 1024px) {

@@ -32,6 +32,7 @@
 
 .product-card__picture {
   display: block;
+  min-height: 200px;
 
   img {
     display: block;
@@ -142,8 +143,10 @@
 
     &--extra {
       min-height: 235px;
+      margin-bottom: 10px;
 
       &::before {
+        bottom: 32px;
         height: 75.744681%;
       }
     }
@@ -151,7 +154,7 @@
 
   .product-card__picture {
     &--extra img {
-      margin-top: 10px;
+      margin-top: 4px;
     }
   }
 

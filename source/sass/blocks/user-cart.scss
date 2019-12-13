@@ -1,9 +1,14 @@
+.user-cart {
+  box-sizing: content-box;
+}
+
 .user-cart__link {
   position: relative;
   box-sizing: border-box;
-  display: block;
+  display: flex;
+  flex-direction: column;
   min-width: 36px;
-  min-height: 36px;
+  min-height: 48px; //36px
   color: #9b8869;
   text-decoration: none;
 
@@ -17,9 +22,16 @@
   }
 }
 
+.user-cart__icon-wrapper {
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+
 .user-cart__icon {
   position: absolute;
-  top: 7px;
+  top: 6px;
   left: 7px;
   width: 21px;
   height: 19px;
@@ -31,9 +43,18 @@
   display: none;
 }
 
+.user-cart__count {
+  &--visible {
+    display: block;
+    margin-top: -6px;
+    padding-left: 2px;
+    text-align: center;
+  }
+}
+
 @media (max-width: 1024px) {
   .user-cart {
-    padding: 9px 0 11px;
+    padding: 9px 0 1px;
     order: 1;
 
     &--closed {
@@ -43,38 +64,49 @@
 
   .user-cart__link {
     box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
     width: 244px;
     height: auto;
-    padding: 4px 0;
+    padding: 13px 0 7px 0;
 
     &--closed {
+      display: block;
       width: 40px;
       height: 40px;
+      min-height: auto;
       padding: 0;
     }
   }
 
-  .user-cart__icon {
+  .user-cart__icon-wrapper {
     display: none;
 
     &--closed {
       display: block;
-      top: 11px;
-      left: 10px;
-      width: 18.85px;
-      height: 17px;
     }
+  }
+
+  .user-cart__icon {
+    top: 11px;
+    left: 10px;
+    width: 18.85px;
+    height: 17px;
   }
 
   .user-cart__text,
   .user-cart__count {
-    display: inline-block;
     font-family: "Hagin Caps Medium", "Times New Roman", serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 18px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+  }
+
+  .user-cart__text {
+    display: block;
+    margin-right: 4px;
 
     &--closed {
       display: none;
@@ -82,6 +114,13 @@
   }
 
   .user-cart__count {
-    margin-left: -2px;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding-left: 0;
+
+    &--closed {
+      display: none;
+    }
   }
 }

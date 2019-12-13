@@ -1,7 +1,9 @@
 .sort {
+  position: relative;
   box-sizing: border-box;
-  display: block;
+  display: flex;
   width: 154px;
+  padding-right: 12px;
   font-family: "Hagin Caps Medium", "Times New Roman", serif;
   font-size: 18px;
   font-weight: 500;
@@ -10,8 +12,8 @@
   color: #9b8869;
   background-color: transparent;
   background-image: url("../img/icon-arrow-down.svg");
+  background-position: 100% 36%;
   background-repeat: no-repeat;
-  background-position: top 4px right;
   border-radius: 0;
   border: none;
   appearance: none;
@@ -25,4 +27,8 @@
   &:active {
     opacity: 0.5;
   }
+}
+
+.sort::-ms-expand {
+  display: none;
 }

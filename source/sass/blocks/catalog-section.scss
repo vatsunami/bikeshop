@@ -85,6 +85,10 @@
   .catalog-section__container {
     padding-top: 27px;
     padding-bottom: 28px;
+
+    &--no-source {
+      padding-bottom: 30px;
+    }
   }
 
   .catalog-section__description {
@@ -92,8 +96,18 @@
     margin: 0 auto 7px;
 
     &--extra {
-      margin-bottom: 0;
+      margin-bottom: 6px;
       padding: 0 15px;
+    }
+
+    &--no-paragraph {
+      margin-bottom: 0;
+    }
+  }
+
+  .catalog-section__title {
+    &--no-paragraph {
+      margin-bottom: 0;
     }
   }
 
@@ -107,7 +121,7 @@
     margin-bottom: 22px;
 
     &--extra {
-      margin-bottom: 24px;
+      margin-bottom: 16px;
     }
   }
 }

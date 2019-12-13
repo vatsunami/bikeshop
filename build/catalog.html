@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Каталог</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <script>
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async=""></script>
   </head>
   <body>
     <div style="display:none">
@@ -26,7 +30,7 @@
                   </a>
                 </div>
 
-                <button class="page-header__menu-button menu-button" type="button">
+                <button class="page-header__menu-button menu-button menu-button--close" type="button">
                   <span class="visually-hidden">Меню</span>
                 </button>
 
@@ -56,7 +60,7 @@
                 <div class="page-header__user-account user-account">
                   <ul class="user-account__list">
                     <li class="user-account__item user-profile">
-                      <a class="user-profile__link" href="#">
+                      <a class="user-profile__link" href="#" aria-label="Пользователь">
                         <svg class="user-profile__icon" width="12" height="14" viewBox="0 0 12 14">
                           <use xlink:href="#icon-user"></use>
                         </svg>
@@ -64,7 +68,7 @@
                       </a>
                     </li>
                     <li class="user-account__item user-logout">
-                      <a class="user-logout__link" href="#">
+                      <a class="user-logout__link" href="#" aria-label="Выйти из аккаунта">
                         <svg class="user-logout__icon" width="24" height="24">
                           <use xlink:href="#icon-logout"></use>
                         </svg>
@@ -77,7 +81,7 @@
                 <div class="page-header__user-nav user-nav">
                   <ul class="user-nav__list">
                     <li class="user-nav__item user-search">
-                      <a class="user-search__link" href="#">
+                      <a class="user-search__link" href="#" aria-label="Поиск">
                         <svg class="user-search__icon" width="24" height="24">
                           <use xlink:href="#icon-search"></use>
                         </svg>
@@ -85,10 +89,12 @@
                       </a>
                     </li>
                     <li class="user-nav__item user-cart">
-                      <a class="user-cart__link" href="#">
-                        <svg class="user-cart__icon" width="18.85" height="17" viewBox="0 0 18.85 17">
-                          <use xlink:href="#icon-basket"></use>
-                        </svg>
+                      <a class="user-cart__link" href="#" aria-label="Корзина">
+                        <span class="user-cart__icon-wrapper">
+                          <svg class="user-cart__icon" width="18.85" height="17" viewBox="0 0 18.85 17">
+                            <use xlink:href="#icon-basket"></use>
+                          </svg>
+                        </span>
                         <span class="user-cart__text">Корзина</span>
                         <span class="user-cart__count count">
                           <span class="count__bracket">(</span>
@@ -125,10 +131,10 @@
                   </div>
                   <div class="catalog-header__content">
                     <div class="catalog-header__sort">
-                      <span class="visually-hidden">Сортировка</span>
-                      <select class="sort" name="sort">
-                        <option value="popular">По популярности</option>
-                      </select>
+                    <label class="visually-hidden" for="sort">Сортировка</label>
+                    <select class="sort" name="sort" id="sort">
+                      <option value="popular">По популярности</option>
+                    </select>
                     </div>
                     <div class="catalog-header__grid">
                       <div class="grid-count">
@@ -176,16 +182,20 @@
                   <div class="filter-price">
                     <h3 class="visually-hidden">Цена</h3>
                     <div class="filter-price__fields">
-                      <label class="visually-hidden">От</label>
-                      <input type="text" name="min" value="28 000">
-                      <label class="visually-hidden">До</label>
-                      <input type="text" name="max" value="180 000">
+                      <label class="visually-hidden" for="min">От</label>
+                      <input type="text" name="min" id="min" value="28 000">
+                      <label class="visually-hidden" for="max">До</label>
+                      <input type="text" name="max" id="max" value="180 000">
                     </div>
                     <div class="filter-price__range">
                       <div class="filter-price__scale"></div>
                       <div class="filter-price__bar"></div>
-                      <button class="filter-price__toggle filter-price__toggle--min" type="button"></button>
-                      <button class="filter-price__toggle filter-price__toggle--max" type="button"></button>
+                      <button class="filter-price__toggle filter-price__toggle--min" type="button">
+                        <span class="visually-hidden">От</span>
+                      </button>
+                      <button class="filter-price__toggle filter-price__toggle--max" type="button">
+                        <span class="visually-hidden">До</span>
+                      </button>
                     </div>
                   </div>
                   <div class="filters-group filters-group--underline filters-group--electrobike">
@@ -195,17 +205,17 @@
                       <label class="toggle-filter__label" for="toggle-electrobike">Электровелосипед</label>
                     </div>
                     <ul class="filters-group__list filters-group__list--electrobike">
-                      <li class="filters-group__item">
+                      <li class="filters-group__item filters-group__item--electrobike">
                         <input class="visually-hidden" type="checkbox" name="bike" id="bike">
                         <label for="bike">Да</label>
                       </li>
-                      <li class="filters-group__item">
+                      <li class="filters-group__item filters-group__item--electrobike">
                         <input class="visually-hidden" type="checkbox" name="electrobike" id="electrobike">
                         <label for="electrobike">Нет</label>
                       </li>
                     </ul>
                   </div>
-                   <div class="filters-group filters-group--underline filters-group--closed">
+                  <div class="filters-group filters-group--underline filters-group--closed">
                     <h3 class="filters-group__title visually-hidden">Производитель</h3>
                     <div class="filters-group__toggle toggle-filter toggle-filter--closed">
                       <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-brand">
@@ -219,11 +229,11 @@
                       <label class="toggle-filter__label" for="toggle-material">Материал рамы</label>
                     </div>
                     <ul class="filters-group__list filters-group__list--material">
-                      <li class="filters-group__item">
+                      <li class="filters-group__item filters-group__item--material">
                         <input class="visually-hidden" type="checkbox" name="steel" id="steel" checked="">
                         <label for="steel">Сталь</label>
                       </li>
-                      <li class="filters-group__item">
+                      <li class="filters-group__item filters-group__item--material">
                         <input class="visually-hidden" type="checkbox" name="carbon" id="carbon">
                         <label for="carbon">Карбон</label>
                       </li>
@@ -236,29 +246,29 @@
                       <label class="toggle-filter__label" for="toggle-color">Цвет</label>
                     </div>
                     <ul class="filters-group__list filters-group__list--color">
-                      <li class="filters-group__item">
+                      <li class="filters-group__item filters-group__item--color">
                         <input class="visually-hidden" type="checkbox" name="black" id="black">
                         <label for="black">Черный</label>
                       </li>
-                      <li class="filters-group__item">
+                      <li class="filters-group__item filters-group__item--color">
                         <input class="visually-hidden" type="checkbox" name="brown" id="brown">
                         <label for="brown">Коричневый</label>
                       </li>
-                      <li class="filters-group__item">
+                      <li class="filters-group__item filters-group__item--color">
                         <input class="visually-hidden" type="checkbox" name="red" id="red">
                         <label for="red">Красный</label>
                       </li>
-                      <li class="filters-group__item">
+                      <li class="filters-group__item filters-group__item--color">
                         <input class="visually-hidden" type="checkbox" name="blue" id="blue">
                         <label for="blue">Голубой</label>
                       </li>
-                      <li class="filters-group__item">
+                      <li class="filters-group__item filters-group__item--color">
                         <input class="visually-hidden" type="checkbox" name="khaki" id="khaki">
                         <label for="khaki">Хаки</label>
                       </li>
                     </ul>
                   </div>
-                  <div class="filters-group filters-group--underline filters-group--closed">
+                  <div class="filters-group filters-group--size filters-group--underline filters-group--closed">
                     <h3 class="filters-group__title visually-hidden">Размер</h3>
                     <div class="filters-group__toggle toggle-filter">
                       <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-size">
@@ -310,7 +320,10 @@
                     <div class="product-card__container">
                       <div class="product-card__top">
                         <a class="product-card__picture" href="#">
-                          <img src="img/product-bike-1.png" alt="Neuzer Chopper Apocalypse" width="300" height="200">
+                          <picture>
+                            <source type="image/webp" srcset="img/product-bike-1@1x.webp 1x, img/product-bike-1@2x.webp 2x">
+                            <img src="img/product-bike-1@1x.png" srcset="img/product-bike-1@1x.png 1x,img/product-bike-1@2x.png 2x" alt="Neuzer Chopper Apocalypse" width="300" height="200">
+                          </picture>
                         </a>
                         <div class="product-card__buttons">
                           <div class="product-card__button-buy">
@@ -349,7 +362,10 @@
                     <div class="product-card__container">
                       <div class="product-card__top">
                         <a class="product-card__picture" href="#">
-                          <img src="img/product-bike-2.png" alt="Schwinn Stingray Occ" width="300" height="200">
+                          <picture>
+                            <source type="image/webp" srcset="img/product-bike-2@1x.webp 1x, img/product-bike-2@2x.webp 2x">
+                            <img src="img/product-bike-2@1x.png" srcset="img/product-bike-2@1x.png 1x, img/product-bike-2@2x.png 2x" alt="Schwinn Stingray Occ" width="300" height="200">
+                          </picture>
                         </a>
                         <div class="product-card__buttons">
                           <div class="product-card__button-buy">
@@ -388,7 +404,10 @@
                     <div class="product-card__container">
                       <div class="product-card__top">
                         <a class="product-card__picture" href="#">
-                          <img src="img/product-bike-3.png" alt="Harley Davidson" width="300" height="200">
+                          <picture>
+                            <source type="image/webp" srcset="img/product-bike-3@1x.webp 1x, img/product-bike-3@2x.webp 2x">
+                            <img src="img/product-bike-3@1x.png" srcset="img/product-bike-3@1x.png 1x, img/product-bike-3@2x.png 2x" alt="Harley Davidson" width="300" height="200">
+                          </picture>
                         </a>
                         <div class="product-card__buttons">
                           <div class="product-card__button-buy">
@@ -427,7 +446,10 @@
                     <div class="product-card__container">
                       <div class="product-card__top">
                         <a class="product-card__picture" href="#">
-                          <img src="img/product-bike-4.png" alt="Micargi Cyclone Electric" width="300" height="200">
+                          <picture>
+                            <source type="image/webp" srcset="img/product-bike-4@1x.webp 1x, img/product-bike-4@2x.webp 2x">
+                            <img src="img/product-bike-4@1x.png" srcset="img/product-bike-4@1x.png 1x, img/product-bike-4@2x.png 2x" alt="Micargi Cyclone Electric" width="300" height="200">
+                          </picture>
                         </a>
                         <div class="product-card__buttons">
                           <div class="product-card__button-buy">
@@ -466,7 +488,10 @@
                     <div class="product-card__container">
                       <div class="product-card__top">
                         <a class="product-card__picture" href="#">
-                          <img src="img/product-bike-5.png" alt="X-front Snowmobile" width="300" height="200">
+                          <picture>
+                            <source type="image/webp" srcset="img/product-bike-5@1x.webp 1x, img/product-bike-5@2x.webp 2x">
+                            <img src="img/product-bike-5@1x.png" srcset="img/product-bike-5@1x.png 1x, img/product-bike-5@2x.png 2x" alt="X-front Snowmobile" width="300" height="200">
+                          </picture>
                         </a>
                         <div class="product-card__buttons">
                           <div class="product-card__button-buy">
@@ -505,7 +530,10 @@
                     <div class="product-card__container">
                       <div class="product-card__top">
                         <a class="product-card__picture" href="#">
-                          <img src="img/product-bike-6.png" alt="2Fast4You Chopper" width="300" height="200">
+                          <picture>
+                            <source type="image/webp" srcset="img/product-bike-6@1x.webp 1x, img/product-bike-6@2x.webp 2x">
+                            <img src="img/product-bike-6@1x.png" srcset="img/product-bike-6@1x.png 1x, img/product-bike-6@2x.png 2x" alt="2Fast4You Chopper" width="300" height="200">
+                          </picture>
                         </a>
                         <div class="product-card__buttons">
                           <div class="product-card__button-buy">
@@ -540,12 +568,14 @@
                     </div>
                   </li>
 
-
                   <li class="catalog-cards__item product-card">
                     <div class="product-card__container">
                       <div class="product-card__top">
                         <a class="product-card__picture" href="#">
-                          <img src="img/product-bike-7.png" alt="Neuzer Chopper Apocalypse" width="300" height="200">
+                          <picture>
+                            <source type="image/webp" srcset="img/product-bike-7@1x.webp 1x, img/product-bike-7@2x.webp 2x">
+                            <img src="img/product-bike-7@1x.png" srcset="img/product-bike-7@1x.png 1x, img/product-bike-7@2x.png 2x" alt="Neuzer Chopper Apocalypse" width="300" height="200">
+                          </picture>
                         </a>
                         <div class="product-card__buttons">
                           <div class="product-card__button-buy">
@@ -584,7 +614,10 @@
                     <div class="product-card__container">
                       <div class="product-card__top">
                         <a class="product-card__picture" href="#">
-                          <img src="img/product-bike-8.png" alt="Schwinn Stingray Occ" width="300" height="200">
+                          <picture>
+                            <source type="image/webp" srcset="img/product-bike-8@1x.webp 1x, img/product-bike-8@2x.webp 2x">
+                            <img src="img/product-bike-8@1x.png" srcset="img/product-bike-8@1x.png 1x, img/product-bike-8@2x.png 2x" alt="Schwinn Stingray Occ" width="300" height="200">
+                          </picture>
                         </a>
                         <div class="product-card__buttons">
                           <div class="product-card__button-buy">
@@ -623,7 +656,10 @@
                     <div class="product-card__container">
                       <div class="product-card__top">
                         <a class="product-card__picture" href="#">
-                          <img src="img/product-bike-9.png" alt="Harley Davidson" width="300" height="200">
+                          <picture>
+                            <source type="image/webp" srcset="img/product-bike-9@1x.webp 1x, img/product-bike-9@2x.webp 2x">
+                            <img src="img/product-bike-9@1x.png" srcset="img/product-bike-9@1x.png 1x, img/product-bike-9@2x.png 2x" alt="Harley Davidson" width="300" height="200">
+                          </picture>
                         </a>
                         <div class="product-card__buttons">
                           <div class="product-card__button-buy">
@@ -662,7 +698,10 @@
                     <div class="product-card__container">
                       <div class="product-card__top">
                         <a class="product-card__picture" href="#">
-                          <img src="img/product-bike-10.png" alt="Micargi Cyclone Electric" width="300" height="200">
+                          <picture>
+                            <source type="image/webp" srcset="img/product-bike-10@2x.webp">
+                            <img src="img/product-bike-10@2x.png" alt="Micargi Cyclone Electric" width="300" height="200">
+                          </picture>
                         </a>
                         <div class="product-card__buttons">
                           <div class="product-card__button-buy">
@@ -701,7 +740,10 @@
                     <div class="product-card__container">
                       <div class="product-card__top">
                         <a class="product-card__picture" href="#">
-                          <img src="img/product-bike-11.png" alt="X-front Snowmobile" width="300" height="200">
+                          <picture>
+                            <source type="image/webp" srcset="img/product-bike-11@1x.webp 1x, img/product-bike-11@2x.webp 2x">
+                            <img src="img/product-bike-11@1x.png" srcset="img/product-bike-11@1x.png 1x, img/product-bike-11@2x.png 2x" alt="X-front Snowmobile" width="300" height="200">
+                          </picture>
                         </a>
                         <div class="product-card__buttons">
                           <div class="product-card__button-buy">
@@ -739,7 +781,10 @@
                     <div class="product-card__container">
                       <div class="product-card__top">
                         <a class="product-card__picture" href="#">
-                          <img src="img/product-bike-12.png" alt="2Fast4You Chopper" width="300" height="200">
+                          <picture>
+                            <source type="image/webp" srcset="img/product-bike-12@1x.webp 1x, img/product-bike-12@2x.webp 2x">
+                            <img src="img/product-bike-12@1x.png" srcset="img/product-bike-12@1x.png 1x, img/product-bike-12@2x.png 2x" alt="2Fast4You Chopper" width="300" height="200">
+                          </picture>
                         </a>
                         <div class="product-card__buttons">
                           <div class="product-card__button-buy">

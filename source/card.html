@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Каталог</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <script>
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async=""></script>
   </head>
   <body>
     <div style="display:none">
@@ -26,7 +30,7 @@
                   </a>
                 </div>
 
-                <button class="page-header__menu-button menu-button" type="button">
+                <button class="page-header__menu-button menu-button menu-button--close" type="button">
                   <span class="visually-hidden">Меню</span>
                 </button>
 
@@ -56,7 +60,7 @@
                 <div class="page-header__user-account user-account">
                   <ul class="user-account__list">
                     <li class="user-account__item user-profile">
-                      <a class="user-profile__link" href="#">
+                      <a class="user-profile__link" href="#" aria-label="Профиль">
                         <svg class="user-profile__icon" width="12" height="14" viewBox="0 0 12 14">
                           <use xlink:href="#icon-user"></use>
                         </svg>
@@ -64,7 +68,7 @@
                       </a>
                     </li>
                     <li class="user-account__item user-logout">
-                      <a class="user-logout__link" href="#">
+                      <a class="user-logout__link" href="#" aria-label="Выйти из аккаунта">
                         <svg class="user-logout__icon" width="24" height="24">
                           <use xlink:href="#icon-logout"></use>
                         </svg>
@@ -77,7 +81,7 @@
                 <div class="page-header__user-nav user-nav user-nav--long">
                   <ul class="user-nav__list user-nav__list--long">
                     <li class="user-nav__item user-search">
-                      <a class="user-search__link" href="#">
+                      <a class="user-search__link" href="#" aria-label="Поиск">
                         <svg class="user-search__icon" width="24" height="24">
                           <use xlink:href="#icon-search"></use>
                         </svg>
@@ -85,12 +89,14 @@
                       </a>
                     </li>
                     <li class="user-nav__item user-cart">
-                      <a class="user-cart__link" href="#">
-                        <svg class="user-cart__icon" width="18.85" height="17" viewBox="0 0 18.85 17">
-                          <use xlink:href="#icon-basket"></use>
-                        </svg>
+                      <a class="user-cart__link" href="#" aria-label="Корзина">
+                        <span class="user-cart__icon-wrapper">
+                          <svg class="user-cart__icon" width="18.85" height="17" viewBox="0 0 18.85 17">
+                            <use xlink:href="#icon-basket"></use>
+                          </svg>
+                        </span>
                         <span class="user-cart__text">Корзина</span>
-                        <span class="user-cart__count count">
+                        <span class="user-cart__count user-cart__count--visible count">
                           <span class="count__bracket">(</span>
                           <span class="count__number">1</span>
                           <span class="count__bracket">)</span>
@@ -99,11 +105,13 @@
                     </li>
                     <li class="user-nav__item user-addition">
                       <a class="user-addition__link" href="#">
-                        <svg class="user-addition__icon" width="24.86" height="12" viewBox="0 0 24.86 12">
-                          <use xlink:href="#icon-burger-plus"></use>
-                        </svg>
+                        <span class="user-addition__icon-wrapper">
+                          <svg class="user-addition__icon" width="24.86" height="12" viewBox="0 0 24.86 12">
+                            <use xlink:href="#icon-burger-plus"></use>
+                          </svg>
+                        </span>
                         <span class="user-addition__text">Дополнительно</span>
-                        <span class="user-addition__count count">
+                        <span class="user-addition__count user-addition__count--visible count">
                           <span class="count__bracket">(</span>
                           <span class="count__number">3</span>
                           <span class="count__bracket">)</span>
@@ -145,88 +153,88 @@
                     </div>
                     <span class="rating__count">(9)</span>
                   </div>
-                  <b class="product__price">7 935 ₽</b>
+                  <b class="product__price">
+                    <span class="product__price-count">7 935</span>
+                    <span class="product__price-currency">P</span>
+                  </b>
                 </div>
 
                 <div class="product__view slider-view">
                   <div class="slider-view__container">
-                    <div class="slider-view__top">
-                      <ul class="slider-view__slides">
-                        <li class="slider-view__slide">
-                          <div class="slider-view__picture">
-                            <picture>
-                              <source media="(max-width: 768px)" srcset="img/image-extra-1-mobile.png">
-                              <img src="img/image-extra-1.png" alt="Седло Brooks B67" width="500" height="350">
-                            </picture>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="slider-view__bottom">
-                      <ul class="slider-view__toggles">
-                        <li class="slider-view__toggle">
-                          <input class="slider-view__input visually-hidden" type="radio" name="color" value="black" id="color-black" checked>
-                          <label class="slider-view__label slider-view__label--color-black" for="color-black">
-                            <span class="visually-hidden">Чёрный</span>
-                          </label>
-                        </li>
-                        <li class="slider-view__toggle">
-                          <input class="slider-view__input visually-hidden" type="radio" name="color" value="brown" id="color-brown">
-                          <label class="slider-view__label slider-view__label--color-brown" for="color-brown">
-                            <span class="visually-hidden">Коричневый</span>
-                          </label>
-                        </li>
-                        <li class="slider-view__toggle">
-                          <input class="slider-view__input visually-hidden" type="radio" name="color" value="beige" id="color-beige">
-                          <label class="slider-view__label slider-view__label--color-beige" for="color-beige">
-                            <span class="visually-hidden">Бежевый</span>
-                          </label>
-                        </li>
-                      </ul>
-                      <div class="slider-view__button-zoom">
-                        <a class="button-zoom" href="#">
-                          <span class="visually-hidden">Увеличить изображение</span>
-                          <svg class="button-zoom__icon" width="26" height="26" viewBox="0 0 26 26">
-                            <use xlink:href="#icon-zoom"></use>
-                          </svg>
-                        </a>
-                      </div>
-                      <div class="slider-view__button-extra">
-                        <a class="button-extra" href="#">
-                          <span class="visually-hidden">Дополнительно</span>
-                          <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
-                            <use xlink:href="#icon-burger-plus"></use>
-                          </svg>
-                        </a>
-                      </div>
+                    <input class="slider-view__input visually-hidden" type="radio" name="color" value="black" id="color-1" checked>
+                    <input class="slider-view__input visually-hidden" type="radio" name="color" value="brown" id="color-2">
+                    <input class="slider-view__input visually-hidden" type="radio" name="color" value="beige" id="color-3">
+                    <ul class="slider-view__toggles">
+                      <li class="slider-view__toggle">
+                        <label class="slider-view__label slider-view__label--color-black" for="color-1">
+                          <span class="visually-hidden">1</span>
+                        </label>
+                      </li>
+                      <li class="slider-view__toggle">
+                        <label class="slider-view__label slider-view__label--color-brown" for="color-2">
+                          <span class="visually-hidden">2</span>
+                        </label>
+                      </li>
+                      <li class="slider-view__toggle">
+                        <label class="slider-view__label slider-view__label--color-beige" for="color-3">
+                          <span class="visually-hidden">3</span>
+                        </label>
+                      </li>
+                    </ul>
+                    <ul class="slider-view__slides">
+                      <li class="slider-view__slide slider-view__slide--active">
+                        <div class="slider-view__picture">
+                          <picture>
+                            <source type="image/webp" media="(max-width: 1024px)" srcset="img/image-extra-1-mobile@1x.webp 1x, img/image-extra-1-mobile@2x.webp 2x">
+                            <source type="image/webp" srcset="img/image-extra-1-desktop@1x.webp 1x, img/image-extra-1-desktop@2x.webp 2x">
+                            <source media="(max-width: 1024px)" srcset="img/image-extra-1-mobile@1x.png 1x, img/image-extra-1-mobile@2x.png 2x">
+                            <img src="img/image-extra-1-desktop@1x.png" srcset="img/image-extra-1-desktop@1x.png 1x, img/image-extra-1-desktop@1x.png 2x" alt="Седло Brooks B67" width="500" height="350">
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="slider-view__slide"></li>
+                      <li class="slider-view__slide"></li>
+                    </ul>
+                    <div class="slider-view__buttons">
+                      <a class="slider-view__button-zoom button-zoom" href="#">
+                        <span class="visually-hidden">Увеличить изображение</span>
+                        <svg class="button-zoom__icon" width="26" height="26" viewBox="0 0 26 26">
+                          <use xlink:href="#icon-zoom"></use>
+                        </svg>
+                      </a>
+                      <a class="slider-view__button-extra button-extra" href="#">
+                        <span class="visually-hidden">Дополнительно</span>
+                        <svg class="button-extra__icon" width="25" height="12" viewBox="0 0 25 12">
+                          <use xlink:href="#icon-burger-plus"></use>
+                        </svg>
+                      </a>
                     </div>
                   </div>
-               </div>
-
-               <div class="product__card-bottom">
-                 <p class="product__description">В комплекте ключ для регулировки, газета с&nbsp;полезной информацией и&nbsp;рекомендациями по уходу от&nbsp;компании-производителя. Фирменная картонная упаковка.</p>
-                 <span class="product__guarantee">Гарантия 1 год</span>
-                 <a class="product__button button button--buy" href="#">
-                   <svg class="button__icon" width="18.85" height="17" viewBox="0 0 18.85 17">
-                     <use xlink:href="#icon-basket"></use>
-                   </svg>В корзину
-                 </a>
-               </div>
+                </div>
+                <div class="product__card-bottom">
+                  <p class="product__description">В комплекте ключ для регулировки, газета с&nbsp;полезной информацией и&nbsp;рекомендациями по уходу от&nbsp;компании-производителя. Фирменная картонная упаковка.</p>
+                  <span class="product__guarantee">Гарантия 1 год</span>
+                  <a class="product__button button button--buy" href="#">
+                    <svg class="button__icon" width="18.85" height="17" viewBox="0 0 18.85 17">
+                      <use xlink:href="#icon-basket"></use>
+                    </svg>В корзину
+                  </a>
+                </div>
               </div>
 
               <div class="product__details product-details">
-                <input class="visually-hidden product-details__input" type="radio" name="section-details">
-                <label class="product-details__toggle">Подробное описание</label>
+                <input class="visually-hidden product-details__input" type="radio" name="section-details" id="section-details-1">
+                <label class="product-details__toggle" for="section-details-1">Подробное описание</label>
                 <section class="product-details__section product-details__section--hidden">
                   <h2 class="visually-hidden">Подробное описание</h2>
                 </section>
-                <input class="visually-hidden product-details__input" type="radio" name="section-details">
-                <label class="product-details__toggle">Условия гарантии</label>
+                <input class="visually-hidden product-details__input" type="radio" name="section-details" id="section-details-2">
+                <label class="product-details__toggle" for="section-details-2">Условия гарантии</label>
                 <section class="product-details__section product-details__section--hidden">
                   <h2 class="visually-hidden">Условия гарантии</h2>
                 </section>
-                <input class="visually-hidden product-details__input" type="radio" name="section-details">
-                <label class="product-details__toggle product-details__toggle--active">Отзывы</label>
+                <input class="visually-hidden product-details__input" type="radio" name="section-details" id="section-details-3">
+                <label class="product-details__toggle product-details__toggle--active" for="section-details-3">Отзывы</label>
                 <section class="product-details__section product-details__section--reviews">
                   <h2 class="visually-hidden">Отзывы</h2>
                   <blockquote class="review">
@@ -263,8 +271,8 @@
                     <a class="review__button button" href="#">Оставить отзыв</a>
                   </div>
                 </section>
-                <input class="visually-hidden product-details__input" type="radio" name="section-details">
-                <label class="product-details__toggle product-details__toggle--last">Обзоры</label>
+                <input class="visually-hidden product-details__input" type="radio" name="section-details" id="section-details-4">
+                <label class="product-details__toggle product-details__toggle--last" for="section-details-4">Обзоры</label>
                 <section class="product-details__section product-details__section--hidden">
                   <h2 class="visually-hidden">Обзоры</h2>
                 </section>
@@ -275,7 +283,7 @@
           <section class="catalog-section">
             <div class="catalog-section__container catalog-section__container--extra catalog-section__container--no-source">
               <div class="catalog-section__description catalog-section__description--extra catalog-section__description--no-paragraph">
-                <h2 class="catalog-section__title catalog-section__title--extra title">С этим товаром смотрят:</h2>
+                <h2 class="catalog-section__title catalog-section__title--extra catalog-section__title--no-paragraph title">С этим товаром смотрят:</h2>
               </div>
               <div class="catalog-section__slider catalog-section__slider--extra slider-cards slider-cards--extra">
                 <ul class="slider-cards__list slider-cards__list--extra">
@@ -286,7 +294,10 @@
                     <div class="product-card__container">
                       <div class="product-card__top product-card__top--extra">
                         <a class="product-card__picture product-card__picture--extra" href="#">
-                          <img src="img/product-extra-5.png" alt="Педали Bikein Pro" width="283" height="200">
+                          <picture>
+                            <source type="image/webp" srcset="img/product-extra-5@1x.webp 1x, img/product-extra-5@2x.webp 2x">
+                            <img src="img/product-extra-5@1x.png" srcset="img/product-extra-5@2x.png 2x" alt="Педали Bikein Pro" width="283" height="200">
+                          </picture>
                         </a>
                         <div class="product-card__buttons product-card__buttons--extra">
                           <div class="product-card__button-buy">
@@ -316,7 +327,10 @@
                     <div class="product-card__container">
                       <div class="product-card__top product-card__top--extra">
                         <a class="product-card__picture product-card__picture--extra" href="#">
-                          <img src="img/product-extra-1.png" alt="Сумка на руль B-soul" width="283" height="200">
+                          <picture>
+                            <source type="image/webp" srcset="img/product-extra-1@1x.webp 1x, img/product-extra-1@2x.webp 2x">
+                            <img src="img/product-extra-1@1x.png" srcset="img/product-extra-1@2x.png 2x" alt="Сумка на руль B-soul" width="283" height="200">
+                          </picture>
                         </a>
                         <div class="product-card__buttons product-card__buttons--extra">
                           <div class="product-card__button-buy">
@@ -346,7 +360,10 @@
                     <div class="product-card__container">
                       <div class="product-card__top product-card__top--extra">
                         <a class="product-card__picture product-card__picture--extra" href="#">
-                          <img src="img/product-extra-2.png" alt="Грипсы Propalm" width="283" height="200">
+                          <picture>
+                            <source type="image/webp" srcset="img/product-extra-2@1x.webp 1x, img/product-extra-2@2x.webp 2x">
+                            <img src="img/product-extra-2@1x.png" srcset="img/product-extra-2@2x.png 2x" alt="Грипсы Propalm" width="283" height="200">
+                          </picture>
                         </a>
                         <div class="product-card__buttons product-card__buttons--extra">
                           <div class="product-card__button-buy">
@@ -376,7 +393,10 @@
                     <div class="product-card__container">
                       <div class="product-card__top product-card__top--extra">
                         <a class="product-card__picture product-card__picture--extra" href="#">
-                          <img src="img/product-extra-3.png" alt="Седло Brooks B66 S" width="283" height="97">
+                          <picture>
+                            <source type="image/webp" srcset="img/product-extra-3@1x.webp 1x, img/product-extra-3@2x.webp 2x">
+                            <img src="img/product-extra-3@1x.png" srcset="img/product-extra-3@2x.png 2x" alt="Седло Brooks B66 S" width="283" height="200">
+                          </picture>
                         </a>
                         <div class="product-card__buttons product-card__buttons--extra">
                           <div class="product-card__button-buy">
@@ -406,7 +426,10 @@
                     <div class="product-card__container">
                       <div class="product-card__top product-card__top--extra">
                         <a class="product-card__picture product-card__picture--extra" href="#">
-                          <img src="img/product-extra-4.png" alt="Колеса Strida 18" width="283" height="200">
+                          <picture>
+                            <source type="image/webp" srcset="img/product-extra-4@1x.webp 1x, img/product-extra-4@2x.webp 2x">
+                            <img src="img/product-extra-4@1x.png" srcset="img/product-extra-4@2x.png 2x" alt="Колеса Strida 18" width="283" height="200">
+                          </picture>
                         </a>
                         <div class="product-card__buttons product-card__buttons--extra">
                           <div class="product-card__button-buy">
@@ -436,7 +459,10 @@
                     <div class="product-card__container">
                       <div class="product-card__top product-card__top--extra">
                         <a class="product-card__picture product-card__picture--extra" href="#">
-                          <img src="img/product-extra-6.png" alt="Руль Lowrider U" width="283" height="200">
+                          <picture>
+                            <source type="image/webp" srcset="img/product-extra-6@1x.webp 1x, img/product-extra-6@2x.webp 2x">
+                            <img src="img/product-extra-6@1x.png" srcset="img/product-extra-6@2x.png 2x" alt="Колеса Strida 18" width="283" height="200">
+                          </picture>
                         </a>
                         <div class="product-card__buttons product-card__buttons--extra">
                           <div class="product-card__button-buy">
@@ -518,7 +544,6 @@
               <a class="logo__link" href="#">
                 <picture>
                   <source media="(max-width: 768px)" srcset="img/logo-mobile.svg">
-                  <!-- <source media="(max-width: 1024px)" srcset="img/logo-mobile.svg"> -->
                   <img src="img/logo-desktop.svg" alt="Chopper Bikeshop" width="184" height="30">
                 </picture>
               </a>

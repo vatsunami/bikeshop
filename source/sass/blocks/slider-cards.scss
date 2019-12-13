@@ -31,7 +31,7 @@
 
 .slider-cards__list {
   box-sizing: border-box;
-  position: absolute;
+  position: relative;
   top: 0;
   left: calc(50% - 682px);
   display: flex;
@@ -113,6 +113,10 @@
     width: 100%;
     min-height: 385px;
 
+    &--extra {
+      min-height: 387px;
+    }
+
     &::before,
     &::after {
       width: calc(50% - 150px);
@@ -132,6 +136,11 @@
   }
 
   .slider-cards__toggle {
+    &--prev-extra,
+    &--next-extra {
+      top: 247px;
+    }
+
     &--prev-extra {
       left: calc(50% - 160px);
     }

@@ -4,7 +4,6 @@
 
 .filter-price__fields {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 18px;
 }
 
@@ -21,6 +20,10 @@
   color: #9b8869;
   background-color: transparent;
   border: 1px solid #9b8869;
+
+  &:first-of-type {
+    margin-right: auto;
+  }
 }
 
 .filter-price__range {
