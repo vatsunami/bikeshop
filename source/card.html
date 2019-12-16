@@ -161,21 +161,21 @@
 
                 <div class="product__view slider-view">
                   <div class="slider-view__container">
-                    <input class="slider-view__input visually-hidden" type="radio" name="color" value="black" id="color-1" checked>
-                    <input class="slider-view__input visually-hidden" type="radio" name="color" value="brown" id="color-2">
-                    <input class="slider-view__input visually-hidden" type="radio" name="color" value="beige" id="color-3">
                     <ul class="slider-view__toggles">
                       <li class="slider-view__toggle">
+                        <input class="slider-view__input visually-hidden" type="radio" name="color" value="black" id="color-1" checked>
                         <label class="slider-view__label slider-view__label--color-black" for="color-1">
                           <span class="visually-hidden">1</span>
                         </label>
                       </li>
                       <li class="slider-view__toggle">
+                        <input class="slider-view__input visually-hidden" type="radio" name="color" value="brown" id="color-2">
                         <label class="slider-view__label slider-view__label--color-brown" for="color-2">
                           <span class="visually-hidden">2</span>
                         </label>
                       </li>
                       <li class="slider-view__toggle">
+                        <input class="slider-view__input visually-hidden" type="radio" name="color" value="beige" id="color-3">
                         <label class="slider-view__label slider-view__label--color-beige" for="color-3">
                           <span class="visually-hidden">3</span>
                         </label>
@@ -192,8 +192,8 @@
                           </picture>
                         </div>
                       </li>
-                      <li class="slider-view__slide"></li>
-                      <li class="slider-view__slide"></li>
+                      <li class="slider-view__slide">2</li>
+                      <li class="slider-view__slide">3</li>
                     </ul>
                     <div class="slider-view__buttons">
                       <a class="slider-view__button-zoom button-zoom" href="#">
@@ -223,19 +223,16 @@
               </div>
 
               <div class="product__details product-details">
-                <input class="visually-hidden product-details__input" type="radio" name="section-details" id="section-details-1">
-                <label class="product-details__toggle" for="section-details-1">Подробное описание</label>
-                <section class="product-details__section product-details__section--hidden">
+                <button class="product-details__toggle">Подробное описание</button>
+                <section class="product-details__section">
                   <h2 class="visually-hidden">Подробное описание</h2>
                 </section>
-                <input class="visually-hidden product-details__input" type="radio" name="section-details" id="section-details-2">
-                <label class="product-details__toggle" for="section-details-2">Условия гарантии</label>
-                <section class="product-details__section product-details__section--hidden">
+                <button class="product-details__toggle">Условия гарантии</button>
+                <section class="product-details__section">
                   <h2 class="visually-hidden">Условия гарантии</h2>
                 </section>
-                <input class="visually-hidden product-details__input" type="radio" name="section-details" id="section-details-3">
-                <label class="product-details__toggle product-details__toggle--active" for="section-details-3">Отзывы</label>
-                <section class="product-details__section product-details__section--reviews">
+                <button class="product-details__toggle product-details__toggle--active">Отзывы</button>
+                <section class="product-details__section product-details__section--active product-details__section--reviews">
                   <h2 class="visually-hidden">Отзывы</h2>
                   <blockquote class="review">
                     <div class="review__top">
@@ -271,9 +268,8 @@
                     <a class="review__button button" href="#">Оставить отзыв</a>
                   </div>
                 </section>
-                <input class="visually-hidden product-details__input" type="radio" name="section-details" id="section-details-4">
-                <label class="product-details__toggle product-details__toggle--last" for="section-details-4">Обзоры</label>
-                <section class="product-details__section product-details__section--hidden">
+                <button class="product-details__toggle product-details__toggle--last">Обзоры</button>
+                <section class="product-details__section">
                   <h2 class="visually-hidden">Обзоры</h2>
                 </section>
               </div>
@@ -587,6 +583,8 @@
         </div>
       </footer>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/header-menu.js"></script>
+    <script src="js/slider-colors.js"></script>
+    <script src="js/tabs.js"></script>
   </body>
 </html>

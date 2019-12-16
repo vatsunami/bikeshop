@@ -200,10 +200,8 @@
                   </div>
                   <div class="filters-group filters-group--underline filters-group--electrobike">
                     <h3 class="filters-group__title visually-hidden">Электровелосипед</h3>
-                    <div class="filters-group__toggle toggle-filter">
-                      <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-electrobike" checked>
-                      <label class="toggle-filter__label" for="toggle-electrobike">Электровелосипед</label>
-                    </div>
+                    <input class="filters-group__toggle visually-hidden" type="checkbox" id="toggle-electrobike" checked>
+                    <label class="filters-group__toggle-label" for="toggle-electrobike">Электровелосипед</label>
                     <ul class="filters-group__list filters-group__list--electrobike">
                       <li class="filters-group__item filters-group__item--electrobike">
                         <input class="visually-hidden" type="checkbox" name="bike" id="bike">
@@ -215,19 +213,15 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="filters-group filters-group--underline filters-group--closed">
+                  <div class="filters-group filters-group--underline filters-group--brand filters-group--closed">
                     <h3 class="filters-group__title visually-hidden">Производитель</h3>
-                    <div class="filters-group__toggle toggle-filter toggle-filter--closed">
-                      <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-brand">
-                      <label class="toggle-filter__label toggle-filter__label--closed" for="toggle-brand">Производитель</label>
-                    </div>
+                    <input class="filters-group__toggle visually-hidden" type="checkbox" id="toggle-brand">
+                    <label class="filters-group__toggle-label filters-group__toggle-label--closed" for="toggle-brand">Производитель</label>
                   </div>
                   <div class="filters-group filters-group--underline filters-group--material">
                     <h3 class="filters-group__title visually-hidden">Материал рамы</h3>
-                    <div class="filters-group__toggle toggle-filter">
-                      <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-material" checked>
-                      <label class="toggle-filter__label" for="toggle-material">Материал рамы</label>
-                    </div>
+                    <input class="filters-group__toggle visually-hidden" type="checkbox" id="toggle-material" checked>
+                    <label class="filters-group__toggle-label" for="toggle-material">Материал рамы</label>
                     <ul class="filters-group__list filters-group__list--material">
                       <li class="filters-group__item filters-group__item--material">
                         <input class="visually-hidden" type="checkbox" name="steel" id="steel" checked>
@@ -241,10 +235,8 @@
                   </div>
                   <div class="filters-group filters-group--underline filters-group--color">
                     <h3 class="filters-group__title visually-hidden">Цвет</h3>
-                    <div class="filters-group__toggle toggle-filter">
-                      <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-color" checked>
-                      <label class="toggle-filter__label" for="toggle-color">Цвет</label>
-                    </div>
+                    <input class="filters-group__toggle visually-hidden" type="checkbox" id="toggle-color" checked>
+                    <label class="filters-group__toggle-label" for="toggle-color">Цвет</label>
                     <ul class="filters-group__list filters-group__list--color">
                       <li class="filters-group__item filters-group__item--color">
                         <input class="visually-hidden" type="checkbox" name="black" id="black">
@@ -270,17 +262,13 @@
                   </div>
                   <div class="filters-group filters-group--size filters-group--underline filters-group--closed">
                     <h3 class="filters-group__title visually-hidden">Размер</h3>
-                    <div class="filters-group__toggle toggle-filter">
-                      <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-size">
-                      <label class="toggle-filter__label toggle-filter__label--closed" for="toggle-size">Размер</label>
-                    </div>
+                    <input class="filters-group__toggle visually-hidden" type="checkbox" id="toggle-size">
+                    <label class="filters-group__toggle-label filters-group__toggle-label--closed" for="toggle-size">Размер</label>
                   </div>
                   <div class="filters-group filters-group--underline filters-group--wheels">
                     <h3 class="filters-group__title visually-hidden">Колеса</h3>
-                    <div class="filters-group__toggle toggle-filter">
-                      <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-wheels" checked>
-                      <label class="toggle-filter__label" for="toggle-wheels">Колеса</label>
-                    </div>
+                    <input class="filters-group__toggle visually-hidden" type="checkbox" id="toggle-wheels" checked>
+                    <label class="filters-group__toggle-label" for="toggle-wheels">Колеса</label>
                     <div class="filters-group__container">
                       <ul class="filters-group__list filters-group__list--wheels">
                         <li class="filters-group__item">
@@ -304,10 +292,8 @@
                   </div>
                   <div class="filters-group">
                     <h3 class="filters-group__title visually-hidden">Кол-во скоростей</h3>
-                    <div class="filters-group__toggle toggle-filter">
-                      <input class="toggle-filter__input visually-hidden" type="checkbox" id="toggle-guests">
-                      <label class="toggle-filter__label toggle-filter__label--closed" for="toggle-guests">Кол-во скоростей</label>
-                    </div>
+                    <input class="filters-group__toggle visually-hidden" type="checkbox" id="toggle-guests">
+                    <label class="filters-group__toggle-label filters-group__toggle-label--closed" for="toggle-guests">Кол-во скоростей</label>
                   </div>
                 </form>
               </div>
@@ -923,6 +909,8 @@
         </div>
       </footer>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/header-menu.js"></script>
+    <script src="js/catalog-menu.js"></script>
+    <script src="js/filter-toggles.js"></script>
   </body>
 </html>

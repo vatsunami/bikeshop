@@ -1,5 +1,4 @@
 .product-details {
-  // box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -7,7 +6,6 @@
   min-height: 389px;
   margin: 0 auto;
   padding: 0 20px 0 10px;
-  // padding-right: 10px;
 }
 
 .product-details__toggle {
@@ -26,6 +24,7 @@
   text-align: center;
   border: 1px solid rgba(155, 136, 105, 0.3);
   border-right: none;
+  border-bottom: none;
   background-color: transparent;
   color: rgba(129, 113, 85, 0.3);
   order: 0;
@@ -36,53 +35,83 @@
   &:active {
     background-color: transparent;
     color: #817155;
+    outline: none;
   }
 
+  &::before,
   &::after {
     content: "";
     position: absolute;
-    bottom: -1px;
-    left: -1px;
     display: block;
-    width: calc(100% + 2px);
-    height: 1px;
-    background-color: rgb(155, 136, 105);
   }
 
-  &:last-of-type {
-    border-right: 1px solid rgba(155, 136, 105, 0.3);
+  &::after {
+    bottom: -1px;
+    left: 0;
+    width: calc(100% + 1px);
+    height: 1px;
+    background-color: #9b8869;
+  }
+
+  &::before {
+    top: 0;
+    right: -1px;
+    width: 1px;
+    height: calc(100% + 1px);
+    background-color: rgba(155, 136, 105, 0.3);
+  }
+
+  &--last {
+    width: calc(25% - 1px);
+
+    &::before {
+      top: -1px;
+    }
   }
 
   &--active {
     color: rgb(129, 113, 85);
     border: 1px solid rgb(155, 136, 105);
-    border-bottom: none;
     border-right: none;
+    border-bottom: none;
     box-shadow: 1px 0 0 rgb(155, 136, 105);
 
     &::after {
-      display: none;
+      left: -1px;
+      top: 0;
+      width: 1px;
+      height: calc(100% + 1px);
+    }
+
+    &::before {
+      right: -1px;
+      width: 1px;
+      background-color: rgb(155, 136, 105);
     }
   }
 }
 
 .product-details__section {
   box-sizing: border-box;
-  display: block;
+  display: none;
   width: 100%;
   min-height: 330px;
-  padding: 50px 49px 61px;
   border: 1px solid #9b8869;
   border-top: none;
   order: 1;
 
-  &--hidden {
-    display: none;
+  &--active {
+    display: block;
+  }
+
+  &--reviews {
+    padding: 51px 49px 61px;
   }
 }
 
 @media (max-width: 1024px) {
   .product-details {
+    min-height: auto;
     padding: 0;
   }
 }
@@ -103,8 +132,6 @@
     border-bottom: none;
 
     &::before {
-      content: "";
-      position: absolute;
       top: 19px;
       right: 14px;
       display: block;
@@ -114,6 +141,7 @@
       background-repeat: no-repeat;
       background-size: 18px auto;
       background-position: 1px 6px;
+      background-color: transparent;
       opacity: 0.5;
     }
 
@@ -137,8 +165,12 @@
   }
 
   .product-details__section {
-    padding: 21px 15px 30px 15px;
+    min-height: auto;
     order: 0;
     border: none;
+
+    &--reviews {
+      padding: 21px 15px 30px 15px;
+    }
   }
 }
