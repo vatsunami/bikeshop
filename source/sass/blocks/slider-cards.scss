@@ -12,7 +12,7 @@
     top: 0;
     width: calc(50% - 512px);
     height: 100%;
-    background-color: rgba(233, 225, 213, 0.95);
+    background-color: rgba(233, 225, 213, 0.7);
     z-index: 2;
   }
 
@@ -26,6 +26,11 @@
 
   &--extra {
     min-height: 419px;
+
+    &::before,
+    &::after {
+      width: calc(50% - 516px);
+    }
   }
 }
 
@@ -87,6 +92,12 @@
     }
   }
 
+  .slider-cards__list {
+    &--extra {
+      transform: translateX(-735px);
+    }
+  }
+
   .slider-cards__toggle {
     top: 251px;
 
@@ -128,6 +139,7 @@
 
     &--extra {
       left: calc(50% - 255px);
+      transform: translateX(-1018px);
     }
   }
 
