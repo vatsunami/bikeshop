@@ -9,7 +9,7 @@
   justify-content: space-between;
   max-width: 1350px;
   margin: 0 auto;
-  padding: 0 28px 0 45px;
+  padding: 0 34px 0 45px;
 }
 
 .catalog__menu {
@@ -35,14 +35,7 @@
   margin-left: auto;
 }
 
-@media (max-width: 1024px) {
-  .catalog__container {
-    padding: 0;
-  }
-}
-
-
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .catalog {
     margin-bottom: 58px;
   }
@@ -70,7 +63,14 @@
     }
 
     &--active-js {
-      position: absolute;
+      position: fixed;
+      top: 57px;
+      left: 0;
+      bottom: 0;
+      overflow-y: scroll;
+      height: calc(100% - 57px);
+      min-height: auto;
+      -ms-overflow-style: none;
     }
   }
 

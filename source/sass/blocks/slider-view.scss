@@ -30,6 +30,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-self: center;
+  max-width: 340px;
   margin: 0 auto;
   padding: 0;
   padding-left: 4px;
@@ -67,8 +69,6 @@
 
 .slider-view__buttons {
   box-sizing: border-box;
-  display: flex;
-  width: 353px;
   margin: 0 auto;
   padding: 0 16px 0 18px;
   order: 3;
@@ -112,15 +112,18 @@
 }
 
 .slider-view__button-zoom {
-  margin-left: calc(50% - 25px);
-  margin-top: 20px;
+  margin: 20px auto 0;
+  order: 3;
 }
 
 .slider-view__button-extra {
+  position: absolute;
+  right: 89px;
+  bottom: 35px;
   margin-left: auto;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .slider-view {
     width: 320px;
     min-height: 240px;
@@ -163,6 +166,7 @@
   }
 
   .slider-view__toggles {
+    max-width: 230px;
     margin-bottom: 12px;
     padding-left: 2px;
   }
@@ -173,8 +177,9 @@
 
   .slider-view__button-extra {
     position: absolute;
-    top: -138px;
+    top: 117px;
     left: auto;
-    right: 18px;
+    right: 58px;
+    bottom: auto;
   }
 }

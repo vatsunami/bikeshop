@@ -1,12 +1,18 @@
 'use strict';
 
 (function () {
+  var RESIZE_INTERVAL = 500;
+  var BREAKPOINT_DESKTOP = 1024;
+
+  var body = document.body;
   var pageHeader = document.querySelector('.page-header');
   var pageHeaderWrapper = pageHeader.querySelector('.page-header__wrapper');
   var pageHeaderTop = pageHeader.querySelector('.page-header__top');
   var pageHeaderTopContainer = pageHeader.querySelector('.page-header__top-container');
   var pageHeaderLogo = pageHeader.querySelector('.page-header__logo');
   var mainNav = pageHeader.querySelector('.page-header__main-nav');
+  var mainNavLinks = mainNav.querySelectorAll('.main-nav__link');
+  var mainNavLinksArray = [].slice.call(mainNavLinks);
   var menuButton = pageHeader.querySelector('.page-header__menu-button');
   var userAccount = pageHeader.querySelector('.page-header__user-account');
   var userNav = pageHeader.querySelector('.page-header__user-nav');
@@ -19,6 +25,7 @@
   var search = userNavList.querySelector('.user-nav__item.user-search');
 
   var closeHeaderMenu = function () {
+    body.classList.remove('noscroll-header-menu');
     menuButton.classList.add('page-header__menu-button--closed');
     menuButton.classList.remove('menu-button--close');
     pageHeaderTop.classList.add('page-header__top--closed');
@@ -49,6 +56,7 @@
   };
 
   var openHeaderMenu = function () {
+    body.classList.add('noscroll-header-menu');
     menuButton.classList.remove('page-header__menu-button--closed');
     menuButton.classList.add('menu-button--close');
     pageHeaderTop.classList.remove('page-header__top--closed');
@@ -84,7 +92,28 @@
     }
   });
 
+  mainNav.addEventListener('click', function (evt) {
+    var target = evt.target;
+    var isMainNavLink = mainNavLinksArray.some(function (linkItem) {
+      return target === linkItem;
+    });
+    if (isMainNavLink) {
+      closeHeaderMenu();
+    }
+  });
+
   window.addEventListener('load', function () {
     closeHeaderMenu();
+  });
+
+  window.addEventListener('resize', function () {
+    var resizeTimeout;
+    if (!resizeTimeout) {
+      resizeTimeout = setTimeout(function () {
+        if (window.innerWidth >= BREAKPOINT_DESKTOP) {
+          closeHeaderMenu();
+        }
+      }, RESIZE_INTERVAL);
+    }
   });
 })();

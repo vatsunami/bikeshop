@@ -54,7 +54,7 @@
   margin-left: auto;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .page-header {
     margin-bottom: 0;
     min-height: 57px;
@@ -97,9 +97,12 @@
     z-index: 100;
 
     &--active-js {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
+      bottom: 0;
+      overflow-y: scroll;
+      -ms-overflow-style: none;
     }
 
     &--closed {
@@ -164,7 +167,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .page-header__wrapper {
     min-height: 568px;
     background-image: url("../img/background-promo-mobile@1x.jpg");

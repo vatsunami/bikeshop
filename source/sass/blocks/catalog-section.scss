@@ -48,7 +48,7 @@
   margin-bottom: 71px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .catalog-section__container {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -56,9 +56,13 @@
 
   .catalog-section__description {
     box-sizing: border-box;
-    max-width: 640px;
+    max-width: 720px;
     margin: 0 auto 44px;
     padding: 0 20px;
+
+    &--extra {
+      max-width: 680px;
+    }
   }
 
   .catalog-section__title {
@@ -81,7 +85,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .catalog-section__container {
     padding-top: 27px;
     padding-bottom: 28px;

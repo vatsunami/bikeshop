@@ -1,31 +1,30 @@
 'use strict';
 
-var sliderCards = (function () {
+var sliderMultipleCards = (function () {
   return function (selector, isExtra) {
     var sliderCards = document.querySelector(selector);
 
     if (sliderCards) {
       var RESIZE_INTERVAL = 500;
 
-      if (isExtra) {
-        var INDEX_OF_FIRST_ACTIVE_CARD = 4;
-        var CountOfActiveCards = {
-          DESKTOP: 4,
-          TABLET: 2,
-          MOBILE: 1
-        };
-      } else {
-        var INDEX_OF_FIRST_ACTIVE_CARD = 3;
-        var CountOfActiveCards = {
-          DESKTOP: 3,
-          TABLET: 1,
-          MOBILE: 1
-        };
-      }
-
-      var ScreenWidth = {
+      var BreakpointWidth = {
         DESKTOP: 1024,
         TABLET: 768
+      };
+
+      var CountOfActiveCards = {
+        DESKTOP: {
+          normal: 3,
+          extra: 4
+        },
+        TABLET: {
+          normal: 1,
+          extra: 2
+        },
+        MOBILE: {
+          normal: 1,
+          extra: 1
+        }
       };
 
       var sliderList = sliderCards.querySelector('.slider-cards__list');
@@ -33,8 +32,15 @@ var sliderCards = (function () {
       var sliderButtonRight = sliderCards.querySelector('.toggle--next');
       var sliderItemsDefault = sliderCards.querySelectorAll('.slider-cards__item');
       var sliderItemsDefaultArray = [].slice.call(sliderItemsDefault);
+      var indexOfFirstActiveCard;
       var countOfActiveCards;
       var itemsArray = [];
+
+      if (isExtra) {
+        indexOfFirstActiveCard = 4;
+      } else {
+        indexOfFirstActiveCard = 3;
+      }
 
       var fillItemsArray = function () {
         sliderItemsDefaultArray.forEach(function (item) {
@@ -53,7 +59,7 @@ var sliderCards = (function () {
         itemsArray.forEach(function (item, index) {
           var price = item.querySelector('.price');
           if (price) {
-            if (index >= INDEX_OF_FIRST_ACTIVE_CARD && index < countOfActiveCards + INDEX_OF_FIRST_ACTIVE_CARD) {
+            if (index >= indexOfFirstActiveCard && index < countOfActiveCards + indexOfFirstActiveCard) {
               price.querySelector('.price__count').classList.remove('price__count--revers');
               price.querySelector('.price__currency').classList.remove('price__currency--revers');
             } else {
@@ -66,12 +72,24 @@ var sliderCards = (function () {
 
       var checkScreenWidth = function () {
         var screenWidth = window.innerWidth;
-        if (screenWidth >= ScreenWidth.DESKTOP) {
-          countOfActiveCards = CountOfActiveCards.DESKTOP;
-        } else if (screenWidth >= ScreenWidth.TABLET && screenWidth < ScreenWidth.DESKTOP) {
-          countOfActiveCards = CountOfActiveCards.TABLET;
+        if (screenWidth >= BreakpointWidth.DESKTOP) {
+          if (isExtra) {
+            countOfActiveCards = CountOfActiveCards.DESKTOP.extra;
+          } else {
+            countOfActiveCards = CountOfActiveCards.DESKTOP.normal;
+          }
+        } else if (screenWidth >= BreakpointWidth.TABLET && screenWidth < BreakpointWidth.DESKTOP) {
+          if (isExtra) {
+            countOfActiveCards = CountOfActiveCards.TABLET.extra;
+          } else {
+            countOfActiveCards = CountOfActiveCards.TABLET.normal;
+          }
         } else {
-          countOfActiveCards = CountOfActiveCards.MOBILE;
+          if (isExtra) {
+            countOfActiveCards = CountOfActiveCards.MOBILE.extra;
+          } else {
+            countOfActiveCards = CountOfActiveCards.MOBILE.normal;
+          }
         }
       };
 
@@ -136,8 +154,8 @@ var sliderCards = (function () {
         }
       });
     }
-  }
+  };
 })();
 
-sliderCards('#slider-cards', false);
-sliderCards('#slider-cards-extra', true);
+sliderMultipleCards('#slider-cards', false);
+sliderMultipleCards('#slider-cards-extra', true);

@@ -16,7 +16,7 @@
   margin-right: 8px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .user-account {
     display: block;
     width: 100%;
@@ -30,8 +30,7 @@
   .user-account__list {
     box-sizing: border-box;
     justify-content: space-between;
-    width: 225px;
-    margin-left: auto;
-    padding-right: 3px;
+    width: 100%;
+    padding: 0 3px 0 66px;
   }
 }

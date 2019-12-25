@@ -34,7 +34,6 @@
   &:focus,
   &:active {
     background-color: transparent;
-    color: #817155;
     outline: none;
   }
 
@@ -109,7 +108,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .product-details {
     min-height: auto;
     padding: 0;

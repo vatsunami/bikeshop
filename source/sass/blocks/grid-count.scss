@@ -1,7 +1,6 @@
 .grid-count {
   display: flex;
   width: 241px;
-  padding-top: 5px;
   font-family: "Hagin Caps Medium", "Times New Roman", serif;
   font-size: 18px;
   font-weight: 500;
@@ -70,7 +69,16 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
+  .grid-count {
+    &--closed {
+      margin-right: 10px;
+      padding-top: 5px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
   .grid-count {
     &--closed {
       display: none;

@@ -49,13 +49,13 @@
   order: 2;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .copyright__info {
     margin: 0 auto;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .copyright__info {
     flex-direction: column;
     width: 100%;

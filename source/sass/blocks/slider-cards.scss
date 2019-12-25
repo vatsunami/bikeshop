@@ -1,6 +1,6 @@
 .slider-cards {
   position: relative;
-  max-width: 1366px;
+  max-width: 1650px;
   min-height: 423px;
   overflow: hidden;
   margin: 0 auto;
@@ -78,7 +78,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .slider-cards {
     &::before,
     &::after {
@@ -120,7 +120,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .slider-cards {
     width: 100%;
     min-height: 385px;

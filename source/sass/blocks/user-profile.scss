@@ -37,13 +37,13 @@
   letter-spacing: 0.04em;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .user-profile {
-    width: 155px;
+    width: 170px;
+    margin: 0 auto;
   }
 
   .user-profile__link {
-    width: 155px;
     min-height: 55px;
     height: auto;
     padding: 18px 0 0 24px;

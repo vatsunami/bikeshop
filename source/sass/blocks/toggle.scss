@@ -7,6 +7,7 @@
   border: none;
   background-repeat: no-repeat;
   background-position: 0 0;
+  cursor: pointer;
 
   &--prev {
     background-image: url("../img/icon-arrow-left.svg");
@@ -17,9 +18,18 @@
     background-image: url("../img/icon-arrow-right.svg");
     background-position: 17px 6px;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .toggle {
     &--next {
       background-position: 19px 6px;

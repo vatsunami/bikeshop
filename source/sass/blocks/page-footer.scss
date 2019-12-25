@@ -23,11 +23,13 @@
 
 .page-footer__container {
   box-sizing: border-box;
-  max-width: 1150px;
+  // max-width: 1150px;
+  max-width: 1200px;
   margin: 0 auto;
 
   &--main {
-    max-width: 1160px;
+    max-width: 1210px;
+    // max-width: 1160px;
     padding-left: 6px;
   }
 }
@@ -38,10 +40,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 33px 10px 48px 7px;
+  padding: 33px 35px 48px 32px;
 
   &--main {
-    padding: 33px 12px 48px 9px;
+    padding: 33px 37px 48px 34px;
   }
 }
 
@@ -59,7 +61,7 @@
   order: 2;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .page-footer__container {
     position: relative;
     padding: 0;
@@ -109,7 +111,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .page-footer__wrapper {
     background-image: url("../img/background-footer-mobile@1x.jpg");
     background-position: left -216px top 0;

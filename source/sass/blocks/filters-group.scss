@@ -68,6 +68,15 @@
   border: none;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
   &::before,
   &::after {
     content: "";

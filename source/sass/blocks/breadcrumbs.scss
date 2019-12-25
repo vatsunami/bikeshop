@@ -53,9 +53,17 @@
   &:active {
     opacity: 0.5;
   }
+
+  &--active {
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+    }
+  }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .breadcrumbs {
     margin-bottom: 45px;
   }
@@ -66,7 +74,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .breadcrumbs {
     margin-bottom: 39px;
   }
