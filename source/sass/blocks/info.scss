@@ -149,7 +149,12 @@
 
   .info__desription {
     max-width: 500px;
+    padding: 0;
     width: 100%;
+
+    &--revers {
+      padding: 0 15px;
+    }
   }
 
   .info__title,
