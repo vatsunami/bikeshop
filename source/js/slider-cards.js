@@ -12,18 +12,31 @@ var sliderMultipleCards = (function () {
         TABLET: 768
       };
 
-      var CountOfActiveCards = {
-        DESKTOP: {
-          normal: 3,
-          extra: 4
+      var SliderData = {
+        normal: {
+          countOfActiveCards: {
+            DESKTOP: 3,
+            TABLET: 1,
+            MOBILE: 1
+          },
+          indexOfFirstActiveCard: 3,
+          topLimitForResizeContainer: 1126,
+          translateDefault: -802,
+          isPriceSwitch: false,
+          containerWidth: 2880,
+          marginDefault: 15
         },
-        TABLET: {
-          normal: 1,
-          extra: 2
-        },
-        MOBILE: {
-          normal: 1,
-          extra: 1
+        extra: {
+          countOfActiveCards: {
+            DESKTOP: 4,
+            TABLET: 2,
+            MOBILE: 1
+          },
+          indexOfFirstActiveCard: 4,
+          topLimitForResizeContainer: 1276,
+          translateDefault: -1018,
+          isPriceSwitch: true,
+          containerWidth: 3396
         }
       };
 
@@ -32,14 +45,49 @@ var sliderMultipleCards = (function () {
       var sliderButtonRight = sliderCards.querySelector('.toggle--next');
       var sliderItemsDefault = sliderCards.querySelectorAll('.slider-cards__item');
       var sliderItemsDefaultArray = [].slice.call(sliderItemsDefault);
-      var indexOfFirstActiveCard;
       var countOfActiveCards;
       var itemsArray = [];
+      var indexOfFirstActiveCard;
 
-      if (isExtra) {
-        indexOfFirstActiveCard = 4;
+      var sliderData;
+      if (!isExtra) {
+        sliderData = SliderData.normal;
       } else {
-        indexOfFirstActiveCard = 3;
+        sliderData = SliderData.extra;
+      }
+
+      indexOfFirstActiveCard = sliderData.indexOfFirstActiveCard;
+
+      var transformSliderExtra = function () {
+        if (window.innerWidth <= sliderData.topLimitForResizeContainer && window.innerWidth >= BreakpointWidth.DESKTOP) {
+          sliderList.style.width = sliderData.containerWidth - (sliderData.topLimitForResizeContainer - window.innerWidth) * 3 + 'px';
+          var translateX = sliderData.translateDefault + (sliderData.topLimitForResizeContainer - window.innerWidth) * 1.5;
+          sliderList.style.transform = 'translate(' + translateX + 'px)';
+        } else {
+          sliderList.style.width = '';
+          sliderList.style.transform = '';
+        }
+      };
+
+      var transformSliderNormal = function () {
+        if (window.innerWidth <= sliderData.topLimitForResizeContainer && window.innerWidth >= BreakpointWidth.DESKTOP) {
+          sliderList.style.width = sliderData.containerWidth - (sliderData.topLimitForResizeContainer - window.innerWidth) * 2.647059 + 'px';
+          var margin;
+          itemsArray.forEach(function (item) {
+            margin = sliderData.marginDefault - (sliderData.topLimitForResizeContainer - window.innerWidth) * 0.14705882;
+            item.style.marginLeft = margin + 'px';
+            item.style.marginRight = margin + 'px';
+          });
+          var translateX = sliderData.translateDefault + (sliderData.topLimitForResizeContainer - window.innerWidth) * 1.27451;
+          sliderList.style.transform = 'translate(' + translateX +  'px)';
+        } else {
+          itemsArray.forEach(function (item) {
+            item.style.marginLeft = '';
+            item.style.marginRight = '';
+          });
+          sliderList.style.width = '';
+          sliderList.style.transform = '';
+        }
       }
 
       var fillItemsArray = function () {
@@ -70,27 +118,32 @@ var sliderMultipleCards = (function () {
         });
       };
 
-      var checkScreenWidth = function () {
-        var screenWidth = window.innerWidth;
-        if (screenWidth >= BreakpointWidth.DESKTOP) {
-          if (isExtra) {
-            countOfActiveCards = CountOfActiveCards.DESKTOP.extra;
+      var switchDisabledClass = function () {
+        itemsArray.forEach(function (item, index) {
+          if (index >= indexOfFirstActiveCard && index < countOfActiveCards + indexOfFirstActiveCard) {
+            item.classList.remove('slider-cards__item--disabled');
           } else {
-            countOfActiveCards = CountOfActiveCards.DESKTOP.normal;
+            item.classList.add('slider-cards__item--disabled');
           }
-        } else if (screenWidth >= BreakpointWidth.TABLET && screenWidth < BreakpointWidth.DESKTOP) {
-          if (isExtra) {
-            countOfActiveCards = CountOfActiveCards.TABLET.extra;
-          } else {
-            countOfActiveCards = CountOfActiveCards.TABLET.normal;
-          }
-        } else {
-          if (isExtra) {
-            countOfActiveCards = CountOfActiveCards.MOBILE.extra;
-          } else {
-            countOfActiveCards = CountOfActiveCards.MOBILE.normal;
-          }
+        });
+      };
+
+      var switchCards = function () {
+        if (sliderData.isPriceSwitch) {
+          switchPrice();
         }
+        switchDisabledClass();
+      };
+
+      var setCountOfActiveCards = function () {
+        if (window.innerWidth >= BreakpointWidth.DESKTOP) {
+          countOfActiveCards = sliderData.countOfActiveCards.DESKTOP;
+        } else if (window.innerWidth >= BreakpointWidth.TABLET && window.innerWidth < BreakpointWidth.DESKTOP) {
+          countOfActiveCards = sliderData.countOfActiveCards.TABLET;
+        } else {
+          countOfActiveCards = sliderData.countOfActiveCards.MOBILE;
+        }
+        console.log(countOfActiveCards);
       };
 
       var moveCards = function (direction) {
@@ -116,26 +169,25 @@ var sliderMultipleCards = (function () {
 
       var onSliderButtonLeftClick = function () {
         moveCards(false);
-        if (isExtra) {
-          switchPrice();
-        }
+        switchCards();
       };
 
       var onSliderButtonRightClick = function () {
         moveCards(true);
-        if (isExtra) {
-          switchPrice();
-        }
+        switchCards();
       };
 
       sliderButtonLeft.addEventListener('click', onSliderButtonLeftClick);
       sliderButtonRight.addEventListener('click', onSliderButtonRightClick);
 
       window.addEventListener('load', function () {
-        checkScreenWidth();
+        setCountOfActiveCards();
         fillItemsArray();
-        if (isExtra) {
-          switchPrice();
+        switchCards();
+        if (!isExtra) {
+          transformSliderNormal();
+        } else {
+          transformSliderExtra();
         }
       });
 
@@ -144,11 +196,14 @@ var sliderMultipleCards = (function () {
         if (!resizeTimeout) {
           resizeTimeout = setTimeout(function () {
             resizeTimeout = null;
-            checkScreenWidth();
+            setCountOfActiveCards();
             returnItemsToStart();
             fillItemsArray();
-            if (isExtra) {
-              switchPrice();
+            switchCards();
+            if (!isExtra) {
+              transformSliderNormal();
+            } else {
+              transformSliderExtra();
             }
           }, RESIZE_INTERVAL);
         }
